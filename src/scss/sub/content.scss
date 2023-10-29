@@ -1,0 +1,90 @@
+// color
+$color-primary : #1800B7;
+$color-accent : #4B33ED;
+$color-primaryNd : #002C85;
+$color-accentNd : #00D4CD;
+
+$color-000 : #000000;
+$color-222 : #222222;
+$color-444 : #444444;
+$color-666 : #666666;
+$color-888 : #888888;
+$color-fff : #ffffff;
+
+$color-bg : #4E79B333;
+
+$color-primaryBg : #F8F9FC;
+$color-primaryNd : #F1F3F9;
+$color-gnbDim : #001A4FD6;
+$color-dim : #00000061;
+$color-dimNd : #00000099;
+
+$color-default : #E2E2E2;
+$color-medium : #CCCCCC;
+$color-strong : #A0A0A0;
+
+$color-ddd : #dddddd;
+$color-d9d9d9 : #d9d9d9;
+$color-aaa : #aaaaaa;
+$color-72758B : #72758B;
+$color-A2A5BC : #A2A5BC;
+
+
+// 타이포
+@mixin txt-80x {
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 9.6rem;
+}
+@mixin txt-60x {
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 8rem;
+}
+@mixin txt-48x {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 6.3rem;
+}
+@mixin txt-40x {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.6rem;
+}
+@mixin txt-32x {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    letter-spacing: -0.02em;
+}
+@mixin txt-24x {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.02em;
+}
+@mixin txt-20x {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.8rem;
+}
+@mixin txt-18x {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.02em;
+}
+@mixin txt-14x {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media(hover: hover) and (pointer: fine) {}

@@ -1,0 +1,152 @@
+
+// button
+.btn {
+    &-support {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        width: 11.3rem;
+        height: 4rem;
+        border: 1px solid $color-d9d9d9;
+        border-radius: 4rem;
+        background-color: $color-fff;
+        font-weight: 600;
+        font-size: 1.4rem;
+        
+        .ico-coin{
+            display: inline-block;
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+    &-menu {
+        width: 4rem;
+        height: 4rem;
+        background-color: transparent;
+        border: none;
+        padding: 8px 7px;
+        position: relative;
+
+        span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $color-fff;
+            position: absolute;
+            transform-origin: center;
+            left: calc(50% - 13px);
+
+            &.line1 {
+                top: 8px;
+            }
+            &.line2 {
+                top: calc(50% - 1px);
+            }
+            &.line3 {
+                bottom: 8px;
+            }
+        }
+    }
+    &-top {
+        width: 8.8rem;
+        height: 8.8rem;
+        position: fixed;
+        bottom: 4.1rem;
+        right: 4rem;
+        background-color: $color-fff;
+        border: 1px solid $color-ddd;
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.6rem;
+        i {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    /* 공통 btn */
+    @mixin btnBasic {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-ti {
+        @include btnBasic;
+        gap: 8px;
+        width: 20rem;
+        line-height: 6.4rem;
+        border: 1px solid $color-fff;
+        background-color: transparent;
+
+        i {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-size: 100% 100%;
+        } 
+
+        &.b {
+            color: $color-222;            
+        }
+    } 
+}
+
+// 아이콘
+.ico{
+    &-plus{
+        width: 13px;
+        height: 13px;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-fff;
+        }
+        &::before {
+            content: '';
+            width: 2px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-fff;
+        }
+    }
+
+    &-link{
+        background: svgIcoLink('fff'); 
+        background-size:100% 100%;
+    }
+    &-linkTop{
+        background: svgIcoLinkTop('000'); 
+        background-size:100% 100%;
+    }
+    &-pin{
+        background: svgIcoPin('fff'); 
+        background-size:100% 100%;
+    }
+    &-phone{
+        background: svgIcoPhone('fff'); 
+        background-size:100% 100%;
+    }
+    &-coin{
+        background: svgIcoCoin('444444', '00D4CD'); 
+        background-size:100% 100%;
+    }
+}
+
+@media(hover: hover) and (pointer: fine) {}

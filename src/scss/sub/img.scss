@@ -1,0 +1,33 @@
+@import '_svg.scss';
+
+#svg{
+    width:1400px; margin:0 auto;
+    .svg-logo{
+        width:76px; height:68px; background: svgLogo('000', '1D2087'); background-size:100% 100%;
+    }
+    .svg02{
+        width:236px; height:236px; background: svgCircle1('00b6e3'); background-size:100% 100%;
+    }
+    .ico-link{
+        width:12px; height:12px; background: svgIcoLink('fff'); background-size:100% 100%;
+    }
+    .ico-linkTop{
+        width:16px; height:16px; background: svgIcoLinkTop('000'); background-size:100% 100%;
+    }
+    .ico-arrowR{
+        width:24px; height:24px; background: svgIcoArrowR('000'); background-size:100% 100%;
+    }
+    .ico-next{
+        width:40px; height:40px; background: svgIcoNext('444444'); background-size:100% 100%;
+    }
+    .ico-pin{
+        width:20px; height:20px; background: svgIcoPin('fff'); background-size:100% 100%;
+    }
+    .ico-phone{
+        width:20px; height:20px; background: svgIcoPhone('fff'); background-size:100% 100%;
+    }
+    .ico-coin{
+        width:16px; height:16px; background: svgIcoCoin('444444', '00D4CD'); background-size:100% 100%;
+    }
+  
+}
