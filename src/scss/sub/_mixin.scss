@@ -1,5 +1,7 @@
 
 $easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1);
+$cubicTxt : cubic-bezier(0.165, 0.84, 0.44, 1);
+$cubicMain : cubic-bezier(0.77, 0, 0.175, 1);
 $speed : 0.3s;
 
 @mixin transition($prop, $sec:$speed, $ease:$easeInOutCubic) {

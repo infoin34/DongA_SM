@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>동아쏘시오홀딩스</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html')
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main>
+            <div id="container">
+                <div style="width: 100%; height: 100vh; background-color: #666;"></div>
+            </div>
+        </main>
+        @@include('../../include/footer.html')
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+    
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>

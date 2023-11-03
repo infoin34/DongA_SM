@@ -14,7 +14,7 @@ $color-fff : #ffffff;
 $color-bg : #4E79B333;
 
 $color-primaryBg : #F8F9FC;
-$color-primaryNd : #F1F3F9;
+$color-primaryBgNd : #F1F3F9;
 $color-gnbDim : #001A4FD6;
 $color-dim : #00000061;
 $color-dimNd : #00000099;
@@ -58,10 +58,15 @@ $color-A2A5BC : #A2A5BC;
     letter-spacing: -0.02em;
 }
 @mixin txt-24x {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 2.4rem;
     line-height: 3.2rem;
     letter-spacing: -0.02em;
+
+    @media screen and (max-width: 992px) {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
 }
 @mixin txt-20x {
     font-weight: 600;
@@ -73,6 +78,11 @@ $color-A2A5BC : #A2A5BC;
     font-size: 1.8rem;
     line-height: 2.8rem;
     letter-spacing: -0.02em;
+
+    @media screen and (max-width: 992px) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
 }
 @mixin txt-14x {
     font-weight: 500;

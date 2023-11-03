@@ -85,6 +85,13 @@ html {}
             text-align: left;
         }
     }
+
+    .view-code {
+        padding: 20px;
+        white-space: pre-line;
+        background-color: #dfdfdf;
+        text-align: left;
+    }
 }
 .design-guide-wrap.is-on{
     display:block;

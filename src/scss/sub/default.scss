@@ -47,6 +47,7 @@ button:-moz-focusring,
 	--clr3: #ff9936;
 	--clr4: #ffae51;
 	--clr5: #ffc570;
+  
 }  
 
 .ell {display:block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; word-break:break-all;}
@@ -175,5 +176,4 @@ button:-moz-focusring,
 		animation-delay: calc(var(--animation-duration) / 6 * -5);
 	}
 } 
-  
   

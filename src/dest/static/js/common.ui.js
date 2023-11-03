@@ -8,34 +8,34 @@
     // });   
 
     /* 로딩 후 콜백 */
-    const afterLoading = (cb)=>{
-        window.addEventListener('load', completed, false);
+	function afterLoading(cb){
+		window.addEventListener('load', completed, false);
 		function completed(){
 	 	   cb();
 	       window.removeEventListener('load', completed, false);      
 	    }
-    };
+	}
 
     /* 전체스크롤 막기/풀기 */
     let scrollHeight = 0;
-    const bodyScrollBlock = (flag) => {
-        if(flag) {
-			scrollHeight = ($docu.scrollTop() );
-			$('body').addClass('no-scr');
-			$('body').css({
+	function bodyScrollBlock(flag){
+		if(flag) {
+			scrollHeight = ($(window).scrollTop() );
+			$('html, body').addClass('no-scr');
+			$('html, body').css({
 				'marin-top': -(scrollHeight)+'px',
 			})
 		}else {
-			$('body').removeAttr('style');
-			$('body').removeClass('no-scr');
+			$('html, body').removeAttr('style');
+			$('html, body').removeClass('no-scr');
 			$('html, body').scrollTop(scrollHeight);
 		}
-    }
+	}
    
     /* 특정 위치로 스크롤 */
-    const scrollMove = (val, time)=>{
+	function scrollMove (val, time){
         $('html, body').animate({scrollTop: val}, time || 300);
-    }
+    }   
 
     /* 팝업 */
     const popup = {
@@ -128,7 +128,11 @@
     //         navigation: {
     //             nextEl: target + ' .slider-navigation .swiper-button-next',
     //             prevEl: target + ' .slider-navigation .swiper-button-prev',
-    //         }
+    //         },
+	//  		pagination: {
+	//			 	el: target +  '.swiper-pagination',
+	//			 	clickable: true,
+	//			 },
     //     });
 	// 	return swiper;
 	// } 
@@ -220,7 +224,6 @@
 				$header.removeClass("open");
 				$header.toggleClass("is-full");
 				$list.hide();
-				$gnb.stop().fadeToggle();
 				$header.find(".header-top").stop().fadeToggle();
 				$(this).siblings(".btn-support").stop().fadeToggle(200);
 				$nav.stop().fadeToggle();
@@ -231,6 +234,12 @@
 				let $line2 = $(this).find(".line2");
 				let $line3 = $(this).find(".line3");
 				let $lineW = $line1.width();
+
+				if (window.innerWidth > 992) {
+					$gnb.stop().fadeToggle();
+				}else {
+					$gnb.hide();
+				}
 
 				if( $(this).hasClass("on") === true){
 					$header.css('height', '100vh');
@@ -250,7 +259,7 @@
 						$header.css({ "overflow-y" : "scroll" });
 					}, 300)
 				}else {
-					$header.css('height', '10rem');
+					$header.css('height', $headerH);
 					$btnAni.set( $line1, { y: 11, rotate: 45 })
 					$btnAni.set( $line2, { width: 0 })
 					$btnAni.set( $line3, { y: -11, rotate: -45 })
@@ -269,29 +278,6 @@
 		})
 	}
 
-	/* 헤더 스크롤시 */ 
-	function headerScrollEvt(){
-		let lastScroll = 0;
-
-		$(window).on('scroll', function(){
-			let scrollTop = $(this).scrollTop();
-
-			if ( $(".header").hasClass("is-full") == false ){
-				console.log("sdkdfsjfds")
-				if(scrollTop == 0) {
-					$(".header").removeClass("scrollD");
-					$(".header").removeClass("scrollU");
-				} else if ( scrollTop > lastScroll) {
-					$(".header").addClass("scrollU");
-					$(".header").removeClass("scrollD");
-				} else if (scrollTop < lastScroll){
-					$(".header").addClass("scrollD");
-				}
-				lastScroll = scrollTop;
-			}
-		})
-	}
-
 	/* 푸터 패밀리 사이트 */
 	function toggleFamily(){
 		var $footer = $(".footer");
@@ -303,7 +289,56 @@
 		});
 	}
 	
+
+	/* 헤더 스크롤시 */ 
+	function headerScrollEvt(){
+		if ( $(".header").hasClass("is-full") == false ){
+			if(currentScr == 0) {
+				$(".header").removeClass("scrollD");
+				$(".header").removeClass("scrollU");
+			} else if ( currentScr > lastScr) {
+				$(".header").addClass("scrollU");
+				$(".header").removeClass("scrollD");
+			} else if (currentScr < lastScr){
+				$(".header").addClass("scrollD");
+			}
+			lastScr = currentScr;
+		}
+	}
+
+	/* 스크롤 이벤트*/
+	function scrollAni(){
+		let setScrT = parseInt(currentScr + ($(window).height()*0.9));		
+		$('.ani').each(function(i){	
+			if(setScrT > $(this).offset().top){											
+				if(!$(this).hasClass('active')){
+					$(this).addClass('active');					
+				}			
+			}else{
+				if($(this).hasClass('active')) {
+					$(this).removeClass('active');
+				}
+			}
+		});
+	}
 	
+	let currentScr, lastScr = 0;
+	function scrollEv(){
+		//현재 스크롤값
+		currentScr = $(window).scrollTop();
+
+		//스크롤 모션
+		headerScrollEvt();
+		scrollAni();
+
+		// 현재 스크롤값은 저장
+		lastScr = currentScr;
+	}
+	
+
+	$(window).on('scroll', function(){
+		scrollEv();
+	});
 
     exports.scrollMove = scrollMove;
     exports.bodyScrollBlock = bodyScrollBlock

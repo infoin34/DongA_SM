@@ -1,71 +1,246 @@
-<!DOCTYPE html>
-<html lang="kr">
+        <!DOCTYPE html>
+        <html lang="kr">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="format-detection" content="telephone=no">
-
-
+        <head>
+        	<meta charset="UTF-8">
+        	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        	<meta name="viewport" content="width=device-width, initial-scale=1">
+        	<meta name="apple-mobile-web-app-capable" content="yes">
+        	<meta name="format-detection" content="telephone=no">
 
 
-	<title>sample</title>
-	<!-- css -->
-	<link rel="stylesheet" href="../../static/css/common.css">
-	<!--//css -->
 
 
-	<!-- srcipt -->
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script src="../../static/js/common.ui.js"></script>
-	<!--//srcipt -->
-</head>
+        	<title>sample</title>
+        	<!-- css -->
+        	<link rel="stylesheet" href="../../static/css/common.css">
+        	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        	<!--//css -->
 
-<body>
-	<div id="wrap" role="main">
 
-		<header class="header">
-			<div class="header-inner">
-				<div class="header-top">
-					<h1>로고</h1>
-				</div>
-				<div class="gnb">
-					<ul class="gnb-depth1">
-						<li class="gnb-depth1-li">
-							<strong><a href="">수석문화재단</a></strong>
-							<ul class="gnb-depth2">
-								<li>
+        	<!-- srcipt -->
+        	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        	<script src="../../static/js/common.ui.js"></script>
+        	<!--//srcipt -->
+        </head>
 
-								</li>
-							</ul>
-						</li>
-						<li class="gnb-depth1-li">
-							<strong><a href="">사업소개</a></strong>
-							<ul class="gnb-depth2">
-								<li>
+        <body>
+        	<div id="wrap" role="main">
+        		<header class="header">
+        			<div class="header-inner">
+        				<div class="header-top">
+        					<a class="logo" href="#">
+        						<h1>로고</h1>
+        					</a>
+        				</div>
+        				<div class="gnb">
+        					<span class="gnb-line"></span>
+        					<ul class="gnb-depth1">
+        						<li class="gnb-depth1-li">
+        							<a href="#" data-js-gnb="trigger"><strong>수석문화재단</strong></a>
+        							<ul class="gnb-depth2" data-js-gnb="list">
+        								<li class="gnb-depth2-li">
+        									<a href="#">재단소개</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">이사장 인사말</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">임원소개</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">연혁</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">CI소개</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#" data-js-gnb="trigger">운영공시</a>
+        									<ul class="gnb-depth3">
+        										<li>
+        											<a href="#">결산서</a>
+        										</li>
+        										<li>
+        											<a href="#">기부금 모금액 및 활용실적</a>
+        										</li>
+        										<li>
+        											<a href="#">기부금 명세서</a>
+        										</li>
+        									</ul>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">정관</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">오시는 길</a>
+        								</li>
+        							</ul>
+        						</li>
+        						<li class="gnb-depth1-li">
+        							<a href="#" data-js-gnb="trigger"><strong>사업소개</strong></a>
+        							<ul class="gnb-depth2" data-js-gnb="list">
+        								<li class="gnb-depth2-li">
+        									<a href="#">장학사업</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#" data-js-gnb="trigger">학술사업</a>
+        									<ul class="gnb-depth3">
+        										<li>
+        											<a href="#">함춘동의학상</a>
+        										</li>
+        										<li>
+        											<a href="#">약사금탑상</a>
+        										</li>
+        									</ul>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">문화사업</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#" data-js-gnb="trigger">교육사업</a>
+        									<ul class="gnb-depth3">
+        										<li>
+        											<a href="#">함춘동의학상</a>
+        										</li>
+        										<li>
+        											<a href="#">약사금탑상</a>
+        										</li>
+        									</ul>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">출판사업</a>
+        								</li>
+        							</ul>
+        						</li>
+        						<li class="gnb-depth1-li">
+        							<a href="#" data-js-gnb="trigger"><strong>커뮤니티</strong></a>
+        							<ul class="gnb-depth2" data-js-gnb="list">
+        								<li class="gnb-depth2-li">
+        									<a href="#">재단소식</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">공지사항</a>
+        								</li>
+        								<li class="gnb-depth2-li">
+        									<a href="#">문의하기</a>
+        								</li>
+        							</ul>
+        						</li>
+        					</ul>
+        				</div>
+        				<div class="header-btnArea">
+        					<a href="#none" class="btn-support">후원하기</a>
+        					<button class="btn-menu">
+        						<span class="line1"></span>
+        						<span class="line2"></span>
+        						<span class="line3"></span>
+        					</button>
+        				</div>
+        			</div>
+        			<nav class="nav">
+        				<div class="nav-inner">
+        					<div class="nav-info">
+        						<div class="nav-support">
+        							<strong class="nav-supportTit">
+                        나눔을 통해<br />
+                        미래 인재의 희망을<br />
+                        특별하고 소중하게<br />
+                        만들어보세요
+                    </strong>
+        							<a href="#" class="nav-supportLink">후원 하러가기<i class="ico-arrowR"></i></a>
+        						</div>
+        						<ul class="nav-policy">
+        							<li><a href="#">개인정보보호정책</a></li>
+        							<li><a href="#">이메일무단수집거부</a></li>
+        						</ul>
+        					</div>
+        					<div class="nav-depth">
+        						<ul class="nav-depth1">
+        							<li class="nav-depth1-li">
+        								<a href="">수석문화재단</a>
+        								<ul class="nav-depth2">
+        									<li class="nav-depth2-li">
+        										<a href="">재단소개</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">이사장 인사말</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">임원소개</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">연혁</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">CI소개</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">오시는 길</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="" class="has-dept3">운영공시</a>
+        										<ul class="nav-depth3">
+        											<li><a href="">결산서</a></li>
+        											<li><a href="">기부금 모금액 및 활용실적</a></li>
+        											<li><a href="">기부금 명세서</a></li>
+        										</ul>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">정관</a>
+        									</li>
+        								</ul>
+        							</li>
+        							<li class="nav-depth1-li">
+        								<a href="">사업소개</a>
+        								<ul class="nav-depth2">
+        									<li class="nav-depth2-li">
+        										<a href="">장학사업</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">문화사업</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">출판사업</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="" class="has-dept3">학술사업</a>
+        										<ul class="nav-depth3">
+        											<li><a href="">함춘동의학상</a></li>
+        											<li><a href="">약사금탑상</a></li>
+        										</ul>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="" class="has-dept3">교육사업</a>
+        										<ul class="nav-depth3">
+        											<li><a href="">평생교육후원</a></li>
+        											<li><a href="">교육복지후원</a></li>
+        										</ul>
+        									</li>
+        								</ul>
+        							</li>
+        							<li class="nav-depth1-li">
+        								<a href="">커뮤니티</a>
+        								<ul class="nav-depth2">
+        									<li class="nav-depth2-li">
+        										<a href="">재단소식</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">공지사항</a>
+        									</li>
+        									<li class="nav-depth2-li">
+        										<a href="">문의하기</a>
+        									</li>
+        								</ul>
+        							</li>
+        						</ul>
+        					</div>
+        				</div>
+        			</nav>
+        		</header>
 
-								</li>
-							</ul>
-						</li>
-						<li class="gnb-depth1-li">
-							<strong><a href="">커뮤니티</a></strong>
-							<ul class="gnb-depth2">
-								<li>
-
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<div class="header-btnArea">
-					<button class="btn-support">후원하기<i class="ico-coin"></i></button>
-					<button class="btn-menu"></button>
-				</div>
-			</div>
-		</header>
-		<!-- 
+        		<!-- 
             ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
             
             예시)
@@ -81,259 +256,288 @@
             if(type == "dark"){<div class="header--dark">@@title</div>} 
         
         -->
-		<main class="wrapper">
-			<section class="main-spot">
-				<strong>세상을 더 이롭게, 행복한 삶을 만들어 갑니다.</strong>
-				<p>인류의 건강과 행복을 위한 끝없는 도전</p>
-				<div class="">
-					<p>미래를 더 가치있게<br>생명을 더 존엄하게</p>
-				</div>
-			</section>
-			<section class="philosophy">
-				<div class="section-title">
-					<h2>
-						<spna>Philosophy</spna>정도경영 철학
-					</h2>
-					<p>동아쏘시오그룹 경영철학인 ‘정도경영(鼎道經營)’은 곧 ‘사회책임경영’입니다.</p>
-				</div>
-				<a href="" class="btn-more"><span>VIEW MORE</span></a>
-				<div class="philosophy__list">
-					<ul>
-						<li>
-							<div class="">정도경영</div>
-							<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
-							<a href="" class="btn-more"><span>VIEW MORE</span></a>
-						</li>
-						<li>
-							<a href="">
-								<div class="">인권경영</div>
-								<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
-								<a href="" class="btn-more"><span>VIEW MORE</span></a>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<div class="">환경경영</div>
-								<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
-								<a href="" class="btn-more"><span>VIEW MORE</span></a>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<div class="">준법경영</div>
-								<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
-								<a href="" class="btn-more"><span>VIEW MORE</span></a>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<div class="">소비자중심 경영</div>
-								<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
-								<a href="" class="btn-more"><span>VIEW MORE</span></a>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="value">
-				<div class="section-title">
-					<h2>
-						<spna>Value</spna> 도전과<br>혁신으로<br>세상을<br>가치있게
-					</h2>
-					<p>동아쏘시오그룹 경영철학인 ‘정도경영(鼎道經營)’은 곧 ‘사회책임경영’입니다.</p>
-					<a href="" class="btn-more"><span>VIEW MORE</span></a>
-				</div>
-				<div class="">
-					<ul>
-						<li>
-							<div class="num">01</div>
-							<div class="">혁신 추구<span>Pursuing Innovation</span></div>
-							<p>새로운 시각으로 아이디어를 생산하고 성실함과 끈기를 통해 혁신의 생활화를 이루어나갑니다.</p>
-						</li>
-						<li>
-							<div class="num">02</div>
-							<div class="">변화 주도<span>Change-driven</span></div>
-							<p>흐름을 읽고 민첩하게 대응하며 언제나 열린 마음으로 새로운 변화를 위해 노력합니다.</p>
-						</li>
-						<li>
-							<div class="num">03</div>
-							<div class="">상호 신뢰<span>Mutual dependence</span></div>
-							<p>서로를 동등하고 일관된 자세로 대하며 적극적인 소통과 신뢰를 통해서 시너지를 창출합니다.</p>
-						</li>
-						<li>
-							<div class="num">04</div>
-							<div class="">함께 성장<span>Growing Up Together</span></div>
-							<p>나눔과 봉사를 통해 사회적 책임을 다하며 구성원, 고객, 사회와 함께하는 성장을 희망합니다.</p>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="news">
-				<div class="section-title">
-					<h2>
-						<spna>News</spna>최근 소식과 동향
-					</h2>
-					<p>동아쏘시오그룹의 다양한 소식을 만나볼 수 있습니다.</p>
-					<a href="" class="btn-more"><span>VIEW MORE</span></a>
-				</div>
-				<div class="news__list swiper-wrapper">
-					<ul>
+        		<main class="wrapper">
+        			<section class="sub-title">
+        				<article>
+        					<div class="wrap-innerA">
+        						<div class="sub-tit-a">
+        							<h2>재단소개</h2>
+        						</div>
+        					</div>
+        					<div class="sub-visual">
+        						<div class="sub-vTxt">
+        							<div class="round-txtWrap">
+        								<span>설립일</span>
+        								<p>타인을 위해 봉사할 수 있고 건강한 사회인으로 성장할 수 있도록</p>
+        								<strong>수석문화재단이 함께 하겠습니다</strong>
+        							</div>
+        						</div>
+        					</div>
 
-						<li>
-							<div class="">에스티팜</div>
-							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
-						<li>
-							<div class="">동아쏘시오홀딩스</div>
-							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
+        				</article>
+        			</section>
+        			<section class="main-spot">
+        				<strong>세상을 더 이롭게, 행복한 삶을 만들어 갑니다.</strong>
+        				<p>인류의 건강과 행복을 위한 끝없는 도전</p>
+        				<div class="">
+        					<p>미래를 더 가치있게<br>생명을 더 존엄하게</p>
+        				</div>
+        			</section>
+        			<section class="philosophy">
+        				<div class="section-title">
+        					<h2>
+        						<spna>Philosophy</spna>정도경영 철학
+        					</h2>
+        					<p>동아쏘시오그룹 경영철학인 ‘정도경영(鼎道經營)’은 곧 ‘사회책임경영’입니다.</p>
+        				</div>
+        				<a href="" class="btn-more"><span>VIEW MORE</span></a>
+        				<div class="philosophy__list">
+        					<ul>
+        						<li>
+        							<div class="">정도경영</div>
+        							<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
+        							<a href="" class="btn-more"><span>VIEW MORE</span></a>
+        						</li>
+        						<li>
+        							<a href="">
+        								<div class="">인권경영</div>
+        								<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
+        								<a href="" class="btn-more"><span>VIEW MORE</span></a>
+        							</a>
+        						</li>
+        						<li>
+        							<a href="">
+        								<div class="">환경경영</div>
+        								<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
+        								<a href="" class="btn-more"><span>VIEW MORE</span></a>
+        							</a>
+        						</li>
+        						<li>
+        							<a href="">
+        								<div class="">준법경영</div>
+        								<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
+        								<a href="" class="btn-more"><span>VIEW MORE</span></a>
+        							</a>
+        						</li>
+        						<li>
+        							<a href="">
+        								<div class="">소비자중심 경영</div>
+        								<p>동호 회장의 따뜻한 마음과 '가마솥 정신'</p>
+        								<a href="" class="btn-more"><span>VIEW MORE</span></a>
+        							</a>
+        						</li>
+        					</ul>
+        				</div>
+        			</section>
+        			<section class="value">
+        				<div class="section-title">
+        					<h2>
+        						<spna>Value</spna> 도전과<br>혁신으로<br>세상을<br>가치있게
+        					</h2>
+        					<p>동아쏘시오그룹 경영철학인 ‘정도경영(鼎道經營)’은 곧 ‘사회책임경영’입니다.</p>
+        					<a href="" class="btn-more"><span>VIEW MORE</span></a>
+        				</div>
+        				<div class="">
+        					<ul>
+        						<li>
+        							<div class="num">01</div>
+        							<div class="">혁신 추구<span>Pursuing Innovation</span></div>
+        							<p>새로운 시각으로 아이디어를 생산하고 성실함과 끈기를 통해 혁신의 생활화를 이루어나갑니다.</p>
+        						</li>
+        						<li>
+        							<div class="num">02</div>
+        							<div class="">변화 주도<span>Change-driven</span></div>
+        							<p>흐름을 읽고 민첩하게 대응하며 언제나 열린 마음으로 새로운 변화를 위해 노력합니다.</p>
+        						</li>
+        						<li>
+        							<div class="num">03</div>
+        							<div class="">상호 신뢰<span>Mutual dependence</span></div>
+        							<p>서로를 동등하고 일관된 자세로 대하며 적극적인 소통과 신뢰를 통해서 시너지를 창출합니다.</p>
+        						</li>
+        						<li>
+        							<div class="num">04</div>
+        							<div class="">함께 성장<span>Growing Up Together</span></div>
+        							<p>나눔과 봉사를 통해 사회적 책임을 다하며 구성원, 고객, 사회와 함께하는 성장을 희망합니다.</p>
+        						</li>
+        					</ul>
+        				</div>
+        			</section>
+        			<section class="news">
+        				<div class="section-title">
+        					<h2>
+        						<spna>News</spna>최근 소식과 동향
+        					</h2>
+        					<p>동아쏘시오그룹의 다양한 소식을 만나볼 수 있습니다.</p>
+        					<a href="" class="btn-more"><span>VIEW MORE</span></a>
+        				</div>
+        				<div class="news__list swiper-wrapper">
+        					<ul>
 
-						<li>
-							<div class="">에스티팜</div>
-							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
-						<li>
-							<div class="">동아쏘시오홀딩스</div>
-							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
+        						<li>
+        							<div class="">에스티팜</div>
+        							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
+        						<li>
+        							<div class="">동아쏘시오홀딩스</div>
+        							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
 
-						<li>
-							<div class="">에스티팜</div>
-							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
-						<li>
-							<div class="">동아쏘시오홀딩스</div>
-							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
+        						<li>
+        							<div class="">에스티팜</div>
+        							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
+        						<li>
+        							<div class="">동아쏘시오홀딩스</div>
+        							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
 
-						<li>
-							<div class="">에스티팜</div>
-							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
-						<li>
-							<div class="">동아쏘시오홀딩스</div>
-							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
+        						<li>
+        							<div class="">에스티팜</div>
+        							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
+        						<li>
+        							<div class="">동아쏘시오홀딩스</div>
+        							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
 
-						<li>
-							<div class="">에스티팜</div>
-							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
-						<li>
-							<div class="">동아쏘시오홀딩스</div>
-							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
-							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
-						</li>
+        						<li>
+        							<div class="">에스티팜</div>
+        							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
+        						<li>
+        							<div class="">동아쏘시오홀딩스</div>
+        							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
 
-					</ul>
-				</div>
-			</section>
-			<section class="business">
-				<div class="section-title">
-					<h2>
-						<spna>Business</spna>동아쏘시오그룹 소개
-					</h2>
-					<p>사업 영역의 경쟁력 Global Healthcare</p>
-					<a href="" class="btn-more"><span>VIEW MORE</span></a>
-				</div>
-				<div class="">
-					<ul>
-						<li>
-							<p>물류</p>
-						</li>
-						<li>
-							<p>제약</p>
-						</li>
-						<li>
-							<p>식음료</p>
-						</li>
-						<li>
-							<p>포장용기</p>
-						</li>
-						<li>
-							<p>기계부품</p>
-						</li>
-						<li>
-							<p>정보통신</p>
-						</li>
-						<li>
-							<p>건설</p>
-						</li>
-						<li>
-							<p>해외</p>
-						</li>
-					</ul>
-				</div>
-			</section>
-		</main>
+        						<li>
+        							<div class="">에스티팜</div>
+        							<div class="">제2 올리고 생산기지 확보로 세계 1위 노린다</span></div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
+        						<li>
+        							<div class="">동아쏘시오홀딩스</div>
+        							<div class="">LS이링크와 EV충전 인프라 구축 MOU체결</div>
+        							<p>동아쏘시오홀딩스(대표이사 사장 정재훈)는 LS용산타워에서 전기차 충전 솔루션 회사인 LS이링크와 ‘EV충전 인프라 구축 업무 협약(MOU)’를 체결했습니다.</p>
+        						</li>
 
-		<div class="footer">
-			<div class="footer-inner">
-				<div class="footer-logo">
-					<h2>LOGO <img src="../../static/images/footer-logo.png" alt=""></h2>
-				</div>
-				<div class="footer-info">
-					<div class="footer-link">
-						<div class="footer-linkCont">
-							<strong>Another site</strong>
-							<ul>
-								<li>
-									<a>개인정보보호정책</a>
-								</li>
-								<li>
-									<a>이메일무단수집거부</a>
-								</li>
-								<li>
-									<a class="hasIco">동아쏘시오홀딩스</a>
-								</li>
-							</ul>
-						</div>
-						<div class="footer-linkCont">
-							<strong>Address</strong>
-							<span>서울시 동대문구 천호대로</span>
-						</div>
-						<div class="footer-linkCont">
-							<strong>Contact</strong>
-							<a href="tel:02-920-8114">02-920-8114</a>
-						</div>
-						<p class="footer-copyright">Copyrightⓒ DONG-A SOCIO HOLDINGS. All Rights Reserved.</p>
-					</div>
-					<div class="footer-familySite">
-						<button class="footer-familySelect">
-							Family Site
-							<i class="ico-plus"></i>
-						</button>
-						<ul class="footer-familyList">
-							<li class="footer-familyList"><a href="" target="_blank"></a></li>
-						</ul>
-						<ul class="footer-partner">
-							<li>
-								<a href="" class="footer-partnerLi"></a>
-							</li>
-							<li>
-								<a href="" class="footer-partnerLi"></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<a class="btn-top">TOP</a>
-	</div>
-</body>
-<!-- 페이지 관련 스크립트 -->
-<script>
+        					</ul>
+        				</div>
+        			</section>
+        			<section class="business">
+        				<div class="section-title">
+        					<h2>
+        						<spna>Business</spna>동아쏘시오그룹 소개
+        					</h2>
+        					<p>사업 영역의 경쟁력 Global Healthcare</p>
+        					<a href="" class="btn-more"><span>VIEW MORE</span></a>
+        				</div>
+        				<div class="">
+        					<ul>
+        						<li>
+        							<p>물류</p>
+        						</li>
+        						<li>
+        							<p>제약</p>
+        						</li>
+        						<li>
+        							<p>식음료</p>
+        						</li>
+        						<li>
+        							<p>포장용기</p>
+        						</li>
+        						<li>
+        							<p>기계부품</p>
+        						</li>
+        						<li>
+        							<p>정보통신</p>
+        						</li>
+        						<li>
+        							<p>건설</p>
+        						</li>
+        						<li>
+        							<p>해외</p>
+        						</li>
+        					</ul>
+        				</div>
+        			</section>
+        		</main>
 
-</script>
-<!--//페이지 관련 스크립트 -->
+        		<div class="footer">
+        			<div class="footer-inner">
+        				<div class="footer-logo">
+        					<h2>LOGO <img src="../../static/images/footer-logo.png" alt=""></h2>
+        				</div>
+        				<div class="footer-left">
+        					<div class="footer-info">
+        						<div class="footer-link">
+        							<div class="footer-linkCont">
+        								<strong>Another site</strong>
+        								<ul>
+        									<li>
+        										<a>개인정보보호정책</a>
+        									</li>
+        									<li>
+        										<a>이메일무단수집거부</a>
+        									</li>
+        									<li>
+        										<a class="hasIco s">동아쏘시오홀딩스<i class="ico-link"></i></a>
+        									</li>
+        								</ul>
+        							</div>
+        							<div class="footer-linkCont">
+        								<strong>Address</strong>
+        								<span class="hasIco"><i class="ico-pin"></i>서울시 동대문구 천호대로</span>
+        							</div>
+        							<div class="footer-linkCont">
+        								<strong>Contact</strong>
+        								<a class="hasIco" href="tel:02-920-8114"><i class="ico-phone"></i>02-920-8114</a>
+        							</div>
+        						</div>
+        						<div class="footer-familySite">
+        							<button class="footer-familySelect">
+        								Family Site
+        								<i class="ico-plus"></i>
+        							</button>
+        							<ul class="footer-familyList">
+        								<li><a class="footer-familyLi">동아쏘시오홀딩스</a></li>
+        								<li><a class="footer-familyLi">수석문화재단</a></li>
+        								<li><a class="footer-familyLi">동아제약</a></li>
+        							</ul>
+        							<ul class="footer-partner">
+        								<li>
+        									<a href="" class="footer-partnerLi">
+        										<img src="../../static/images/partner01.svg" alt="">
+        									</a>
+        								</li>
+        								<li>
+        									<a href="" class="footer-partnerLi">
+        										<img src="../../static/images/partner02.svg" alt="">
+        									</a>
+        								</li>
+        							</ul>
+        						</div>
+        					</div>
+        					<p class="footer-copyright">Copyrightⓒ DONG-A SOCIO HOLDINGS. All Rights Reserved.</p>
+        				</div>
+        			</div>
+        		</div>
+        		<a class="btn-top" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+        		<script>
+        		</script>
+        	</div>
+        </body>
+        <!-- 페이지 관련 스크립트 -->
+        <script>
 
-</html>
+        </script>
+        <!--//페이지 관련 스크립트 -->
+
+        </html>

@@ -20,6 +20,9 @@
     .ico-next{
         width:40px; height:40px; background: svgIcoNext('444444'); background-size:100% 100%;
     }
+    .ico-pre{
+        width:40px; height:40px; background: svgIcoPre('444444'); background-size:100% 100%;
+    }
     .ico-pin{
         width:20px; height:20px; background: svgIcoPin('fff'); background-size:100% 100%;
     }
@@ -28,6 +31,15 @@
     }
     .ico-coin{
         width:16px; height:16px; background: svgIcoCoin('444444', '00D4CD'); background-size:100% 100%;
+    }
+    .ico-establish{
+        width:100px; height:100px; background: svgIcoEstablish(); background-size:100% 100%;
+    }
+    .ico-scholarshipStdt{
+        width:100px; height:100px; background: svgIcoScholarshipStdt(); background-size:100% 100%;
+    }
+    .ico-scholarship{
+        width:100px; height:100px; background: svgIcoScholarship(); background-size:100% 100%;
     }
   
 }
