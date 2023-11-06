@@ -71,7 +71,7 @@
         backdrop-filter: blur(24px);
 
         &::after {
-            opacity: 1;
+            opacity: 0.5;
             background-color: $color-default;
             @include transition(opacity, 0.4s);
         }
@@ -1190,7 +1190,6 @@
 @media screen and (max-width: 1200px) {
     .nav-inner {
         flex-direction: column;
-        padding: 2rem 0;
     }
 
     .nav-info {
@@ -1200,10 +1199,6 @@
         padding-bottom: 4.8rem;
         margin-bottom: 4.8rem;
     }
-    
-    .supportCont-countUP .countUP {
-        font-size: 8.5rem;
-    }
 
     .businessCont-img{
         left: 50%;
@@ -1212,68 +1207,26 @@
 
     .footer-inner {
         flex-direction: column;
-        gap: 6rem;
+        gap: 7rem;
     }
 
     .footer-copyright {
-        margin-top: 4rem;
-        color: $color-222;
+        margin-top: 3.6rem;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .header {
-        height: 7rem;
-    }
     .gnb {
         display: none;
-    }
-    .header-inner {
-        height: 7rem;
-    }
-    .header-top {
-        width: 6rem;
-        height: 5.1rem;
-    }
-    .header-btnArea {
-        height: 7rem;
-    }
-    .nav-depth1-li {
-        gap: 5.8rem;
     }
 
     .businessCont-info {
         width: 100%;
     }
 
-    .mainSlide .wrap-inner {
-        padding: 0px 7rem;
-    }
-    .mainSlide-nav .mainSlide-pagination {
-        left: 7rem !important;
-    }
-
-    .mainCont:not(:first-of-type) {
-        padding-top: 8rem;
-        padding-bottom: 10rem;
-
-        .wrap-inner{
-            gap: 6rem;
-        }
-    }
-    
-    .main-tit {
-        font-size: 6rem;
-        line-height: 7.5rem;
-    }
-    .mainCont-tit strong{
-        font-size: 4rem;
-        line-height: 5.3rem;
-    }
     .supportCont-list {
         flex-direction: column;
         align-items: center;
-        gap: 4rem;
     }
     .businessCont-inner {
         flex-direction: column;
@@ -1285,8 +1238,11 @@
         flex-basis: 100%;
         min-height: auto;
     }
+    .infoSlide {
+        padding-top: 0rem;
+    }
     .infoSlide-nav {
-        margin-top: 2rem;
+        margin-top: 3.2rem;
     }
 
     .businessCont-img {
@@ -1326,12 +1282,8 @@
     
 
     .footer{
-        &-logo{
-        width: 21.1rem;
-        }
         &-info{
             flex-direction: column;
-            gap: 4rem;
         }
         &-familyList {
             top: 0px;
@@ -1396,21 +1348,6 @@
 
         &-partner {
             margin-top: 5rem;
-        }
-    }
-
-    .btn{
-        &-top{
-            width: 5rem;
-            height: 5rem;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            font-size: 1.4rem;
-
-            i {
-                width: 14px;
-                height: 14px;
-            }
         }
     }
 }

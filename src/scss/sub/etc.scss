@@ -75,15 +75,20 @@
         background: svgIcoPre('fff');
         background-size: 100% 100%;
         border: none;
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 2.4rem;
+        height: 2.4rem;
         
         &-g {
             background: svgIcoPre('ccc');
             background-size: 100% 100%;
             border: none;
-            width: 3.2rem;
-            height: 3.2rem;
+            width: 2.4rem;
+            height: 2.4rem;
+
+            &.w-40x {
+                width: 4rem;
+                height: 4rem;
+            }
         }
 
         &.swiper-button-disabled {
@@ -101,15 +106,20 @@
         background: svgIcoNext('fff');
         background-size: 100% 100%;
         border: none;
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 2.4rem;
+        height: 2.4rem;
         
         &-g {
             background: svgIcoNext('ccc');
             background-size: 100% 100%;
             border: none;
-            width: 3.2rem;
-            height: 3.2rem;
+            width: 2.4rem;
+            height: 2.4rem;
+
+            &.w-40x {
+                width: 4rem;
+                height: 4rem;
+            }
         }
 
         &.swiper-button-disabled {
@@ -354,12 +364,6 @@
 }
 
 @media screen and (max-width: 992px) {
-    .btn-top {
-        width: 4.5rem;
-        height: 4.5rem;    
-        bottom: 4.1rem;
-        left: calc(100% - 12.4rem);
-    }
     .scrollDown-line{
         height: 10rem;
         &::after {

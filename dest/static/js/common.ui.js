@@ -224,7 +224,6 @@
 				$header.removeClass("open");
 				$header.toggleClass("is-full");
 				$list.hide();
-				$gnb.stop().fadeToggle();
 				$header.find(".header-top").stop().fadeToggle();
 				$(this).siblings(".btn-support").stop().fadeToggle(200);
 				$nav.stop().fadeToggle();
@@ -235,6 +234,12 @@
 				let $line2 = $(this).find(".line2");
 				let $line3 = $(this).find(".line3");
 				let $lineW = $line1.width();
+
+				if (window.innerWidth > 992) {
+					$gnb.stop().fadeToggle();
+				}else {
+					$gnb.hide();
+				}
 
 				if( $(this).hasClass("on") === true){
 					$header.css('height', '100vh');
@@ -254,7 +259,7 @@
 						$header.css({ "overflow-y" : "scroll" });
 					}, 300)
 				}else {
-					$header.css('height', '10rem');
+					$header.css('height', $headerH);
 					$btnAni.set( $line1, { y: 11, rotate: 45 })
 					$btnAni.set( $line2, { width: 0 })
 					$btnAni.set( $line3, { y: -11, rotate: -45 })
