@@ -288,7 +288,6 @@
 			$list.stop().slideToggle()
 		});
 	}
-	
 
 	/* 헤더 스크롤시 */ 
 	function headerScrollEvt(){
@@ -306,7 +305,7 @@
 		}
 	}
 
-	/* 스크롤 이벤트*/
+	/* 스크롤 애니 이벤트*/
 	function scrollAni(){
 		let setScrT = parseInt(currentScr + ($(window).height()*0.9));		
 		$('.ani').each(function(i){	
@@ -334,11 +333,33 @@
 		// 현재 스크롤값은 저장
 		lastScr = currentScr;
 	}
-	
-
 	$(window).on('scroll', function(){
 		scrollEv();
 	});
+
+	/* 입력필드(검색) */ 
+	function textFeildEvt(){
+		$(".txtField").each(function(){
+			let $this = $(this);
+			let $input = $this.find(".tf-input");
+			let $delete = $this.find(".tf-delete");
+
+			$input.on({
+				focus: function(){
+					$delete.addClass("on");
+				}
+			});
+
+			$delete.on({
+				click: function(){
+					console.log($input);
+					$input.val("");
+					$(this).removeClass("on");
+				}
+			});
+
+		})
+	}
 
     exports.scrollMove = scrollMove;
     exports.bodyScrollBlock = bodyScrollBlock
@@ -349,5 +370,6 @@
 		headerEvt()
 		headerScrollEvt()
 		toggleFamily()
+		textFeildEvt()
 	});
 })(window, jQuery);

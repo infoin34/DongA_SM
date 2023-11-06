@@ -62,11 +62,6 @@ $color-A2A5BC : #A2A5BC;
     font-size: 2.4rem;
     line-height: 3.2rem;
     letter-spacing: -0.02em;
-
-    @media screen and (max-width: 992px) {
-        font-size: 1.8rem;
-        line-height: 2.4rem;
-    }
 }
 @mixin txt-20x {
     font-weight: 600;
@@ -78,11 +73,6 @@ $color-A2A5BC : #A2A5BC;
     font-size: 1.8rem;
     line-height: 2.8rem;
     letter-spacing: -0.02em;
-
-    @media screen and (max-width: 992px) {
-        font-size: 1.6rem;
-        line-height: 2.6rem;
-    }
 }
 @mixin txt-14x {
     font-weight: 500;

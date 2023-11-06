@@ -561,26 +561,72 @@
 }
 
 // 서브 레이아웃
-.sub{
-    &-title {
-        margin-top: 24rem;
+.subCont {
+    &:last-of-type {
+        padding-bottom: 18rem;
+    }
 
-        .wrap-inner{
-            display: flex;
-            flex-direction: column;
-            gap: 8rem;
+    &.sub-list {
+        padding-bottom: 16rem;
+    }
+}
+
+.sub{
+    &-titB{
+        margin-bottom: 8rem;
+    }
+}
+
+.subTit {
+    margin-top: 22rem;
+
+    &-a{
+        // 센터형식
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h2 {
+            @include txt-48x; 
         }
     }
 
-    &-tit{
-        &-a{
-            // 센터형식
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
+    &-b{
+        // 센터형식
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        justify-content: flex-start;
 
-            h2 {
-                @include txt-48x; 
+        overflow: hidden;
+
+        h2 {
+            opacity: 0;
+            transform: translateX(-100%);
+            align-self: flex-start;
+            @include txt-48x;
+
+            animation: 1s 0.2s subTitB01 forwards $cubicTxt;
+
+            @keyframes subTitB01 {
+                0% { transform: translateX(-80%); opacity: 0; }
+                100% { transform: translateX(0); opacity: 1; }
+            }
+        }
+
+        p {
+            opacity: 0;
+            transform: translateX(-100%);
+            align-self: flex-start;
+            @include txt-18x;
+            color: $color-666;
+
+            animation: 1.3s 0.4s subTitB02 forwards $cubicTxt;
+
+            @keyframes subTitB02 {
+                0% { transform: translateX(-80%); opacity: 0; }
+                100% { transform: translateX(0); opacity: 1; }
             }
         }
     }
@@ -1075,7 +1121,7 @@
     }
     &-li {
         flex-grow: 1;
-        flex-basis: auto;
+        flex-basis: 100%;
     }
     &-img {
         width: 100%;
@@ -1108,6 +1154,7 @@
         @include txt-24x;
         color: $color-222;
         margin-bottom: 2rem;
+        min-height: 6.4rem;
     }
     &-txt {
         display: -webkit-box;
@@ -1117,6 +1164,7 @@
         @include txt-18x;
         color: $color-666;
         margin-bottom: 3.4rem;
+        min-height: 8.4rem;
     }
     &-ico {
         display: block;

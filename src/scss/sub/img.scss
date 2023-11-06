@@ -17,6 +17,32 @@
     .ico-arrowR{
         width:24px; height:24px; background: svgIcoArrowR('000'); background-size:100% 100%;
     }
+    .ico-paginP{
+        width:40px; height:40px; background: svgIcoPaginf('000'); background-size:24px 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .ico-paginPre{
+        width:40px; height:40px; background: svgIcoPaginpre('000'); background-size:24px 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .ico-paginNext{
+        width:40px; height:40px; background: svgIcoPaginnext('000'); background-size:24px 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .ico-paginLast{
+        width:40px; height:40px; background: svgIcoPaginlast('000'); background-size:24px 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .ico-tfdelete{
+        width:26px; height:26px; background: svgIcoTfDelte('909090'); background-size:100% 100%;
+    }
+    .ico-tfsearch{
+        width:26px; height:26px; background: svgIcoTfSearch('000'); background-size:100% 100%;
+    }
     .ico-next{
         width:40px; height:40px; background: svgIcoNext('444444'); background-size:100% 100%;
     }

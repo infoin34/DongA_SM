@@ -62,3 +62,33 @@
     $icon: "data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='32.5' cy='50.5' r='29' stroke='%231800B7' stroke-width='3'/%3E%3Cpath d='M18 42L25.2 62L32.4 45.0769L39.6 62L46 42' stroke='%2300D4CD' stroke-width='3' stroke-linecap='square' stroke-linejoin='round'/%3E%3Cpath d='M17 52.334H21' stroke='%2300D4CD' stroke-width='3' stroke-linecap='square' stroke-linejoin='round'/%3E%3Cpath d='M44 52H48' stroke='%2300D4CD' stroke-width='3' stroke-linecap='square' stroke-linejoin='round'/%3E%3Cpath d='M54.6372 31.9661C58.5989 32.2625 63.0387 32.4285 67.7276 32.4285C84.4462 32.4285 97.9992 30.3179 97.9992 27.7142C97.9992 25.1106 84.4462 23 67.7276 23C58.7621 23 50.707 23.607 45.1641 24.5714' stroke='%231800B7' stroke-width='3'/%3E%3Cpath d='M97.9961 44.2148C97.9961 47.2524 84.0768 49.7148 66.9063 49.7148C65.0623 49.7148 63.2558 49.6864 61.5 49.6319' stroke='%231800B7' stroke-width='3'/%3E%3Cpath d='M97.9955 58.3574C97.9955 61.395 84.0761 63.8574 66.9057 63.8574C63.9929 63.8574 61.1736 63.7865 58.5 63.654' stroke='%231800B7' stroke-width='3'/%3E%3Cpath d='M97.998 27.7148V70.9288C97.998 74.8342 84.0787 78.0002 66.9083 78.0002C58.6121 78.0002 51.0749 77.2611 45.5 76.0566' stroke='%231800B7' stroke-width='3'/%3E%3C/svg%3E ";
     @return url($icon);
 }
+@function svgIcoTfDelte($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z' fill='#{$color}'/%3E%3Cpath d='M7.19971 6L18 16.8L16.7998 18L6 7.2L7.19971 6Z' fill='white'/%3E%3Cpath d='M18 7.2L7.19971 18L6 16.8L16.7998 6L18 7.2Z' fill='white'/%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
+@function svgIcoTfSearch($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 15C3 21.6274 8.37258 27 15 27C21.6274 27 27 21.6274 27 15C27 8.37258 21.6274 3 15 3C8.37258 3 3 8.37258 3 15Z' stroke='#{$color}' stroke-width='2'/%3E%3Cpath d='M24 24L30 30' stroke='#{$color}' stroke-width='2'/%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
+@function svgIcoPaginf($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%0A%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_802_6555)'%3E%3Cpath d='M12 16.59L7.67341 12L12 7.41L10.668 6L5 12L10.668 18L12 16.59Z' fill='#{$color}'/%3E%3Cpath d='M19 16.59L14.6734 12L19 7.41L17.668 6L12 12L17.668 18L19 16.59Z' fill='#{$color}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_802_6555'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
+@function svgIcoPaginpre($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_802_6560)'%3E%3Cpath d='M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z' fill='#{$color}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_802_6560'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
+@function svgIcoPaginnext($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_802_6584)'%3E%3Cpath d='M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z' fill='#{$color}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_802_6584'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
+@function svgIcoPaginlast($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_802_6588)'%3E%3Cpath d='M12 16.59L16.3266 12L12 7.41L13.332 6L19 12L13.332 18L12 16.59Z' fill='#{$color}'/%3E%3Cpath d='M5 16.59L9.32659 12L5 7.41L6.33198 6L12 12L6.33198 18L5 16.59Z' fill='#{$color}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_802_6588'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
