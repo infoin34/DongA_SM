@@ -8,8 +8,13 @@
 	<meta name="viewport" content="width=960">
 	<title>마크업</title>
 	<link rel="stylesheet" href="../markup/markup.css" />
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="../markup/markup.js"></script>
+	<!-- build:css -->
+	 <link rel="stylesheet" href="../markup/markup.css" />
+	 <!-- endbuild -->
+	 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	 <!-- build:js -->
+	 <script src="../markup/markup.js"></script>
+	 <!-- endbuild -->
 	<script>
 		//state-> 완료: end , 진행중: ing 		  
 		const markupList = [
@@ -25,16 +30,18 @@
 			},
 			{
 				'메인' : [
-					{'depth2': '메인',  'depth3': '', 'info': '','src': 'main/SS_MAIN_PAGE', 'state':'ing'}
+					{'depth2': '메인',  'depth3': '', 'info': '','src': 'main/SS_MAIN_PAGE', 'state':'end'}
 				]
 			},	
 			{
 				'수석문화재단' : [
 					{'depth2': '재단소개', 'info': '','src': 'sample/sample', 'state':''},
 					{'depth2': 'CEO 인사말', 'info': '','src': 'sample/sample', 'state':''},
-					{'depth2': '가치 및 비전', 'info': '', 'src': 'bb/bb', 'state':'ing'},
-					{'depth2': '연혁', 'info': '', 'src': 'bb/aa', 'state':'end'},
-					{'depth2': 'CI소개', 'info': '', 'src': 'cc/aa', 'state':''}
+					{'depth2': '가치 및 비전', 'info': '', 'src': 'bb/bb', 'state':''},
+					{'depth2': '연혁', 'info': '', 'src': 'bb/aa', 'state':''},
+					{'depth2': 'CI소개', 'info': '', 'src': 'cc/aa', 'state':''},
+					{'depth2': '운영공시', 'info': '', 'src': 'sub/SS_SUB_INT_IR', 'state':'ing'},
+					{'depth2': '운영공시 - 상세', 'info': '', 'src': 'sub/SS_SUB_INT_IR2', 'state':'ing'}
 				]
 			},
 			{
@@ -48,7 +55,10 @@
 			},
 			{
 				'커뮤니티' : [
-					{'depth2': '재단소식', 'depth3': '', 'info': '','src': 'sub/SS_ADM_POS_GALLERY', 'state':''},
+					{'depth2': '재단소식', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NEWS', 'state':'ing'},
+					{'depth2': '재단소식 - 상세', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NEWS_VIEW', 'state':'ing'},
+					{'depth2': '공지사항', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE', 'state':'ing'},
+					{'depth2': '공지사항 - 상세', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE2', 'state':'ing'},
 				]
 			},
 		]

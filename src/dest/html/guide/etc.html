@@ -13,8 +13,8 @@
 
 	<title>guide</title>
 	<!-- css -->
-	<link rel="stylesheet" href="../../static/css/common.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="../../static/css/common.css">
 	<!--//css -->
 
 
@@ -23,6 +23,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="../../static/js/common.ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
 	<!--//srcipt -->
 	<link rel="stylesheet" href="../../static/css/guide.css">
 </head>
@@ -124,13 +125,26 @@
 					</colgroup>
 					<thead>
 						<tr>
-							<th scope="col" colspan="2">구분</th>
+							<th scope="col" colspan="3">구분</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<th></th>
-							<td></td>
+							<th>셀렉트 박스</th>
+							<td>
+								<select name="" id="" class="cSelect">
+									<option value="opt1">옵션1</option>
+									<option value="opt2">옵션2</option>
+								</select>
+							</td>
+							<td>
+								<pre class="view-code">
+                                    &lt;select name="" id="" class="cSelect"&gt;
+                                        &lt;option value="opt1"&gt;옵션1&lt;/option&gt;
+                                        &lt;option value="opt2"&gt;옵션2&lt;/option&gt;
+                                    &lt;/select&gt;
+                                </pre>
+							</td>
 						</tr>
 					</tbody>
 				</table>

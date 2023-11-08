@@ -19,6 +19,11 @@
     $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.87259 2.12704V13.8759' stroke='#{$color}' stroke-width='1.75' stroke-linecap='round'/%3E%3Cpath d='M2.65088 7.34863L7.87259 2.12692L13.0943 7.34863' stroke='#{$color}' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A";
     @return url($icon);
 }
+@function svgIcoArrowL($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.72192 5L1.6 12.4M1.6 12.4L8.72192 19.8M1.6 12.4H24' stroke='#{$color}' stroke-width='2'/%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
 @function svgIcoArrowR($color){
     $color: '%23'+$color;
     $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.2333 7.02225L14.6604 1.33374L16.1626 0L24 8L16.1626 16L14.6604 14.6663L20.2333 8.97775H0V7.02225H20.2333Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
@@ -48,6 +53,21 @@
     $color: '%23'+$color;
     $color2: '%23'+$color2;
     $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.3746 15.6H14.9746V14.4H14.3746V15.6ZM1.36328 15.6H14.3746V14.4H1.36328V15.6Z' fill='#{$color}'/%3E%3Cpath d='M4 13.9144C2.18652 12.6327 1 10.5032 1 8.09287C1 4.17558 4.13401 1 8 1C11.866 1 15 4.17558 15 8.09287C15 10.5032 13.8135 12.6327 12 13.9144' stroke='#{$color}' stroke-width='1.2'/%3E%3Cpath d='M4.85938 6.25L6.51619 10.625L8.17301 6.6875L9.82983 10.625L11.3026 6.25' stroke='#{$color2}' stroke-width='1.2' stroke-linecap='square' stroke-linejoin='round'/%3E%3Cpath d='M4.5 8.5H5.5M11.9375 8.5H11' stroke='#{$color2}' stroke-width='1.2' stroke-linecap='square'/%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
+@function svgIcoFile($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 2V1.25H3.25V2H4ZM20 22V22.75H20.75V22H20ZM4 22H3.25V22.75H4V22ZM13.4118 2L13.9452 1.47282C13.8043 1.33024 13.6122 1.25 13.4118 1.25V2ZM20 8.66667H20.75C20.75 8.46929 20.6722 8.27987 20.5335 8.13948L20 8.66667ZM20 21.25H4V22.75H20V21.25ZM4.75 22V2H3.25V22H4.75ZM4 2.75H13.4118V1.25H4V2.75ZM19.25 8.66667V22H20.75V8.66667H19.25ZM12.8783 2.52718L19.4665 9.19385L20.5335 8.13948L13.9452 1.47282L12.8783 2.52718Z' fill='#{$color}'/%3E%3Cpath d='M12.5723 2V9.61905H19.2389' stroke='#{$color}' stroke-width='1.5'/%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
+@function svgIcoDown($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.1588 10.813L12.0136 17.7968M12.0136 17.7968L4.86838 10.813M12.0136 17.7968V2.00004' stroke='#{$color}' stroke-width='1.5'/%3E%3Cpath d='M2 21.999H21.9992' stroke='#{$color}' stroke-width='1.5'/%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
+@function svgIcoDropdown($color){
+    $color: '%23'+$color;
+    $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 8L6 8L12 15L18 8Z' fill='#{$color}'/%3E%3C/svg%3E%0A";
     @return url($icon);
 }
 @function svgIcoEstablish(){
@@ -90,5 +110,9 @@
 @function svgIcoPaginlast($color){
     $color: '%23'+$color;
     $icon: "data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_802_6588)'%3E%3Cpath d='M12 16.59L16.3266 12L12 7.41L13.332 6L19 12L13.332 18L12 16.59Z' fill='#{$color}'/%3E%3Cpath d='M5 16.59L9.32659 12L5 7.41L6.33198 6L12 12L6.33198 18L5 16.59Z' fill='#{$color}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_802_6588'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A";
+    @return url($icon);
+}
+@function svgIcoGallery(){
+    $icon: "data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='28' cy='28' r='22' fill='white'/%3E%3Ccircle cx='28' cy='28' r='22' fill='%234E79B3' fill-opacity='0.2'/%3E%3Cpath d='M6 9H19L21 3H35L37 9H50V35H6V9Z' fill='white' stroke='%23444444' stroke-width='2'/%3E%3Ccircle cx='28' cy='21' r='10' stroke='%231800B7' stroke-width='2'/%3E%3Cpath d='M25 7H31' stroke='%231800B7' stroke-width='2'/%3E%3Crect x='11' y='35' width='34' height='18' stroke='%23444444' stroke-width='2'/%3E%3Crect x='15' y='35' width='26' height='12' stroke='%23444444' stroke-width='2'/%3E%3C/svg%3E%0A";
     @return url($icon);
 }

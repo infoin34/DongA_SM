@@ -14,8 +14,20 @@
     .ico-linkTop{
         width:16px; height:16px; background: svgIcoLinkTop('000'); background-size:100% 100%;
     }
+    .ico-arrowL{
+        width:24px; height:24px; background: svgIcoArrowL('000'); background-size:100% 100%;
+    }
     .ico-arrowR{
         width:24px; height:24px; background: svgIcoArrowR('000'); background-size:100% 100%;
+    }
+    .ico-file{
+        width:24px; height:24px; background: svgIcoFile('444'); background-size:100% 100%;
+    }
+    .ico-down{
+        width:24px; height:24px; background: svgIcoDown('444'); background-size:100% 100%;
+    }
+    .ico-dropDown{
+        width:24px; height:24px; background: svgIcoDropdown('444'); background-size:100% 100%;
     }
     .ico-paginP{
         width:40px; height:40px; background: svgIcoPaginf('000'); background-size:24px 24px;
@@ -66,6 +78,9 @@
     }
     .ico-scholarship{
         width:100px; height:100px; background: svgIcoScholarship(); background-size:100% 100%;
+    }
+    .ico-gallery{
+        width:100px; height:100px; background: #fff svgIcoGallery() no-repeat center ; border-radius: 50%;
     }
   
 }

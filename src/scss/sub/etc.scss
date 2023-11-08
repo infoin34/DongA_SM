@@ -79,6 +79,14 @@
         @include transition(all, 0.3s, $cubicTxt);
     }
 
+    &-down {
+        width: 2.4rem;
+        height: 2.4rem;
+        border: none;
+        background: svgIcoDown('444'); 
+        background-size:100% 100%;
+    }
+
     /* 스와이퍼 버튼 */ 
     &-pre {
         background: svgIcoPre('fff');
@@ -97,6 +105,24 @@
             &.w-40x {
                 width: 4rem;
                 height: 4rem;
+            }
+        }
+
+        &-b {
+            background: svgIcoPre('444');
+            background-size: 100% 100%;
+            border: none;
+            width: 3.2rem;
+            height: 3.2rem;
+
+            &.w-40x {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            &.swiper-button-disabled {
+                background: svgIcoPre('ccc');
+                background-size: 100% 100%;
             }
         }
 
@@ -130,6 +156,25 @@
                 height: 4rem;
             }
         }
+
+        &-b {
+            background: svgIcoNext('444');
+            background-size: 100% 100%;
+            border: none;
+            width: 3.2rem;
+            height: 3.2rem;
+
+            &.w-40x {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            &.swiper-button-disabled {
+                background: svgIcoNext('ccc');
+                background-size: 100% 100%;
+            }
+        }
+
 
         &.swiper-button-disabled {
             opacity: 0.4;
@@ -213,18 +258,25 @@
         font-weight: 600;
         font-size: 1.6rem;
         line-height: 5.6rem;
-        border: 1px solid $color-accent;
-        background-color: transparent;
-        color: $color-accent;        
+        color: $color-fff;   
+        border: none;
+        background-color: $color-accent;     
         -webkit-transition: 0.2s;
         -o-transition: 0.2s;
         transition: 0.2s;    
+        @include transition(all, 0.3s, linear);
+
+        &.s {
+            color: $color-accent;   
+            border: 1px solid $color-accent;
+            background-color: transparent;
+        }
     }
 }
 
 // 아이콘
 .ico{
-    &-plus{
+    &-plus {
         width: 13px;
         height: 13px;
         position: relative;
@@ -252,24 +304,23 @@
             background-color: $color-fff;
         }
     }
-
-    &-link{
+    &-link {
         background: svgIcoLink('fff'); 
         background-size:100% 100%;
-    }
-    &-linkTop{
+    } 
+    &-linkTop {
         background: svgIcoLinkTop('000'); 
         background-size:100% 100%;
     }
-    &-pin{
+    &-pin {
         background: svgIcoPin('fff'); 
         background-size:100% 100%;
     }
-    &-phone{
+    &-phone {
         background: svgIcoPhone('fff'); 
         background-size:100% 100%;
     }
-    &-coin{
+    &-coin {
         background: svgIcoCoin('444444', '00D4CD'); 
         background-size:100% 100%;
     }
@@ -281,257 +332,20 @@
         background: svgIcoScholarshipStdt(); 
         background-size:100% 100%;
     }
-    &-scholarship     {
+    &-scholarship {
         background: svgIcoScholarship(); 
         background-size:100% 100%;
     }
-}
-
-// 텍스트 필드
-.txtField { 
-    border: 1px solid $color-default;
-    display: inline-flex;
-    align-items: center;
-    gap: 2.4rem;
-    width: 100%;
-    padding: 1.6rem 2.4rem;
-}
-.tf {
-    &-input {
-        @include txt-18x;
-        color: $color-444;
-        flex-grow: 1;
-        
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-
-        border: none;
-        outline: none;
-
-        @include placeholder($color: #888); 
+    &-arrowL{ 
+        background: svgIcoArrowL('000'); 
+        background-size:100% 100%;
     }
-
-    &-btn {
-        display: flex;
-        align-items: center;
-        gap: 2.4rem;
-        
-        button {
-            width: 2.4rem;
-            height: 2.4rem;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-        }
-
+    &-arrowR{ 
+        background: svgIcoArrowR('000'); 
+        background-size:100% 100%;
     }
-
-    &-delete {
-        display: none;
-        background: svgIcoTfDelte('909090'); background-size:100% 100%;
-    }
-
-    &-search {
-        background: svgIcoTfSearch('000'); background-size:100% 100%;
-        display: inline-block;
-    }
-}
-
-// 공통 리스트
-.clist {
-    &-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding-bottom: 2rem;
-        border-bottom: 2px solid $color-444;
-
-        &-left {
-            justify-content: flex-end;
-        }
-    }
-
-    &-infoNum {
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-        color: $color-444;
-
-        strong {
-            font-weight: 600;
-            color: $color-primary;
-        }
-    }
-
-    &-search {
-        flex-basis: 38.4rem;
-    }
-
-    // 이미지 리스트
-    &-img{
-        width: 100%;
-    }
-    &-imgLi {
-        border-bottom: 1px solid $color-default;
-        @include transition(all, 0.3s, $cubicTxt);
-    }
-
-    // 페이징 
-    &-pagin {
-        margin-top: 8rem;
-        display: flex;
-        justify-content: center;
-    }
-}
-// 리스트 - 이미지
-.imgLi {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14rem;
-    padding: 4rem;
-
-    &-info {
-        flex-grow: 1;
-        display: flex;
-        justify-content: flex-start;
-        gap: 2.4rem;
-        align-items: center;
-    }
-
-    &-img {
-        flex-basis: 28.2rem;
-        flex-shrink: 0;
-        height: 19.6rem;
-        
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &-txt {
-        flex-grow: 1;
-        text-align: left;
-
-        strong {
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            width: 100%;
-            @include txt-24x;
-            color: $color-222;
-        }
-
-        p {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            width: 100%;
-            @include txt-18x;
-            color: $color-666;
-            min-height: 5.6rem;
-            margin-top: 1.6rem;
-            margin-bottom: 2rem;
-        }
-
-        .imgLi-date{
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            color: $color-888;
-        }
-    }
-
-    &-btn {
-        flex-shrink: 0;
-    }
-}
-
-// 페이징 
-.cpagin {
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-
-
-    > a {    text-indent: -9999px;
-    }
-    a {
-        display: inline-block;
-        width: 4rem;
-        height: 4rem;
-    }
-    &-list {
-        display: flex;
-        gap: 1.6rem;
-        align-items: center;
-    }
-    &-num {
-        text-align: center;
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 4rem;
-        color: $color-222;
-
-        &.on {
-            background-color: $color-accent;
-            color: $color-fff;
-        }
-    }
-    &-first {
-        width:40px;
-        height:40px;
-        background-position: center;
-        background: svgIcoPaginf('444') center no-repeat;
-        background-size: 24px 24px;
-
-        &.disable{
-            background: svgIcoPaginf('A0A0A0') center no-repeat;
-            background-size: 24px 24px;
-        }
-    }
-    &-prev {
-        width:40px;
-        height:40px;
-        background-position: center;
-        background: svgIcoPaginpre('444') center no-repeat;
-        background-size: 24px 24px;
-
-        &.disable{
-            background: svgIcoPaginpre('A0A0A0') center no-repeat;
-            background-size: 24px 24px;
-        }
-    }
-    &-next {
-        width:40px;
-        height:40px;
-        background-position: center;
-        background: svgIcoPaginnext('444') center no-repeat;
-        background-size: 24px 24px;
-
-        &.disable{
-            background: svgIcoPaginnext('A0A0A0') center no-repeat;
-            background-size: 24px 24px;
-        }
-    }
-    &-last {
-        width:40px;
-        height:40px;
-        background-position: center;
-        background: svgIcoPaginlast('444') center no-repeat;
-        background-size: 24px 24px;
-
-        &.disable{
-            background: svgIcoPaginlast('A0A0A0') center no-repeat;
-            background-size: 24px 24px;
-        }
+    &-file{
+        background: svgIcoFile('444'); background-size:100% 100%;
     }
 }
 
@@ -613,16 +427,73 @@
     }
 }
 
+// 셀렉트 박스
+.cSelect {
+    display: inline-block;
+    width: 100%;
+    height: 6.4rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: -0.02em;
+    line-height: 6.4rem;
+    padding: 0 2.4rem;
+    border: 1px solid $color-default !important;
+    border-radius: 0;
+
+    &::after {
+        width: 2.4rem;
+        height: 2.4rem;
+        top: calc( 50% - 1.2rem );
+        right: 2.4rem;
+        background: svgIcoDropdown('444'); 
+        background-size:100% 100%;
+        transform-origin: center center;
+        transform: rotate(0);
+        border-bottom: none;
+        border-right: none;
+        margin-top: 0;
+    }
+
+    &.open {
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: calc(100% + 2px);
+        left: -1px;
+        border: 1px solid $color-default !important;
+        border-radius: 0;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+        padding: 3rem 2.4rem;
+        cursor: auto;
+    }
+
+    .option {
+        background-color: transparent !important;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        min-height: auto;
+        padding: 0;
+
+        &.selected {
+            font-weight: 400;
+            color: $color-accent;
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {
     .scrollDown-line{
         height: 10rem;
         &::after {
             height: 2.5rem;
         }
-    }
-
-    .tf-delete.on {
-        display: inline-flex;
     }
 }
 
@@ -649,12 +520,7 @@
         }
     }
 
-    .clist-imgLi:hover {
-        background-color: $color-primaryBg;
-
-        .btn-link {
-            background: svgIcoArrowR('4B33ED');
-            background-size: 100% 100%;
-        }
+    .btn-t:not(.s):hover {
+        background-color: $color-primary;
     }
 }

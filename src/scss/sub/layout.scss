@@ -186,7 +186,7 @@
                 height: 10rem;
                 line-height: 10rem;
                 font-weight: 600;
-                font-size: 2.4rem;
+                font-size: 2rem;
                 color: $color-fff;
             }
         }
@@ -205,6 +205,7 @@
             font-weight: 500;
             font-size: 2rem;
             color: $color-aaa;
+            white-space: nowrap;
             line-height: 3.4rem;
             position: relative;
             @include transition(all, 0.2s);
@@ -569,11 +570,19 @@
     &.sub-list {
         padding-bottom: 16rem;
     }
+    &.sub-view-t{
+        padding-bottom: 14rem;
+    }
 }
 
 .sub{
     &-titB{
         margin-bottom: 8rem;
+    }
+    &-view-g{
+        background-color: $color-primaryBgNd;
+        overflow: hidden;
+        padding-top: 14rem;
     }
 }
 
@@ -592,7 +601,7 @@
     }
 
     &-b{
-        // 센터형식
+        // 왼쪽정렬 형식
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -607,7 +616,7 @@
             align-self: flex-start;
             @include txt-48x;
 
-            animation: 1s 0.2s subTitB01 forwards $cubicTxt;
+            animation: 0.7s 0.15s subTitB01 forwards $cubicTxt;
 
             @keyframes subTitB01 {
                 0% { transform: translateX(-80%); opacity: 0; }
@@ -622,12 +631,52 @@
             @include txt-18x;
             color: $color-666;
 
-            animation: 1.3s 0.4s subTitB02 forwards $cubicTxt;
+            animation: 1s 0.3s subTitB02 forwards $cubicTxt;
 
             @keyframes subTitB02 {
                 0% { transform: translateX(-80%); opacity: 0; }
                 100% { transform: translateX(0); opacity: 1; }
             }
+        }
+    }
+
+    &-v{
+        // 뷰페이지 형식
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        justify-content: flex-start;
+        padding-bottom: 6rem;
+        border-bottom: 1px solid $color-default;
+
+        h2 {
+            @include txt-40x;
+        }
+        
+        &-info {
+            display: flex;
+            align-items: center;
+            gap: 2.2rem;
+        }
+        &-c {
+            @include txt-20x;
+            color: $color-primary;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 2px;
+                height: 1.6rem;
+                background-color: $color-medium;
+                position: absolute;
+                top: calc(50% - 0.8rem);
+                right: -10px;
+            }
+        }
+        &-d {
+            @include txt-18x; 
+            color: $color-888;
         }
     }
 }
@@ -936,9 +985,9 @@
     &-txtGroup {
         opacity: 0;
         margin-bottom: 5.6rem;
-        transform: translateY(5rem);
-        @include transition(all, 0.6s, $cubicTxt);
-        transition-delay: 0.4s;
+        transform: translateY(10rem);
+        @include transition(all, 1s, $cubicTxt);
+        transition-delay: 0.6s;
 
         span {
             display: block;
@@ -962,8 +1011,8 @@
     }
     &-btnGroup {
         opacity: 0;
-        transform: translateY(2rem);
-        @include transition(all, 0.6s, $cubicTxt);
+        transform: translateY(8rem);
+        @include transition(all, 1s, $cubicTxt);
         transition-delay: 0.8s;
     }
     &-nav{
@@ -1122,6 +1171,20 @@
     &-li {
         flex-grow: 1;
         flex-basis: 100%;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: $color-accent;
+            
+            @include transition(all, 0.4s);
+        }
     }
     &-img {
         width: 100%;
@@ -1198,6 +1261,7 @@
 
     &-li {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         flex-basis: auto;
     }
@@ -1416,6 +1480,10 @@
         }
     }
     .newsCont-li:hover {
+        &::after {
+            width: 100%;
+        }
+
         .newsCont-img img{
             scale: 1.15;
         }

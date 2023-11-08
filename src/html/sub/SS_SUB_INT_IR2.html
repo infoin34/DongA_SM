@@ -1,0 +1,75 @@
+
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>운영공시 상세</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-titV subCont">
+                <article class="subTit">
+                    <div class="wrap-inner typeA">
+                        <div class="subTit-v">
+                            <div class="subTit-v-info">
+                                <span class="subTit-v-c">운영공시</span>
+                                <span class="subTit-v-d">2023.04.07</span>
+                            </div>
+                            <h2>2022년도 결산서</h2>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="sub-view subCont">
+                <article class="sub-comNews-view">
+                    <div class="wrap-inner typeA">
+                        <div class="viewCont">
+                            <!-- 에디터 영역 (하단 코드 삭제) -->
+                            <p style=" font-weight: 400; font-size: 18px; line-height: 28px; letter-spacing: -0.02em; color: #666;">
+                                수석문화재단의 2022년 결산서 입니다.<br>
+                                자세한 문의사항은 문의하기 페이지에서 문의 바랍니다.<br><br>
+                            </p>
+                            <img src="../../../dest/static/images/settlement.png" alt="" style="width: 100%;">
+                            <!-- 에디터 영역 끝 -->
+                        </div>
+                        <div class="viewCont-nav">
+                            <div class="viewCont-page">
+                                <a href="" class="viewCont-prev">이전글</a>
+                                <a href="" class="viewCont-next">다음글</a>
+                            </div>
+                            <div class="viewCont-gotoList">
+                                <button class="btn-t">목록</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        @@include('../../include/footer.html')
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+    
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>   

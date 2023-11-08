@@ -336,6 +336,9 @@
 	$(window).on('scroll', function(){
 		scrollEv();
 	});
+	$(window).ready(function(){
+		scrollEv();
+	});
 
 	/* 입력필드(검색) */ 
 	function textFeildEvt(){
@@ -361,6 +364,13 @@
 		})
 	}
 
+	/* 나이스 셀렉트 */
+	function selectNice(){
+		$(".cSelect").each(function(){
+			$(this).niceSelect();
+		})
+	}
+
     exports.scrollMove = scrollMove;
     exports.bodyScrollBlock = bodyScrollBlock
     exports.popup = popup;
@@ -371,5 +381,6 @@
 		headerScrollEvt()
 		toggleFamily()
 		textFeildEvt()
+		selectNice()
 	});
 })(window, jQuery);

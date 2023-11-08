@@ -1,0 +1,567 @@
+<html lang="kr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+
+
+
+
+	<title>재단소식</title>
+	<!-- css -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="../../static/css/common.css">
+	<!--//css -->
+
+
+	<!-- srcipt -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="../../static/js/common.ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+	<!--//srcipt -->
+</head>
+
+<body>
+	<div id="wrap" role="main">
+
+		<header class="header is-dark">
+			<div class="header-inner">
+				<div class="header-top">
+					<a class="logo" href="#">
+						<h1>로고</h1>
+					</a>
+				</div>
+				<div class="gnb">
+					<span class="gnb-line"></span>
+					<ul class="gnb-depth1">
+						<li class="gnb-depth1-li">
+							<a href="#" data-js-gnb="trigger"><strong>수석문화재단</strong></a>
+							<ul class="gnb-depth2" data-js-gnb="list">
+								<li class="gnb-depth2-li">
+									<a href="#">재단소개</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">이사장 인사말</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">임원소개</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">연혁</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">CI소개</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">정관</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">오시는 길</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#" data-js-gnb="trigger">운영공시</a>
+									<ul class="gnb-depth3">
+										<li>
+											<a href="#">결산서</a>
+										</li>
+										<li>
+											<a href="#">기부금 모금액 및 활용실적</a>
+										</li>
+										<li>
+											<a href="#">기부금 명세서</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="gnb-depth1-li">
+							<a href="#" data-js-gnb="trigger"><strong>사업소개</strong></a>
+							<ul class="gnb-depth2" data-js-gnb="list">
+								<li class="gnb-depth2-li">
+									<a href="#">장학사업</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">문화사업</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">출판사업</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#" data-js-gnb="trigger">학술사업</a>
+									<ul class="gnb-depth3">
+										<li>
+											<a href="#">함춘동의학상</a>
+										</li>
+										<li>
+											<a href="#">약사금탑상</a>
+										</li>
+									</ul>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#" data-js-gnb="trigger">교육사업</a>
+									<ul class="gnb-depth3">
+										<li>
+											<a href="#">함춘동의학상</a>
+										</li>
+										<li>
+											<a href="#">약사금탑상</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="gnb-depth1-li">
+							<a href="#" data-js-gnb="trigger"><strong>커뮤니티</strong></a>
+							<ul class="gnb-depth2" data-js-gnb="list">
+								<li class="gnb-depth2-li">
+									<a href="#">재단소식</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">공지사항</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">문의하기</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="header-btnArea">
+					<a href="#none" class="btn-support">후원하기</a>
+					<button class="btn-menu">
+						<span class="line1"></span>
+						<span class="line2"></span>
+						<span class="line3"></span>
+					</button>
+				</div>
+			</div>
+			<nav class="nav">
+				<div class="nav-inner">
+					<div class="nav-info">
+						<div class="nav-support">
+							<strong class="nav-supportTit">
+                        나눔을 통해<br />
+                        미래 인재의 희망을<br />
+                        특별하고 소중하게<br />
+                        만들어보세요
+                    </strong>
+							<a href="#" class="nav-supportLink">후원 하러가기<i class="ico-arrowR"></i></a>
+						</div>
+						<ul class="nav-policy">
+							<li><a href="#">개인정보보호정책</a></li>
+							<li><a href="#">이메일무단수집거부</a></li>
+						</ul>
+					</div>
+					<div class="nav-depth">
+						<ul class="nav-depth1">
+							<li class="nav-depth1-li">
+								<a href="">수석문화재단</a>
+								<ul class="nav-depth2">
+									<li class="nav-depth2-li">
+										<a href="">재단소개</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">이사장 인사말</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">임원소개</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">연혁</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">CI소개</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">오시는 길</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="" class="has-dept3">운영공시</a>
+										<ul class="nav-depth3">
+											<li><a href="">결산서</a></li>
+											<li><a href="">기부금 모금액 및 활용실적</a></li>
+											<li><a href="">기부금 명세서</a></li>
+										</ul>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">정관</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-depth1-li">
+								<a href="">사업소개</a>
+								<ul class="nav-depth2">
+									<li class="nav-depth2-li">
+										<a href="">장학사업</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">문화사업</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">출판사업</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="" class="has-dept3">학술사업</a>
+										<ul class="nav-depth3">
+											<li><a href="">함춘동의학상</a></li>
+											<li><a href="">약사금탑상</a></li>
+										</ul>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="" class="has-dept3">교육사업</a>
+										<ul class="nav-depth3">
+											<li><a href="">평생교육후원</a></li>
+											<li><a href="">교육복지후원</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-depth1-li">
+								<a href="">커뮤니티</a>
+								<ul class="nav-depth2">
+									<li class="nav-depth2-li">
+										<a href="">재단소식</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">공지사항</a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="">문의하기</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main class="wrapper">
+			<section class="sub-titB subCont">
+				<article class="subTit">
+					<div class="wrap-inner typeA">
+						<div class="subTit-b">
+							<h2>재단소식</h2>
+							<p>함께 나누는 이야기를 담아 만든 수석문화재단의 소식을 만나보세요.</p>
+						</div>
+					</div>
+				</article>
+			</section>
+			<section class="sub-list subCont">
+				<!-- ^ 애니메이션 ani btot -->
+				<article class="sub-comNews">
+					<div class="wrap-inner typeA">
+						<div class="clist">
+							<div class="clist-top">
+								<div class="clist-info">
+									<span class="clist-infoNum">
+                                        총 <strong>30</strong>건
+                                    </span>
+									<div class="clist-search"></div>
+								</div>
+								<div class="clist-search">
+									<div class="txtField">
+										<input type="text" class="tf-input" placeholder="검색어를 입력하세요.">
+										<span class="tf-btn">
+                                            <button class="tf-delete"></button>
+                                            <button class="tf-search"></button>
+                                        </span>
+									</div>
+								</div>
+							</div>
+							<div class="clist-Box">
+								<ul class="clist-img">
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/gallery1_01.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>제37회 마로니에 전국여성백일장 후원</strong>
+													<p>수석문화재단은 2019년 10월 11일 11일 서울 종로구 마로니에공원에서 열린 '제37회 마로니에 전국여성 백일장'이 성황리에 마무리 되었다고 밝혔다. 마로니에 전국여성 백일장은 1983년 말줄임 말줄임 말줄임 말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/gallery1_02.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>수석문화재단, 함춘동아의학상에 한주용 선정(2019 함춘송년의 밤)</strong>
+													<p>수석문화재단은 2019년 12월 17일 함춘 송년의 밤 행사에서 함춘동아의학상 수상자로 선정된 삼성서울병원 한주용 교수에게 3,000만원의 연구비를 후원했다 김 교수는 수술 후 급성 빈혈 말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/mainNew03.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>제 46회 약사금탑상 시상 및 동아제약, 대한약사회 감사패 수상</strong>
+													<p>지난 2020년 7월 1일, 서초구에 위치한 대한약사회 동아홀에서 열린 2020년 약사 포상시상식에서 동아제약에서 협찬하고 수석문화재단에서 후원하는 제46회 약사금탑상 시상식이 열렸다 말줄임말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/gallery1_01.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>제37회 마로니에 전국여성백일장 후원</strong>
+													<p>수석문화재단은 2019년 10월 11일 11일 서울 종로구 마로니에공원에서 열린 '제37회 마로니에 전국여성 백일장'이 성황리에 마무리 되었다고 밝혔다. 마로니에 전국여성 백일장은 1983년 말줄임 말줄임 말줄임 말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/gallery1_02.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>수석문화재단, 함춘동아의학상에 한주용 선정(2019 함춘송년의 밤)</strong>
+													<p>수석문화재단은 2019년 12월 17일 함춘 송년의 밤 행사에서 함춘동아의학상 수상자로 선정된 삼성서울병원 한주용 교수에게 3,000만원의 연구비를 후원했다 김 교수는 수술 후 급성 빈혈 말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/mainNew03.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>제 46회 약사금탑상 시상 및 동아제약, 대한약사회 감사패 수상</strong>
+													<p>지난 2020년 7월 1일, 서초구에 위치한 대한약사회 동아홀에서 열린 2020년 약사 포상시상식에서 동아제약에서 협찬하고 수석문화재단에서 후원하는 제46회 약사금탑상 시상식이 열렸다 말줄임말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/gallery1_01.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>제37회 마로니에 전국여성백일장 후원</strong>
+													<p>수석문화재단은 2019년 10월 11일 11일 서울 종로구 마로니에공원에서 열린 '제37회 마로니에 전국여성 백일장'이 성황리에 마무리 되었다고 밝혔다. 마로니에 전국여성 백일장은 1983년 말줄임 말줄임 말줄임 말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/gallery1_02.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>수석문화재단, 함춘동아의학상에 한주용 선정(2019 함춘송년의 밤)</strong>
+													<p>수석문화재단은 2019년 12월 17일 함춘 송년의 밤 행사에서 함춘동아의학상 수상자로 선정된 삼성서울병원 한주용 교수에게 3,000만원의 연구비를 후원했다 김 교수는 수술 후 급성 빈혈 말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/mainNew03.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>제 46회 약사금탑상 시상 및 동아제약, 대한약사회 감사패 수상</strong>
+													<p>지난 2020년 7월 1일, 서초구에 위치한 대한약사회 동아홀에서 열린 2020년 약사 포상시상식에서 동아제약에서 협찬하고 수석문화재단에서 후원하는 제46회 약사금탑상 시상식이 열렸다 말줄임말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+									<li class="clist-imgLi">
+										<a href="#none" class="imgLi">
+											<div class="imgLi-info">
+												<div class="imgLi-img">
+													<img src="../../../dest/static/images/gallery1_01.png" alt="">
+												</div>
+												<div class="imgLi-txt">
+													<strong>제37회 마로니에 전국여성백일장 후원</strong>
+													<p>수석문화재단은 2019년 10월 11일 11일 서울 종로구 마로니에공원에서 열린 '제37회 마로니에 전국여성 백일장'이 성황리에 마무리 되었다고 밝혔다. 마로니에 전국여성 백일장은 1983년 말줄임 말줄임 말줄임 말줄임</p>
+													<span class="imgLi-date">2023.08.07</span>
+												</div>
+											</div>
+											<div class="imgLi-btn">
+												<button class="btn-link"></button>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="clist-pagin">
+								<div class="cpagin">
+									<a class="cpagin-first disable" href="#none">첫페이지</a>
+									<a class="cpagin-prev disable" href="#none">이전</a>
+									<ul class="cpagin-list">
+										<li class="cpagin-li">
+											<a class="cpagin-num on" href="#none">1</a>
+										</li>
+										<li class="cpagin-li">
+											<a class="cpagin-num" href="#none">2</a>
+										</li>
+										<li class="cpagin-li">
+											<a class="cpagin-num" href="#none">3</a>
+										</li>
+										<li class="cpagin-li">
+											<a class="cpagin-num" href="#none">4</a>
+										</li>
+										<li class="cpagin-li">
+											<a class="cpagin-num" href="#none">5</a>
+										</li>
+										<li class="cpagin-li">
+											<a class="cpagin-num" href="#none">6</a>
+										</li>
+										<li class="cpagin-li">
+											<a class="cpagin-num" href="#none">7</a>
+										</li>
+										<li class="cpagin-li">
+											<a class="cpagin-num" href="#none">8</a>
+										</li>
+										<li class="cpagin-li">
+											<a class="cpagin-num" href="#none">9</a>
+										</li>
+										<li class="cpagin-li">
+											<a class="cpagin-num" href="#none">10</a>
+										</li>
+									</ul>
+									<a class="cpagin-next" href="#none">다음</a>
+									<a class="cpagin-last" href="#none">마지막페이지</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<div class="footer">
+			<div class="footer-inner">
+				<div class="footer-logo">
+					<h2>LOGO <img src="../../static/images/footer-logo.png" alt=""></h2>
+				</div>
+				<div class="footer-left">
+					<div class="footer-info">
+						<div class="footer-link">
+							<div class="footer-linkCont">
+								<strong>Another site</strong>
+								<ul>
+									<li>
+										<a>개인정보보호정책</a>
+									</li>
+									<li>
+										<a>이메일무단수집거부</a>
+									</li>
+									<li>
+										<a class="hasIco s">동아쏘시오홀딩스<i class="ico-link"></i></a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer-linkCont">
+								<strong>Address</strong>
+								<span class="hasIco"><i class="ico-pin"></i>서울시 동대문구 천호대로</span>
+							</div>
+							<div class="footer-linkCont">
+								<strong>Contact</strong>
+								<a class="hasIco" href="tel:02-920-8114"><i class="ico-phone"></i>02-920-8114</a>
+							</div>
+						</div>
+						<div class="footer-familySite">
+							<button class="footer-familySelect">
+								Family Site
+								<i class="ico-plus"></i>
+							</button>
+							<ul class="footer-familyList">
+								<li><a class="footer-familyLi">동아쏘시오홀딩스</a></li>
+								<li><a class="footer-familyLi">수석문화재단</a></li>
+								<li><a class="footer-familyLi">동아제약</a></li>
+							</ul>
+							<ul class="footer-partner">
+								<li>
+									<a href="" class="footer-partnerLi">
+										<img src="../../static/images/partner01.svg" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="" class="footer-partnerLi">
+										<img src="../../static/images/partner02.svg" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="footer-copyright">Copyrightⓒ DONG-A SOCIO HOLDINGS. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+		<a class="btn-top" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+		<script>
+		</script>
+	</div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+
+</script>
+<!--//페이지 관련 스크립트 -->
+
+</html>
