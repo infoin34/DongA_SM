@@ -444,6 +444,14 @@ $color-A2A5BC : #A2A5BC;
             height: 2.4rem;
             background: svgIcoArrowL('444') 100%;
         }
+
+        &.disable {
+            color: $color-888;
+            pointer-events: none;
+            &::before {
+                background: svgIcoArrowL('888') 100%;
+            }
+        }
     }
     &-next {
         display: inline-flex;
@@ -459,10 +467,22 @@ $color-A2A5BC : #A2A5BC;
             height: 2.4rem;
             background: svgIcoArrowR('444') 100%;
             background-repeat: no-repeat;
+        }        
+
+        &.disable {
+            color: $color-888;
+            pointer-events: none;
+            &::after {
+                background: svgIcoArrowR('888') 100%;
+                background-repeat: no-repeat;
+            }
         }
     }
     &-gotoList {
         text-align: center;
+    }
+    &-download {
+        margin-top: 8rem;
     }
 }
 .galleryCont {
@@ -552,6 +572,40 @@ $color-A2A5BC : #A2A5BC;
         transform: translateY(-50%);
     }
 }
+.downCont{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+    padding: 2.2rem 4rem;
+    background-color: $color-primaryBg;
+
+    &-linkWrap {
+        display: flex;
+        align-items: center;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        gap: 4rem;
+    }
+    &-cate {
+        flex-shrink: 0;
+        @include txt-20x;
+    }
+    &-tit {
+        flex-shrink: 1;
+        flex-basis: 100%;
+        @include txt-18x;
+        line-height: 5rem;
+        overflow: hidden;   
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &-btn{
+        flex-shrink: 0;
+        justify-self: flex-end;
+    }
+}
+
 
 @media screen and (max-width: 1200px) {}
 
@@ -602,6 +656,12 @@ $color-A2A5BC : #A2A5BC;
         &::after {
             background: svgIcoArrowR('4B33ED') 100%;
             background-repeat: no-repeat;
+        }
+    }
+
+    .downCont-linkWrap:hover {
+        .btn-ti {
+            border: 1px solid $color-accent;
         }
     }
 }

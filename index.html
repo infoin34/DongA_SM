@@ -8,8 +8,10 @@
 	<meta name="viewport" content="width=960">
 	<title>마크업</title>
 	<link rel="stylesheet" href="../markup/markup.css" />
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="../markup/markup.js"></script>
+	<link rel="stylesheet" href="./markup/markup.css">
+
+	 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	 <script src="./markup/markup.js"></script>
 	<script>
 		//state-> 완료: end , 진행중: ing 		  
 		const markupList = [
@@ -18,42 +20,51 @@
 					{'depth2': 'img', 'info': '아이콘, 로고, 이미지 모음', 'src': 'guide/svg', 'state':''},
 					{'depth2': 'layout','info': 'header, footer, nav', 'src': 'guide/layout'},
 					{'depth2': 'button', 'info': 'style', 'src': 'guide/etc?button'},
-					{'depth2': 'form', 'info': 'input, select', 'src': 'guide/etc?component'},
+					{'depth2': 'form', 'info': 'input, select', 'src': 'guide/etc?form'},
 					{'depth2': 'component', 'info': 'block요소 공통', 'src': 'guide/etc?component'},
 					{'depth2': 'popup', 'info': 'style', 'src': ''}
 				]
 			},
 			{
 				'메인' : [
-					{'depth2': '메인',  'depth3': '', 'info': '','src': 'main/SS_MAIN_PAGE', 'state':'ing'}
+					{'depth2': '메인',  'depth3': '', 'info': '','src': 'main/SS_MAIN_PAGE', 'state':'end'}
 				]
 			},	
 			{
 				'수석문화재단' : [
-					{'depth2': '재단소개', 'info': '','src': 'sample/sample', 'state':''},
-					{'depth2': 'CEO 인사말', 'info': '','src': 'sample/sample', 'state':''},
-					{'depth2': '가치 및 비전', 'info': '', 'src': 'bb/bb', 'state':'ing'},
-					{'depth2': '연혁', 'info': '', 'src': 'bb/aa', 'state':'end'},
-					{'depth2': 'CI소개', 'info': '', 'src': 'cc/aa', 'state':''},
-					{'depth2': '운영공시', 'info': '', 'src': 'sub/SS_SUB_INT_IR', 'state':''},
-					{'depth2': '운영공시 - 상세', 'info': '', 'src': 'sub/SS_SUB_INT_IR2', 'state':''}
+					{'depth2': '재단소개', 'info': '','src': 'sub/SS_SUB_INT_FOUNDATION', 'state':''},
+					{'depth2': '이사장 인사말', 'info': '','src': '', 'state':''},
+					{'depth2': '임원소개', 'info': '', 'src': '', 'state':''},
+					{'depth2': '연혁소개', 'info': '', 'src': '', 'state':''},
+					{'depth2': 'CI소개', 'info': '', 'src': '', 'state':''},
+					{'depth2': '운영공시', 'info': '', 'src': 'sub/SS_SUB_INT_IR', 'state':'ing'},
+					{'depth2': '운영공시 - 상세', 'info': '', 'src': 'sub/SS_SUB_INT_IR_VIEW', 'state':'ing'},
+					{'depth2': '정관', 'info': '', 'src': '', 'state':''},
+					{'depth2': '오시는 길', 'info': '', 'src': '', 'state':''}
 				]
 			},
 			{
-				'투자정보' : [
-					{'depth2': '주식정보', 'info': '', 'src': 'iii'},
-					{'depth2': '재무정보', 'info': '팝업(#pop1, #pop2)', 'src': 'eee'},
-					{'depth2': 'IR', 'info': '', 'src': ''},
-					{'depth2': '기업지배구조', 'info': '', 'src': ''},
-					{'depth2': '공고', 'info': '', 'src': ''}
+				'사업소개' : [
+					{'depth2': '장학사업', 'info': '', 'src': ''},
+					// {'depth2': '학술사업', 'info': '팝업(#pop1, #pop2)', 'src': 'eee'},
+					{'depth2': '학술사업', 'info': '', 'src': ''},
+					{'depth2': '문화사업', 'info': '', 'src': ''},
+					{'depth2': '교육사업', 'info': '', 'src': ''},
+					{'depth2': '출판사업', 'info': '', 'src': ''}
 				]
 			},
 			{
 				'커뮤니티' : [
-					{'depth2': '재단소식', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NEWS', 'state':''},
-					{'depth2': '재단소식 - 상세', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NEWS_VIEW', 'state':''},
-					{'depth2': '공지사항', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE', 'state':''},
-					{'depth2': '공지사항 - 상세', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE2', 'state':''},
+					{'depth2': '재단소식', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NEWS', 'state':'ing'},
+					{'depth2': '재단소식 - 상세', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NEWS_VIEW', 'state':'ing'},
+					{'depth2': '공지사항', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE', 'state':'ing'},
+					{'depth2': '공지사항 - 상세', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE_VIEW', 'state':'ing'},
+					{'depth2': '문의하기', 'depth3': '', 'info': '','src': '', 'state':''},
+				]
+			},
+			{
+				'기타' : [
+					{'depth2': '후원하기', 'depth3': '', 'info': '','src': '', 'state':''},
 				]
 			},
 		]

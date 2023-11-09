@@ -3,7 +3,10 @@
 #svg{
     width:1400px; margin:0 auto;
     .svg-logo{
-        width:76px; height:68px; background: svgLogo('000', '1D2087'); background-size:100% 100%;
+        width:152px; height:24px; background: svgLogo('000', '1D2087'); background-size:100% 100%;
+    }
+    .svg-footLogo{
+        width:246px; height:212px; background: svgFootlogo('fff'); background-size:100% 100%;
     }
     .svg02{
         width:236px; height:236px; background: svgCircle1('00b6e3'); background-size:100% 100%;

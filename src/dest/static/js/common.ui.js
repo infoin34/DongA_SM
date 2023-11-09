@@ -333,6 +333,7 @@
 		// 현재 스크롤값은 저장
 		lastScr = currentScr;
 	}
+	
 	$(window).on('scroll', function(){
 		scrollEv();
 	});
@@ -371,6 +372,16 @@
 		})
 	}
 
+	/* 서브 비주얼 이벤트 */
+	function subVisScr() {
+
+		setTimeout(function(){
+			$(".subVisScr-start").addClass("down");
+			$(".subVisScr-after").addClass("up");
+		}, 2500)
+		
+	} 
+
     exports.scrollMove = scrollMove;
     exports.bodyScrollBlock = bodyScrollBlock
     exports.popup = popup;
@@ -382,5 +393,6 @@
 		toggleFamily()
 		textFeildEvt()
 		selectNice()
+		subVisScr()
 	});
 })(window, jQuery);
