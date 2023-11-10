@@ -85,5 +85,14 @@
     .ico-gallery{
         width:100px; height:100px; background: #fff svgIcoGallery() no-repeat center ; border-radius: 50%;
     }
+    .ico-promote{
+        width:72px; height:72px; background: svgIcoPromote(); background-size:100% 100%;
+    }
+    .ico-support{
+        width:72px; height:72px; background: svgIcoSupport(); background-size:100% 100%;
+    }
+    .ico-education{
+        width:72px; height:72px; background: svgIcoEducation(); background-size:100% 100%;
+    }
   
 }

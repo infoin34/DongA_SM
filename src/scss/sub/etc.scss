@@ -73,7 +73,7 @@
             pointer-events: none;
             opacity: 0;
             @include transition(all, 0.3s, linear);
-            
+
             &.show {
                 opacity: 1;
                 pointer-events: all;
@@ -383,6 +383,15 @@
     }
     &-footLogo{
         background: svgFootlogo('fff'); background-size:100% 100%;
+    }
+    &-promote{
+        background: svgIcoPromote(); background-size:100% 100%;
+    }
+    &-support{
+        background: svgIcoSupport(); background-size:100% 100%;
+    }
+    &-education{
+        background: svgIcoEducation(); background-size:100% 100%;
     }
 }
 

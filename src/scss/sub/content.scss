@@ -606,6 +606,60 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
+.subCText{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+
+    strong {
+        @include txt-48x;
+        letter-spacing: -0.04em;
+        color: $color-222;
+    }
+
+    p {
+        @include txt-18x;
+        color: $color-666;
+    }
+}
+
+.purposeCont {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    &-tit {
+        @include txt-32x; 
+    }
+    &-list {
+        display: flex;
+        gap: 2.4rem;
+    } 
+    &-li {
+        background-color: $color-fff;
+        flex-basis: 100%;
+        padding: 4rem 4rem 3.6rem;
+    }
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3.2rem;
+    }
+    &-name {
+        @include txt-24x;
+        color: $color-222;
+        padding-bottom: 0.5rem;
+    }
+    &-ico {
+        width: 7.2rem;
+        height: 7.2rem;
+    }
+    &-txt {
+        @include txt-18x;
+    }
+}
 
 @media screen and (max-width: 1200px) {}
 
@@ -615,7 +669,11 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .purposeCont-list {
+        flex-direction: column;
+    }
+}
 
 @media(hover: hover) and (pointer: fine) {
     .clist-imgLi:hover {

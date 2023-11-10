@@ -145,6 +145,7 @@
         /* 컬러 */ 
         .header-top .logo::after {
             background: svgLogo('000', '1D2087'); 
+            background-size: 100% 100%;
         }
         .gnb .gnb-depth1-li > a {
             color: $color-000;
@@ -585,15 +586,14 @@
 
 // 서브 레이아웃
 .subCont {
+    padding-bottom: 14rem;
+
     &:last-of-type {
         padding-bottom: 18rem;
     }
 
     &.sub-list {
         padding-bottom: 16rem;
-    }
-    &.sub-view-t{
-        padding-bottom: 14rem;
     }
 }
 
@@ -605,6 +605,13 @@
         background-color: $color-primaryBgNd;
         overflow: hidden;
         padding-top: 14rem;
+    }
+    &-white{
+        padding-top: 14rem;
+    }
+    &-gray{
+        padding-top: 14rem;
+        background-color: $color-primaryBgNd;
     }
 }
 
@@ -1323,22 +1330,6 @@
 
 // 서브비주얼
 .subVis {
-    &-bg {
-        width: 100vw;
-        height: calc(100vh - 24.3rem);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-
-        img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
 
     &-Tit {
         @include txt-60x;
@@ -1404,11 +1395,20 @@
         transform: translateX(-50%);
         position: absolute;
 
+        visibility: hidden;
+
         transition: 0.4s;
         
         overflow: hidden;
 
-        
+        background-position: 50% 50%;
+        background-size: cover;
+
+        &.sub01 {
+            // 재단소개 bg
+            background-image: url(../../../dest/static/images/sub_main01.png);
+        }
+
         &.active {
             width: calc(100% + 2px);
             max-width: 100%;
@@ -1421,6 +1421,7 @@
     }
 
     &-start {
+        width: calc(100% - 4rem);
         position: absolute;
         text-align: center;
         top: 50%;
@@ -1433,7 +1434,7 @@
     }
 
     &-after {
-        width: 100%;
+        width: calc(100% - 4rem);
         position: absolute;
         text-align: center;
         top: 50%;
