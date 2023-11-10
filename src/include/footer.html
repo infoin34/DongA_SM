@@ -61,6 +61,12 @@
         </div>
     </div>
 </div>
-<a class="btn-top @@class" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+
+@@if (page_scr === true){
+    <a class="btn-top @@class" data-js-scrbtn="notZero"><i class="ico-linkTop"></i>TOP</a>
+}
+@@if (page_scr === false){
+    <a class="btn-top @@class" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+}
 <script>
 </script>
