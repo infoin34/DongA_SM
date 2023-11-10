@@ -15,6 +15,7 @@
 	<!-- css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../../static/css/common.css">
+	<link rel="stylesheet" href="../../static/css/locomotive-scroll.css">
 	<!--//css -->
 
 
@@ -22,8 +23,12 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="../../static/js/locomotive-scroll.min.js"></script>
 	<script src="../../static/js/common.ui.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+
 	<!--//srcipt -->
 </head>
 
@@ -50,7 +55,7 @@
 									<a href="#">이사장 인사말</a>
 								</li>
 								<li class="gnb-depth2-li">
-									<a href="#">임원소개</a>
+									<a href="#">함께하는 사람들</a>
 								</li>
 								<li class="gnb-depth2-li">
 									<a href="#">연혁</a>
@@ -170,7 +175,7 @@
 										<a href="">이사장 인사말</a>
 									</li>
 									<li class="nav-depth2-li">
-										<a href="">임원소개</a>
+										<a href="">함께하는 사람들</a>
 									</li>
 									<li class="nav-depth2-li">
 										<a href="">연혁</a>
@@ -259,41 +264,43 @@
         
         -->
 		<main class="wrapper">
-			<section class="sub-tit subCont">
-				<article class="subTit">
-					<div class="wrap-inner typeA">
-						<div class="subTit-a">
-							<h2>재단소개</h2>
+			<section class="sub-tit subCont scrTit">
+				<article class="scrArea">
+					<div class="subTit">
+						<div class="wrap-inner typeA">
+							<div class="subTit-a">
+								<h2>재단소개</h2>
+							</div>
 						</div>
 					</div>
-				</article>
-				<article class="subVisScr">
-					<div class="subVisScr-inner ani">
-						<div class="subVisScr-start ani">
-							<strong class="subVis-Tit">
-                                우리가 함께 만드는 길<br>
-                                즐거움을 함께하는 첫걸음
-                            </strong>
-						</div>
-						<div class="subVisScr-after ani">
-							<div class="subVis-round">
-								<span>설립입</span>
-								<span>1987.05.13</span>
+					<div class="subVisScr">
+						<div class="subVisScr-inner">
+							<div class="subVisScr-start">
+								<strong class="subVis-Tit">
+                                    우리가 함께 만드는 길<br>
+                                    즐거움을 함께하는 첫걸음
+                                </strong>
 							</div>
-							<span class="subVis-txt">타인을 위해 봉사할 수 있고 건강한 사회인으로 성장할 수 있도록</span>
-							<strong class="subVis-Tit">
-                                수석문화재단이 함께 하겠습니다
-                            </strong>
-						</div>
-						<div class="subVis-bg">
-							<img src="../../../dest/static/images/sub_main01.png" alt="">
+							<div class="subVisScr-after">
+								<div class="subVis-round">
+									<span>설립입</span>
+									<span>1987.05.13</span>
+								</div>
+								<span class="subVis-txt">타인을 위해 봉사할 수 있고 건강한 사회인으로 성장할 수 있도록</span>
+								<strong class="subVis-Tit">
+                                    수석문화재단이 함께 하겠습니다
+                                </strong>
+							</div>
+							<div class="subVis-bg">
+								<img src="../../../dest/static/images/sub_main01.png" alt="">
+							</div>
 						</div>
 					</div>
 				</article>
 			</section>
-			<section></section>
-
-			<section style="height: 500vh;"></section>
+			<section class="subCont">
+				sdfmdsklfjsdlkjf
+			</section>
 		</main>
 
 		<div class="footer">
@@ -308,20 +315,20 @@
 								<strong>Another site</strong>
 								<ul>
 									<li>
-										<a><strong>개인정보보호정책</strong></a>
+										<a href="#none"><strong>개인정보보호정책</strong></a>
 									</li>
 									<li>
-										<a>이메일무단수집거부</a>
+										<a href="#none">이메일무단수집거부</a>
 									</li>
-									<li>
-										<a class="hasIco s">동아쏘시오홀딩스<i class="ico-link"></i></a>
-									</li>
+									<!-- <li>
+                                <a class="hasIco s">동아쏘시오홀딩스<i class="ico-link"></i></a>
+                            </li> -->
 								</ul>
 							</div>
 							<div class="footer-linkContG">
 								<div class="footer-linkCont">
 									<strong>Address</strong>
-									<span class="hasIco"><i class="ico-pin"></i>서울시 동대문구 천호대로</span>
+									<span class="hasIco"><i class="ico-pin"></i>서울시 동대문구 천호대로 64</span>
 								</div>
 								<div class="footer-linkCont">
 									<strong>Contact</strong>
@@ -359,13 +366,81 @@
 				</div>
 			</div>
 		</div>
-		<a class="btn-top" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+		<a class="btn-top @@class" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
 		<script>
 		</script>
 	</div>
 </body>
 <!-- 페이지 관련 스크립트 -->
 <script>
+	function test() {
+		console.log(currentTop);
+	}
+	let currentTop = $(".scrArea").css("margin-top");
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	function removeProps() {
+		console.log('Reverse Complete')
+	}
+	let $tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".scrTit",
+			toggleActions: "restart none restart none",
+			start: "top 100",
+			end: "+=7500",
+			scrub: 1,
+			pin: true,
+		},
+		onReverseComplete: () => removeProps()
+	})
+
+	$tl.from($(".scrArea"), {
+		marginTop: currentTop
+	})
+	$tl.to($(".scrArea"), {
+		marginTop: "0"
+	})
+	$tl.to($(".subVisScr-inner"), {
+		width: "100%"
+	})
+	$tl.to($(".subVisScr-start"), {
+		opacity: "0",
+		marginTop: "10rem"
+	})
+	$tl.to($(".subVisScr-start"), {
+		opacity: "1",
+		marginTop: "0"
+	})
+	$tl.to({}, {
+		duration: 1
+	});
+	$tl.to($(".subVisScr-start"), {
+		opacity: "0",
+		marginTop: "10rem"
+	})
+	$tl.to($(".subVisScr-inner"), {
+		maxWidth: "100%"
+	})
+	$tl.to($(".subVisScr-after"), {
+		opacity: "0",
+		marginTop: "10rem"
+	})
+	$tl.to($(".subVisScr-after"), {
+		opacity: "1",
+		marginTop: "0"
+	})
+	$tl.to($(".scrArea"), {
+		marginBottom: currentTop
+	})
+	$tl.to({}, {
+		duration: 1
+	});
+
+	$(window).ready(function() {
+		$('html, body').scrollTop(0);
+		scrollMove(1500, 1100);
+	});
 </script>
 <!--//페이지 관련 스크립트 -->
 

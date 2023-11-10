@@ -296,10 +296,10 @@
 				$(".header").removeClass("scrollD");
 				$(".header").removeClass("scrollU");
 			} else if ( currentScr > lastScr) {
+				$(".header").addClass("scrollD");    
+			} else if (currentScr < lastScr){
 				$(".header").addClass("scrollU");
 				$(".header").removeClass("scrollD");
-			} else if (currentScr < lastScr){
-				$(".header").addClass("scrollD");
 			}
 			lastScr = currentScr;
 		}
@@ -319,6 +319,12 @@
 				}
 			}
 		});
+
+		if( currentScr > 130) {
+			$(".btn-top").addClass("show");
+		}else {
+			$(".btn-top").removeClass("show");
+		}
 	}
 	
 	let currentScr, lastScr = 0;
@@ -334,6 +340,16 @@
 		lastScr = currentScr;
 	}
 	
+	/* 서브 비주얼 불러오기 이벤트 */
+	// function subVisScrLoad() {
+	// 	$(".subVisScr").each(function(){
+	// 		let $this = $(this);
+	// 		setTimeout(function(){
+	// 			$this.addClass("active");
+	// 		}, 2500)
+	// 	});
+	// } 
+
 	$(window).on('scroll', function(){
 		scrollEv();
 	});
@@ -372,15 +388,26 @@
 		})
 	}
 
-	/* 서브 비주얼 이벤트 */
-	function subVisScr() {
-
-		setTimeout(function(){
-			$(".subVisScr-start").addClass("down");
-			$(".subVisScr-after").addClass("up");
-		}, 2500)
+	// function scrTit(){
+	// 	let $subTit = $(".subVisScr");
+	// 	let $subCont = $(".scrCont");
+	// 	gsap.to($subTit, {
+	// 		duration: 2,
+	// 		x: 500,
+	// 		rotation: 360,
+	// 		borderRadius: 100,
 		
-	} 
+	// 		scrollTrigger: {
+	// 			trigger: $subCont,
+	// 			start: "top 50%",
+	// 			end: "top 100px",
+	// 			pin: true,
+	// 			scrub: true,    
+	// 			markers: true,
+	// 		}
+	// 	});
+	// }
+
 
     exports.scrollMove = scrollMove;
     exports.bodyScrollBlock = bodyScrollBlock
@@ -393,6 +420,7 @@
 		toggleFamily()
 		textFeildEvt()
 		selectNice()
-		subVisScr()
+		subVisScrLoad()
+		// scrTit()
 	});
 })(window, jQuery);

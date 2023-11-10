@@ -68,6 +68,17 @@
             width: 16px;
             height: 16px;
         }
+
+        &.is-main{
+            pointer-events: none;
+            opacity: 0;
+            @include transition(all, 0.3s, linear);
+            
+            &.show {
+                opacity: 1;
+                pointer-events: all;
+            }
+        } 
     }
 
     &-link {

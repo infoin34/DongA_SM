@@ -14,6 +14,7 @@
 	<!-- css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../../static/css/common.css">
+	<link rel="stylesheet" href="../../static/css/locomotive-scroll.css">
 	<!--//css -->
 
 
@@ -21,8 +22,12 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="../../static/js/locomotive-scroll.min.js"></script>
 	<script src="../../static/js/common.ui.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+
 	<!--//srcipt -->
 </head>
 
@@ -49,7 +54,7 @@
 									<a href="#">이사장 인사말</a>
 								</li>
 								<li class="gnb-depth2-li">
-									<a href="#">임원소개</a>
+									<a href="#">함께하는 사람들</a>
 								</li>
 								<li class="gnb-depth2-li">
 									<a href="#">연혁</a>
@@ -169,7 +174,7 @@
 										<a href="">이사장 인사말</a>
 									</li>
 									<li class="nav-depth2-li">
-										<a href="">임원소개</a>
+										<a href="">함께하는 사람들</a>
 									</li>
 									<li class="nav-depth2-li">
 										<a href="">연혁</a>
@@ -343,20 +348,20 @@
 								<strong>Another site</strong>
 								<ul>
 									<li>
-										<a><strong>개인정보보호정책</strong></a>
+										<a href="#none"><strong>개인정보보호정책</strong></a>
 									</li>
 									<li>
-										<a>이메일무단수집거부</a>
+										<a href="#none">이메일무단수집거부</a>
 									</li>
-									<li>
-										<a class="hasIco s">동아쏘시오홀딩스<i class="ico-link"></i></a>
-									</li>
+									<!-- <li>
+                                <a class="hasIco s">동아쏘시오홀딩스<i class="ico-link"></i></a>
+                            </li> -->
 								</ul>
 							</div>
 							<div class="footer-linkContG">
 								<div class="footer-linkCont">
 									<strong>Address</strong>
-									<span class="hasIco"><i class="ico-pin"></i>서울시 동대문구 천호대로</span>
+									<span class="hasIco"><i class="ico-pin"></i>서울시 동대문구 천호대로 64</span>
 								</div>
 								<div class="footer-linkCont">
 									<strong>Contact</strong>
@@ -394,7 +399,7 @@
 				</div>
 			</div>
 		</div>
-		<a class="btn-top" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+		<a class="btn-top @@class" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
 		<script>
 		</script>
 	</div>

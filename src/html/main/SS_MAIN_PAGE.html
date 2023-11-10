@@ -71,7 +71,7 @@
                         <div class="wrap-inner typeA">
                             <div class="mainCont-tit ani">
                                 <span>끊임없이 성장중!</span>
-                                <strong>수석문화재단은 인재들의 발전을<br>위해 지원하고 응원합니다</strong>
+                                <strong>인재들의 무한한 발전을 위해<br>지원하고 응원합니다</strong>
                             </div>
                             <ul class="supportCont-list">
                                 <li class="supportCont-li">
@@ -350,52 +350,68 @@
                                 <div class="partnerSlide">
                                     <ul class="partnerSlide-wrap swiper-wrapper">
                                         <li class="partnerSlide-li swiper-slide">
-                                            <div class="partnerSlide-img">
-                                                <img src="../../../dest/static/images/mainPartner01.png" alt="">
-                                            </div>
-                                            <span class="partnerSlide-name">서울특별시 교육청</span>
+                                            <a href="" class="partnerSlide-cont">
+                                                <div class="partnerSlide-img">
+                                                    <img src="../../../dest/static/images/mainPartner01.png" alt="">
+                                                </div>
+                                                <span class="partnerSlide-name">서울특별시 교육청</span>
+                                            </a>
                                         </li>
                                         <li class="partnerSlide-li swiper-slide">
-                                            <div class="partnerSlide-img">
-                                                <img src="../../../dest/static/images/mainPartner02.png" alt="">
-                                            </div>
-                                            <span class="partnerSlide-name">서울특별시 아동복지협회</span>
+                                            <a href="" class="partnerSlide-cont">
+                                                <div class="partnerSlide-img">
+                                                    <img src="../../../dest/static/images/mainPartner02.png" alt="">
+                                                </div>
+                                                <span class="partnerSlide-name">서울특별시 아동복지협회</span>
+                                            </a>
                                         </li>
                                         <li class="partnerSlide-li swiper-slide">
-                                            <div class="partnerSlide-img">
-                                                <img src="../../../dest/static/images/mainPartner03.png" alt="">
-                                            </div>
-                                            <span class="partnerSlide-name">대한약사회</span>
+                                            <a href="" class="partnerSlide-cont">
+                                                <div class="partnerSlide-img">
+                                                    <img src="../../../dest/static/images/mainPartner03.png" alt="">
+                                                </div>
+                                                <span class="partnerSlide-name">대한약사회</span>
+                                            </a>
                                         </li>
                                         <li class="partnerSlide-li swiper-slide">
-                                            <div class="partnerSlide-img">
-                                                <img src="../../../dest/static/images/mainPartner04.png" alt="">
-                                            </div>
-                                            <span class="partnerSlide-name">사단법인 물망초</span>
+                                            <a href="" class="partnerSlide-cont">
+                                                <div class="partnerSlide-img">
+                                                    <img src="../../../dest/static/images/mainPartner04.png" alt="">
+                                                </div>
+                                                <span class="partnerSlide-name">사단법인 물망초</span>
+                                            </a>
                                         </li>
                                         <li class="partnerSlide-li swiper-slide">
-                                            <div class="partnerSlide-img">
-                                                <img src="../../../dest/static/images/mainPartner01.png" alt="">
-                                            </div>
-                                            <span class="partnerSlide-name">서울특별시 교육청</span>
+                                            <a href="" class="partnerSlide-cont">
+                                                <div class="partnerSlide-img">
+                                                    <img src="../../../dest/static/images/mainPartner01.png" alt="">
+                                                </div>
+                                                <span class="partnerSlide-name">서울특별시 교육청</span>
+                                            </a>
                                         </li>
                                         <li class="partnerSlide-li swiper-slide">
-                                            <div class="partnerSlide-img">
-                                                <img src="../../../dest/static/images/mainPartner02.png" alt="">
-                                            </div>
-                                            <span class="partnerSlide-name">서울특별시 아동복지협회</span>
+                                            <a href="" class="partnerSlide-cont">
+                                                <div class="partnerSlide-img">
+                                                    <img src="../../../dest/static/images/mainPartner02.png" alt="">
+                                                </div>
+                                                <span class="partnerSlide-name">서울특별시 아동복지협회</span>
+                                            </a>
                                         </li>
                                         <li class="partnerSlide-li swiper-slide">
-                                            <div class="partnerSlide-img">
-                                                <img src="../../../dest/static/images/mainPartner03.png" alt="">
-                                            </div>
-                                            <span class="partnerSlide-name">대한약사회</span>
+                                            <a href="" class="partnerSlide-cont">
+                                                <div class="partnerSlide-img">
+                                                    <img src="../../../dest/static/images/mainPartner03.png" alt="">
+                                                </div>
+                                                <span class="partnerSlide-name">대한약사회</span>
+                                            </a>
                                         </li>
                                         <li class="partnerSlide-li swiper-slide">
-                                            <div class="partnerSlide-img">
-                                                <img src="../../../dest/static/images/mainPartner04.png" alt="">
-                                            </div>
-                                            <span class="partnerSlide-name">사단법인 물망초</span>
+                                            <a href="" class="partnerSlide-cont">
+                                                <div class="partnerSlide-img">
+                                                    <img src="../../../dest/static/images/mainPartner04.png" alt="">
+                                                </div>
+                                                <span class="partnerSlide-name">사단법인 물망초</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -409,7 +425,7 @@
                 </section>
             </div>
         </main>
-        @@include('../../include/footer.html')
+        @@include('../../include/footer.html', {"class" : "is-main"})
     </div>
 </body>
 <!-- 페이지 관련 스크립트 -->
@@ -443,6 +459,7 @@
         spaceBetween: 0,
         speed : 700,
         threshold: 150,
+        // loop: true,
         
         keyboard: {
             enabled: true,
@@ -480,11 +497,10 @@
         imgSlide.controller.control = infoSlide;
 
         
-        /* 사업 슬라이드 */ 
+        /* 파트너 슬라이드  */ 
         var partnerSlide = new Swiper(".partnerSlide", {
         slidesPerView: 1,
         spaceBetween: 0,
-        loop: true,
         autoplay: {
             delay: 3000,
         },
