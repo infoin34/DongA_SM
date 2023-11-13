@@ -544,6 +544,9 @@
 }
 
 @media(hover: hover) and (pointer: fine) {
+    .btn-support:hover {
+        color: $color-accent;
+    }
     .btn-ti {
         &:hover {
             background-color: $color-fff;

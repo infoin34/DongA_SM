@@ -364,6 +364,21 @@
                 line-height: 4rem;
                 color: $color-fff;
 
+                span {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        bottom: 6px;
+                        height: 1px;
+                        width: 0%;
+                        background-color: $color-fff;
+                        position: absolute;
+                        @include transition(all, 0.2s);
+                    }
+                }
+
                 &::after {
                     content: '';
                     display: inline-block;
@@ -595,11 +610,19 @@
     &.sub-list {
         padding-bottom: 16rem;
     }
+
+    &.sub-titB {
+        padding-bottom: 0;
+    }
 }
 
 .sub{
     &-titB{
         margin-bottom: 8rem;
+        
+        &.bt-0 {
+            margin-bottom: 0;
+        }
     }
     &-view-g{
         background-color: $color-primaryBgNd;
@@ -608,6 +631,9 @@
     }
     &-white{
         padding-top: 14rem;
+    }
+    &-fixtab{
+        padding-top: 0;
     }
     &-gray{
         padding-top: 14rem;
@@ -707,6 +733,88 @@
             @include txt-18x; 
             color: $color-888;
         }
+    }
+}
+
+.subVis {
+    &-wrap {
+        width: 100%;
+        margin-top: 4rem;
+        overflow: hidden;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 69.5rem;
+    position: relative;
+    background-size: cover;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-fff;
+
+        animation: 0.7s 0.7s subVis forwards ease;
+    
+        @keyframes subVis {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+    }
+
+    &-txt {
+        width: calc(100% - 4rem);
+        text-align: center;
+        transform: translateY(100%); 
+        margin-bottom: 3px;
+        opacity: 0;
+
+        &.m {
+            margin-bottom: 0;
+        }
+
+        animation: 0.7s 1.3s subVisTxt forwards $cubicTxt;
+    
+        @keyframes subVisTxt {
+            0% { transform: translateY(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+    }
+
+    &-date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+            letter-spacing: -0.02em;
+
+            &:not(:first-of-type)::before {
+                content: '';
+                display: inline-block;
+                width: 9.2rem;
+                height: 1px;
+                background-color: $color-aaa;
+                margin: 0 2.4rem;
+            }
+        }
+    }
+
+    &.history {
+        background-image: url(../../../dest/static/images/subVis-history.png);
     }
 }
 
@@ -1653,6 +1761,9 @@
         &::after {
             background-color: $color-fff;
         }
+    }
+    .nav-depth2-li:hover span::after{
+        width: 100%;
     }
     .newsCont-li:hover {
         &::after {

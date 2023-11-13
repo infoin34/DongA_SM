@@ -356,6 +356,8 @@
 	$(window).ready(function(){
 		scrollEv();
 	});
+	
+	// let $trigger = $('[data-js-gnb="trigger"]');
 
 	/* 입력필드(검색) */ 
 	function textFeildEvt(){
@@ -387,27 +389,6 @@
 			$(this).niceSelect();
 		})
 	}
-
-	// function scrTit(){
-	// 	let $subTit = $(".subVisScr");
-	// 	let $subCont = $(".scrCont");
-	// 	gsap.to($subTit, {
-	// 		duration: 2,
-	// 		x: 500,
-	// 		rotation: 360,
-	// 		borderRadius: 100,
-		
-	// 		scrollTrigger: {
-	// 			trigger: $subCont,
-	// 			start: "top 50%",
-	// 			end: "top 100px",
-	// 			pin: true,
-	// 			scrub: true,    
-	// 			markers: true,
-	// 		}
-	// 	});
-	// }
-
 
     exports.scrollMove = scrollMove;
     exports.bodyScrollBlock = bodyScrollBlock

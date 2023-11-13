@@ -1,0 +1,139 @@
+
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>정관</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-titB subCont bt-0">
+                <article class="subTit">
+                    <div class="wrap-inner typeA">
+                        <div class="subTit-b">
+                            <h2>함께하는 사람들</h2>
+                            <p>각 분야의 인사들이 수석문화재단을 함께 이끌어 가고 있습니다.</p>
+                        </div>
+                    </div>
+					<!-- <div class="sub-visual">
+						<div class="subVis">
+							<div class="sub-vTxt">
+								<div class="round-txtWrap">
+									<span>설립일</span>
+									<strong>수석문화재단이 함께 하겠습니다</strong>
+								</div>
+							</div>
+						</div>
+					</div> -->
+                </article>
+            </section>
+            <!-- <section class="sub-white subCont">
+                <article class="sub-people">
+                    <div class="wrap-inner typeA">
+                        <div class="sub-withP">
+                            <ul class="withPCont">
+                                <li class="withPCont-li ani btot">
+                                    <div class="withPCont-img"></div>
+                                    <div class="withPCont-txtArea">
+                                        <span class="withPCont-position">이사장</span>
+                                        <strong class="withPCont-name">박광순</strong>
+                                        <div class="withPCont-occupation">
+                                            <span>수석문화재단 이사장</span>
+                                            <span>㈜전홍 회장</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="withPCont-li ani btot">
+                                    <div class="withPCont-img"></div>
+                                    <div class="withPCont-txtArea">
+                                        <span class="withPCont-position">이사</span>
+                                        <strong class="withPCont-name">김낙회</strong>
+                                        <div class="withPCont-occupation">
+                                            <span>한국광고총연합회 회장</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="withPCont-li ani btot">
+                                    <div class="withPCont-img"></div>
+                                    <div class="withPCont-txtArea">
+                                        <span class="withPCont-position">이사</span>
+                                        <strong class="withPCont-name">김자호</strong>
+                                        <div class="withPCont-occupation">
+                                            <span>간삼건축 회장</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="withPCont-li ani btot">
+                                    <div class="withPCont-img"></div>
+                                    <div class="withPCont-txtArea">
+                                        <span class="withPCont-position">이사</span>
+                                        <strong class="withPCont-name">김주영</strong>
+                                        <div class="withPCont-occupation">
+                                            <span>서강대학교 경영학부 마케팅전공 교수</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="withPCont-li ani btot">
+                                    <div class="withPCont-img"></div>
+                                    <div class="withPCont-txtArea">
+                                        <span class="withPCont-position">이사</span>
+                                        <strong class="withPCont-name">유창수</strong>
+                                        <div class="withPCont-occupation">
+                                            <span>유진투자증권 부회장</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="withPCont-li ani btot">
+                                    <div class="withPCont-img"></div>
+                                    <div class="withPCont-txtArea">
+                                        <span class="withPCont-position">감사</span>
+                                        <strong class="withPCont-name">권경배</strong>
+                                        <div class="withPCont-occupation">
+                                            <span>세진 회계법인 파트너사 회계사</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="withPCont-li ani btot">
+                                    <div class="withPCont-img"></div>
+                                    <div class="withPCont-txtArea">
+                                        <span class="withPCont-position">감사</span>
+                                        <strong class="withPCont-name">김경태</strong>
+                                        <div class="withPCont-occupation">
+                                            <span>동천수 운영지원 실장</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section> -->
+        </main>
+        
+        @@include('../../include/footer.html', 
+        {page_scr : false})
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>

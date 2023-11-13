@@ -661,17 +661,292 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
-@media screen and (max-width: 1200px) {}
+.withPCont {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 4rem;
+    row-gap: 12rem;
+
+    &-li {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    &-img {
+        max-width: 24rem;
+        max-height: 24rem;
+        width: 100%;
+        border-radius: 50%;
+
+        background-color: #D9D9D9;
+
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
+
+    &-txtArea {
+        width: 100%;
+        text-align: left;
+    }
+
+    &-position {
+        display: block;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 0.8rem;
+        color: $color-primary;
+    }
+
+    &-name {
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+        letter-spacing: -0.02em;
+        color: $color-222;
+    }
+
+    &-occupation {
+        margin-top: 1.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        span {
+            @include txt-18x;
+            color: $color-666;
+
+            &:not(:first-of-type)::before {
+                content: '';
+                display: inline-block;
+                width: 2px;
+                height: 1.8rem;
+                background-color: $color-medium;
+                margin: 0 1rem;
+                vertical-align:middle;
+                transform: translateY(-1px);
+            }
+        }
+    }
+}
+
+.tabCont {
+    &-swipArea {
+        width: 100%;
+        position: relative;
+        padding-top: 17rem;
+    }
+    &-swipBox {
+        width: 100%;
+        height: 9rem;
+        position: absolute;
+        top: 0;
+        @include transition(top, 0.4s, ease);
+        background-color: $color-fff;
+        z-index: 15;
+
+        &.fix {
+            position: fixed;
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.08);
+            background-color: $color-fff;
+    
+
+            .tabCont-swip{
+                border-bottom: none;
+            }
+        }
+
+        &.up {
+            top: 10rem;
+        }
+    }
+    &-swip {
+        width: calc(100% - 4rem);
+        border-bottom: 2px solid $color-default;
+        max-width: 120rem;
+        height: 9rem;
+        margin: 0 auto;
+        overflow: hidden;
+        box-sizing: content-box;
+    }
+    &-swipLi {
+        width: 24rem;
+    }
+    &-btn {
+        display: block;
+        width: 100%;
+        height: 9rem;
+        line-height: 9rem;
+        text-align: center;
+        font-weight: 500;
+        font-size: 2rem;
+        color: $color-666;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            width: 100%;
+            height: 4px;
+            bottom: -1px;
+            background-color: $color-accent;
+            z-index: 5;
+        }
+
+        &.on{
+            font-weight: 700;
+            color: $color-accent;
+
+            &::after {
+                display: block;
+            }
+        }
+    }
+}
+
+.subHistory{
+    &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14rem;
+    }
+    &-box {
+        width: 100%;
+    }
+    &-tit {
+        text-align: center;
+        margin-bottom: 3.2rem;
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $color-888; 
+        }
+        strong {
+            @include txt-60x;
+            color: $color-222;
+        }
+    }
+    &-contG {
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #EEEEEE;
+        }
+    }
+    &-cont {
+        width: 50%;
+        margin-bottom: 2.6rem;
+
+        strong {
+            display: block;
+            @include txt-24x;
+            color: $color-primaryNd;
+            margin-bottom: 1.6rem;
+        }
+
+        li {
+            @include txt-18x;
+            color: $color-666;
+            position: relative;
+
+            &:not(:last-of-type){
+                margin-bottom: 1rem;
+            }
+        }
+
+        &:not(.even) {
+            padding-right: 4.8rem;
+            text-align: right;
+            margin-right: auto;
+
+
+            li{
+                padding-right: 1rem;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: $color-medium;
+                    vertical-align: middle;
+                    position: absolute;
+                    right: 0;
+                    top: 1.2rem;
+                }
+            }
+        }
+
+        &.even {
+            padding-left: 4.8rem;
+            text-align: left;
+            margin-left: auto;
+
+            li{
+                padding-left: 1rem;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: $color-medium;
+                    vertical-align: middle;
+                    position: absolute;
+                    left: 0;
+                    top: 1.2rem;
+                }
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .withPCont {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
 @media screen and (max-width: 992px) {
     .tf-delete.on {
         display: inline-flex;
+    }
+    
+    .withPCont {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 768px) {
     .purposeCont-list {
         flex-direction: column;
+    }
+    
+    .withPCont {
+        grid-template-columns: 1fr;
     }
 }
 
