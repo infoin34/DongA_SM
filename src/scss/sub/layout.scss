@@ -417,7 +417,7 @@
     display: flex;
     justify-content: center;
     background-color: $color-000;
-    padding: 9.8rem 3rem 4.2rem;
+    padding: 10rem 2rem 6rem;
     &-inner {
         display: flex;
         justify-content: space-between;
@@ -431,15 +431,15 @@
 
         i {
             display: block;
-            width: 24.6rem;
-            height: 21.2rem;
+            width: 28.2rem;
+            height: 4.5rem;
         }
     }
 
     // 인포영역
     &-info {
         display: flex;
-        align-items: flex-start;
+        align-items: flex-end;
         gap: 17.3rem;
     }
 
@@ -447,7 +447,7 @@
     &-link {
         display: flex;
         flex-direction: column;
-        gap: 3.6rem;
+        gap: 7.2rem;
         color: $color-medium;
     }
     &-linkContG {
@@ -538,8 +538,9 @@
         background-color: #333;
         display: none;
         position: absolute;
-        top: 37px;
+        top: -16px;
         z-index: 99;
+        transform: translateY(-100%);
     }
     &-familyLi {
         display: block;
@@ -550,14 +551,17 @@
     }
 
     &-bottom {
-        margin-top: 6rem;
+        margin-top: 2.4rem;
         width: 100%;
-
-        ::after {
-            content: '';
-            display: block;
-            clear: both;
-        }
+    }
+    &-bottom-t {
+        display: flex;
+    }
+    &-bottom-b {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 22rem;
     }
 
     // copyright
@@ -570,9 +574,8 @@
 
     // 협력영역
     &-partner {
-        display: flex;
-        gap: 2.5rem;
-        margin-right: -2.5rem;
+        display: inline-flex;
+        gap: 2.5rem;        
         float: right;
     }
     &-partnerLi {
@@ -622,6 +625,10 @@
         
         &.bt-0 {
             margin-bottom: 0;
+        }
+        
+        &.bt-40 {
+            margin-bottom: 4rem;
         }
     }
     &-view-g{
@@ -1602,6 +1609,7 @@
     }
     .footer-info {
         justify-content: space-between;
+        gap: 0;
     }
     .footer-copyright {
         margin-top: 3.6rem;
@@ -1672,21 +1680,14 @@
             height: 60vw;
         }
     }
-    
 
-    .footer{
-        &-info{
-            flex-direction: column;
-        }
-        &-familyList {
-            top: 0px;
-            transform: translateY( calc(-100% - 10px));
-        }
-    }
 
     .footer-partner{
         float: none;
         margin-right: 0;
+    }
+    .footer-copyright {
+        margin-top: 2.4rem;
     }
 }
 
@@ -1738,12 +1739,25 @@
         }
 
         &-partner {
-            margin-top: 5rem;
+            margin-top: 3.6rem;
         }
-    }
-    .footer-linkContG{
-        flex-direction: column;
-        gap: 3.6rem;
+
+        &-info {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3.6rem;
+        }
+        &-link {
+            gap: 3.6rem;
+        }
+        &-linkContG{
+            flex-direction: column;
+            gap: 3.6rem;
+        }
+        &-logo i {
+            max-width: 28.2rem;
+            width: 100%;
+        }
     }
 }
 

@@ -308,14 +308,14 @@
 	/* 스크롤 애니 이벤트*/
 	function scrollAni(){
 		let setScrT = parseInt(currentScr + ($(window).height()*0.9));		
-		$('.ani').each(function(i){	
-			if(setScrT > $(this).offset().top){											
-				if(!$(this).hasClass('active')){
-					$(this).addClass('active');					
+		$('.ani').each(function(index, item){	
+			if(setScrT > $(item).offset().top) {											
+				if(!$(item).hasClass('active')){
+					$(item).addClass('active');					
 				}			
-			}else{
-				if($(this).hasClass('active')) {
-					$(this).removeClass('active');
+			}else {
+				if($(item).hasClass('active')) {
+					$(item).removeClass('active');
 				}
 			}
 		});

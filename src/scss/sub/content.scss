@@ -142,7 +142,7 @@ $color-A2A5BC : #A2A5BC;
         padding-bottom: 2rem;
         border-bottom: 2px solid $color-444;
 
-        &-left {
+        &-right {
             justify-content: flex-end;
         }
     }
@@ -735,6 +735,16 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
+.incorporation{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    &-cont {
+        width: 100%;
+    }
+}
+
 .tabCont {
     &-swipArea {
         width: 100%;
@@ -787,6 +797,9 @@ $color-A2A5BC : #A2A5BC;
         font-size: 2rem;
         color: $color-666;
         position: relative;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
 
         &::after {
             content: '';
