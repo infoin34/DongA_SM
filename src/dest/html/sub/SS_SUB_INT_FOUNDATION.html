@@ -443,7 +443,8 @@
 		marginTop: currentTop
 	})
 	$tl.to($(".scrArea"), {
-		marginTop: "0"
+		marginTop: "0",
+		duration: 1.5
 	}, "+=0.5")
 	$tl.to($(".subVisScr-inner"), {
 		width: "0",
@@ -451,7 +452,8 @@
 	}, "+=0.5")
 	$tl.to($(".subVisScr-inner"), {
 		width: "100vw",
-		visibility: "visible"
+		visibility: "visible",
+		duration: 1.8
 	}, "+=0.5")
 	$tl.to($(".subVisScr-start"), {
 		opacity: "0",
@@ -495,7 +497,7 @@
 
 	$(window).ready(function() {
 		$('html, body').scrollTop(0);
-		scrollMove(650, 900);
+		scrollMove(800, 1500);
 	});
 
 
