@@ -432,7 +432,7 @@
 			trigger: ".scrTit",
 			toggleActions: "restart none restart none",
 			start: "top 100",
-			end: "+=2500",
+			end: "+=2000",
 			scrub: 1,
 			pin: true,
 		},
@@ -444,7 +444,7 @@
 	})
 	$tl.to($(".scrArea"), {
 		marginTop: "0"
-	})
+	}, "+=0.5")
 	$tl.to($(".subVisScr-inner"), {
 		width: "0",
 		visibility: "hidden"
@@ -460,7 +460,7 @@
 	$tl.to($(".subVisScr-start"), {
 		opacity: "1",
 		marginTop: "0",
-		duration: 3
+		duration: 2
 	})
 	$tl.to({}, {
 		duration: 2
@@ -468,7 +468,7 @@
 	$tl.to($(".subVisScr-start"), {
 		opacity: "0",
 		marginTop: "10rem",
-		duration: 3
+		duration: 2
 	}, "+=0.5")
 	$tl.to($(".subVisScr-inner"), {
 		maxWidth: "100%"
@@ -476,16 +476,16 @@
 	$tl.to($(".subVisScr-after"), {
 		opacity: "0",
 		marginTop: "10rem",
-		duration: 3
+		duration: 2
+	}, "-1")
+	$tl.to($(".subVisScr-after"), {
+		opacity: "1",
+		marginTop: "0",
+		duration: 2
 	}, "+=0.5")
 	$tl.to({}, {
 		duration: 2
 	});
-	$tl.to($(".subVisScr-after"), {
-		opacity: "1",
-		marginTop: "0",
-		duration: 3
-	}, "+=0.5")
 	$tl.to($(".scrArea"), {
 		marginBottom: currentTop
 	}, "+=0.5")
@@ -495,7 +495,7 @@
 
 	$(window).ready(function() {
 		$('html, body').scrollTop(0);
-		scrollMove(300, 900);
+		scrollMove(650, 900);
 	});
 
 
