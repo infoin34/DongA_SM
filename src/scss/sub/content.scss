@@ -799,6 +799,7 @@ $color-A2A5BC : #A2A5BC;
         position: relative;
         background-color: transparent;
         border: none;
+        cursor: pointer;
 
         &::after {
             content: '';
