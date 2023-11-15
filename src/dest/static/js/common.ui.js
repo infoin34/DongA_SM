@@ -37,87 +37,108 @@
         $('html, body').animate({scrollTop: val}, time || 300);
     }   
 
-    /* 팝업 */
+	/* 팝업 */
     const popup = {
-		targetLayer : '',
 		guideZindex : 1020,
 		targetArr : [],
 		freezeTop : 0,
 		popupObj : {},
 		popupSetTimer : null,
 		oldHeight : 0,
-		layerPopup : function(obj) {
+		open : function(obj) {
 			'use strict'
-			var $obj = (typeof obj === 'string') ? $(obj) : obj ;
+			let $obj = (typeof obj === 'string') ? $(obj) : obj ;
 
-			popupBase.layerPopupInit($obj);
+			popup.layerPopupInit($obj);
 		},
-		layerPopupInit: function($obj) {
+		layerPopupInit: function(obj) {
 			'use strict'
-			var $obj = $obj,
-				$wrapper = $obj.find('.wrapper'),
-				$closeBtn = $obj.find('.close, .fn-close, .btn-close'),
-				$popup = $obj.find('.popup'),
-				$close = $obj.find('.btn.close');
+			let $obj = obj,
+				$wrapper = $obj.find('.popup-wrap'),
+				$closeBtn = $obj.find('.close, .btn-close');
 
-			popupBase.targetLayer = $obj;
-			$.each(popupBase.targetArr, function(i) {
-				if (popupBase.targetArr[i].attr('id') == $obj.attr('id')) popupBase.targetArr.splice(i,1);
+			$.each(popup.targetArr, function(i) {
+				if (popup.targetArr[i].attr('data-pop') == $obj.attr('data-pop')) popup.targetArr.splice(i,1);
 			})
-			popupBase.targetArr.push($obj);
+			popup.targetArr.push($obj);
 
+			popup.guideZindex++;
+			$obj.attr('data-pop', popup.guideZindex);
 			$obj.css({
 				'display': 'block',
-				'z-index': popupBase.guideZindex + (popupBase.targetArr.length + 1)
+				'z-index': popup.guideZindex
 			});
 
-			$popup.css({
-				'margin-top': '10px',
-			});
-
-			if (popupBase.targetArr.length == 1) {
-				if( !$body.hasClass('layer-open') ) {
+			if (popup.targetArr.length == 1) {
+				if(!$('html').hasClass('layer-open') ) {
 					bodyScrollBlock(true);
 				}
 			}
-			$body.append($obj);
+			$('html').append($obj);
 
 			$closeBtn.click(function (e) {
 				e.preventDefault();
-				popupBase.closePopup('#'+$obj.attr('id'));
+				popup.closePopup(this);
 			});
 
-			// layer-popup-fix 클래스를 추가하면 dim 클릭해도 닫히지 않음  20-10-23
+			// layer-popup-fix 클래스를 추가하면 dim 클릭해도 닫히지 않음 
 			$obj.on('click', function(e) {				
-				if ( !$(this).hasClass('layer-popup-fix') && e.target.classList.contains('popup-wrapper') || e.target.classList.contains('layer-popup') ) {
-					popupBase.closePopup('#'+$obj.attr('id'))
-				} else {
-					
+				if (!$(this).hasClass('layer-popup-fix') && e.target.classList.contains('popup-wrap')) {
+					popup.closePopup(this);
 				}
 			});
 		},
 		popupCloseAllFn : function() {
 			'use strict'
-
-			$.each(popupBase.targetArr, function(i) {
-				popupBase.closePopup();
+			$.each(popup.targetArr, function(i) {
+				popup.closePopup();
 			});
 		},
-		closePopup : function(id) {
-			var $tg = id ? $(id) : popupBase.targetArr[popupBase.targetArr.length - 1] ;
-			$tg.css({ 'display': 'none', 'z-index': 0 });
-			$.each(popupBase.targetArr, function(i) {
-				if (popupBase.targetArr[i].attr('id') == $tg.attr('id')) {
-					popupBase.targetArr.splice(i,1);
-					return false;
+		closePopup : function(target) {
+			let $target = $(target),
+			    $pop = $target.hasClass('layer-popup') ? $target : $target.parents('.layer-popup');
+			
+			$.each(popup.targetArr, function(i) {
+				if (popup.targetArr[i].attr('data-pop') == $pop.attr('data-pop')) {
+					popup.targetArr.splice(i,1);
 				}
-			})
-			popupBase.targetLayer = '';
-			if (popupBase.targetArr.length == 0) {
-				if( !$body.hasClass('layer-open') ) {
+			});
+			if (popup.targetArr.length == 0) {
+				if( !$('html').hasClass('layer-open') ) {
 					bodyScrollBlock(false);
 				}
+			}			
+			$pop.css({ 'display': 'none', 'z-index': 0 });
+		},
+		confirm : function(obj){
+			let btns = '';
+			let _ = this;
+
+			if(typeof(obj) == 'string'){
+				$('.pop-confirm .confirm-text').html(obj);
+			}else{
+				$('.pop-confirm .confirm-text').html(obj.text);
 			}
+
+			if(obj.cancel) btns += '<a href="#" class="btn-type-c btn-cancel">취소</a>';
+			btns += '<a href="#" class="btn-type-b btn-check">확인</a>';
+
+			$('.pop-confirm .btn-wrap').html(btns);
+
+			$('.pop-confirm .btn-check').off('click');
+			$('.pop-confirm .btn-check').on('click', function(){
+				obj.check && obj.check();
+				_.closePopup('.pop-confirm');				
+				return false;
+			});
+			
+			$('.pop-confirm .btn-cancel').off('click');
+			$('.pop-confirm .btn-cancel').on('click', function(){
+				obj.cancel && obj.cancel();
+				_.closePopup('.pop-confirm');
+				return false;
+			});			
+			_.open('.pop-confirm');			
 		}		
 	};
 
