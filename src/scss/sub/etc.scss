@@ -465,9 +465,29 @@
         @include transition(all, 1s, $cubicTxt);
     }
 
+    &.rtol {
+        transform: translateX(30%);
+        opacity: 0;
+        @include transition(all, 1s, $cubicTxt);
+    }
+
+    &.ltor {
+        transform: translateX(-30%);
+        opacity: 0;
+        @include transition(all, 1s, $cubicTxt);
+    }
+
     &.active {
         &.btot {
             transform: translateY(0%);
+            opacity: 1;
+        }
+        &.rtol {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+        &.ltor {
+            transform: translateX(0%);
             opacity: 1;
         }
     }

@@ -11,7 +11,7 @@
 
 
 
-	<title>공지사항</title>
+	<title>이사장 인사말</title>
 	<!-- css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../../static/css/common.css">
@@ -247,204 +247,71 @@
 			</nav>
 		</header>
 
+		<!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->
 		<main class="wrapper">
-			<section class="sub-titB subCont">
-				<article class="subTit">
-					<div class="wrap-inner typeA">
-						<div class="subTit-b">
-							<h2>공지사항</h2>
-							<p>수석문화재단의 새로운 알림과 유용한 정보들을 한곳에서 확인하세요.</p>
+			<section class="sub-titB subCont bt-0">
+				<article class="subCtit">
+					<div class="subTit">
+						<div class="wrap-inner typeA">
+							<div class="subTit-b">
+								<h2>이사장 인사말</h2>
+							</div>
+						</div>
+					</div>
+					<div class="subVis-wrap">
+						<div class="subVis ceo">
+							<div class="subVis-txt m">
+								<span class="subVis-t">타인을 위해 일할 줄 아는 책임감 있는 인재 발굴·육성 학술·문화진흥에 전력하는 재단으로</span>
+								<strong class="subVis-tit">수석문화재단이 걸어온 길</strong>
+							</div>
 						</div>
 					</div>
 				</article>
 			</section>
-			<section class="sub-list subCont">
-				<article class="sub-comNoti">
+			<section class="sub-ceo subCont">
+				<article class="subHistory">
 					<div class="wrap-inner typeA">
-						<div class="clist">
-							<div class="clist-top">
-								<div class="clist-info">
-									<span class="clist-infoNum">
-                                        총 <span>30</span>건
-									</span>
-									<div class="clist-search"></div>
-								</div>
-								<div class="clist-search">
-									<div class="txtField">
-										<input type="text" class="tf-input" placeholder="검색어를 입력해 주세요.">
-										<span class="tf-btn">
-                                            <button class="tf-delete"></button>
-                                            <button class="tf-search"></button>
-                                        </span>
-									</div>
-								</div>
+						<div class="subCText ani ltor">
+							<strong>
+                                <em>수석문화재단</em> 홈페이지에 오신 것을 환영합니다.
+                            </strong>
+							<p>
+								1987년 5월 13일 설립한 수석장학회는 동아제약 창립 60주년이 되는 1992년에<br>
+                                수석문화재단으로 개편하여 오늘에 이르고 있습니다.
+							</p>
+						</div>
+					</div>
+					<div class="ceoCont">
+						<div class="wrap-inner typeA">
+							<p class="ceoCont-txt ani btot">
+								올해로 창립 37주년을 맞이하는 본 재단은 현재 장학사업을 비롯해 학술사업 (함춘동아의학상, 약사금탑상), 문화사업(마로니에 여성 백 일장), 교육사업(평생교육, 교육복지)을 후원하고 있으며, 『생활한자 3,000자』발간 등의 출판 사업을 통해 공익법인으로서 사회에 기여하고 있습니다. 수석문화재단은 앞으로도 다양한 문화 및 학술 활동에 대한 지원 사업을 더욱 확대해 나감으로써 사회 발전에 이바지해 나갈 것입니다.<br><br><br>
+                                감사합니다.
+							</p>
+							<img class="ceoCont-img ani rtol" src="../../../dest/static/images/ceo-img.png" alt="">
+						</div>
+					</div>
+					<div class="wrap-inner typeA">
+						<div class="ceoName ani ltor">
+							<div class="ceoName-txt">
+								<span class="ceoName-name">강신호</span>
+								<span class="ceoName-position">이사장</span>
 							</div>
-							<div class="clist-Box">
-								<ul class="clist-txt">
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">30</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내 test 안내 안내안내안내 ㅇ</strong>
-											<span class="txtLi-file">
-                                                <i class="ico-file"></i>
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">29</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내 test 안내 안내안내안내 ㅇ안내 안내안내안내 </strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">28</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">27</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                                <i class="ico-file"></i>
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">26</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">25</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">24</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">23</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">22</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">21</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="clist-pagin">
-								<div class="cpagin">
-									<a class="cpagin-first disable" href="#none">첫페이지</a>
-									<a class="cpagin-prev disable" href="#none">이전</a>
-									<ol class="cpagin-list">
-										<li class="cpagin-li">
-											<a class="cpagin-num on" href="#none">1</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">2</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">3</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">4</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">5</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">6</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">7</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">8</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">9</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">10</a>
-										</li>
-									</ol>
-									<a class="cpagin-next" href="#none">다음</a>
-									<a class="cpagin-last" href="#none">마지막페이지</a>
-								</div>
-							</div>
+							<img class="ceoName-sign" src="../../../dest/static/images/ceoName-sign.png"></img>
 						</div>
 					</div>
 				</article>
@@ -521,7 +388,7 @@
 </body>
 <!-- 페이지 관련 스크립트 -->
 <script>
-
+	$(function() {});
 </script>
 <!--//페이지 관련 스크립트 -->
 

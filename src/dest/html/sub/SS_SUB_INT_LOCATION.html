@@ -11,7 +11,7 @@
 
 
 
-	<title>공지사항</title>
+	<title>오시는 길</title>
 	<!-- css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../../static/css/common.css">
@@ -247,202 +247,82 @@
 			</nav>
 		</header>
 
+		<!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->
 		<main class="wrapper">
-			<section class="sub-titB subCont">
+			<section class="sub-titB subCont bt-0">
 				<article class="subTit">
 					<div class="wrap-inner typeA">
 						<div class="subTit-b">
-							<h2>공지사항</h2>
-							<p>수석문화재단의 새로운 알림과 유용한 정보들을 한곳에서 확인하세요.</p>
+							<h2>오시는 길</h2>
+							<p>나눔과 사랑을 잇는 수석문화재단에 오시는 길을 안내드립니다.</p>
 						</div>
 					</div>
 				</article>
 			</section>
-			<section class="sub-list subCont">
-				<article class="sub-comNoti">
+			<section class="sub-white subCont pt-80">
+				<article class="sub-location">
 					<div class="wrap-inner typeA">
-						<div class="clist">
-							<div class="clist-top">
-								<div class="clist-info">
-									<span class="clist-infoNum">
-                                        총 <span>30</span>건
-									</span>
-									<div class="clist-search"></div>
-								</div>
-								<div class="clist-search">
-									<div class="txtField">
-										<input type="text" class="tf-input" placeholder="검색어를 입력해 주세요.">
-										<span class="tf-btn">
-                                            <button class="tf-delete"></button>
-                                            <button class="tf-search"></button>
-                                        </span>
+						<div class="locationCont">
+							<div class="locationCont-map ani btot">
+								<div id="daumRoughmapContainer1699606404371" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+							</div>
+							<div class="locationCont-txt ani btot">
+								<div class="locationCont-txtBox ">
+									<strong class="locationCont-tit">
+                                        위치
+                                    </strong>
+									<div class="locationCont-group">
+										<dl class="locationCont-dl">
+											<dt>주소</dt>
+											<dd>서울시 동대문구 천호대로 64</dd>
+										</dl>
+										<dl class="locationCont-dl">
+											<dt>전화</dt>
+											<dd>02-920-8329</dd>
+										</dl>
 									</div>
 								</div>
-							</div>
-							<div class="clist-Box">
-								<ul class="clist-txt">
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">30</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내 test 안내 안내안내안내 ㅇ</strong>
-											<span class="txtLi-file">
-                                                <i class="ico-file"></i>
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">29</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내 test 안내 안내안내안내 ㅇ안내 안내안내안내 </strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">28</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">27</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                                <i class="ico-file"></i>
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">26</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">25</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">24</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">23</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">22</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-									<li class="clist-txtLi">
-										<a href="#none" class="txtLi">
-											<span class="txtLi-num">21</span>
-											<strong class="txtLi-name">수석문화재단 공지사항 텍스트 test test test 안내</strong>
-											<span class="txtLi-file">
-                                            </span>
-											<span class="txtLi-date">2023.04.07</span>
-											<span class="txtLi-ico">
-                                                <i class="ico-arrowR"></i>
-                                            </span>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="clist-pagin">
-								<div class="cpagin">
-									<a class="cpagin-first disable" href="#none">첫페이지</a>
-									<a class="cpagin-prev disable" href="#none">이전</a>
-									<ol class="cpagin-list">
-										<li class="cpagin-li">
-											<a class="cpagin-num on" href="#none">1</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">2</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">3</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">4</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">5</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">6</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">7</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">8</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">9</a>
-										</li>
-										<li class="cpagin-li">
-											<a class="cpagin-num" href="#none">10</a>
-										</li>
-									</ol>
-									<a class="cpagin-next" href="#none">다음</a>
-									<a class="cpagin-last" href="#none">마지막페이지</a>
+								<div class="locationCont-txtBox">
+									<strong class="locationCont-tit">
+                                        교통
+                                    </strong>
+									<div class="locationCont-group">
+										<dl class="locationCont-dl">
+											<dt>지하철</dt>
+											<dd><span class="traffic line1">1호선</span>서울시 동대문구 천호대로 64</dd>
+											<dd><span class="traffic line2">2호선</span>신설동역 9번 출구 도보 5분 거리</dd>
+										</dl>
+									</div>
+									<div class="locationCont-group">
+										<dl class="locationCont-dl">
+											<dt>버스</dt>
+											<dd class="locationCont-ex">동아제약앞 정류장 하차</dd>
+											<div class="ddG">
+												<dd><span class="traffic bus1">간선</span>147, 202, 241</dd>
+												<dd><span class="traffic bus2">지선</span>1017</dd>
+											</div>
+											<dd class="locationCont-ex">동아제약앞 정류장 하차</dd>
+											<dd><span class="traffic bus1">간선</span>303, 370, 721, N30</dd>
+											<dd><span class="traffic bus2">지선</span>2112</dd>
+											<dd><span class="traffic bus3">지선</span>9301</dd>
+											<dd><span class="traffic bus4">지선</span>6002</dd>
+										</dl>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -520,8 +400,14 @@
 	</div>
 </body>
 <!-- 페이지 관련 스크립트 -->
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp": "1699606404371",
+		"key": "2gs8j",
+	}).render();
+</script>
 <script>
-
 </script>
 <!--//페이지 관련 스크립트 -->
 
