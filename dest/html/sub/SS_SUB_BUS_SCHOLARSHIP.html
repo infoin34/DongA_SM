@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+
+
+
+
+	<title>장학사업</title>
+	<!-- css -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="../../static/css/common.css">
+	<link rel="stylesheet" href="../../static/css/locomotive-scroll.css">
+	<!--//css -->
+
+
+	<!-- srcipt -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="../../static/js/locomotive-scroll.min.js"></script>
+	<script src="../../static/js/common.ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+
+	<!--//srcipt -->
+</head>
+
+<body>
+	<div id="wrap" role="main">
+
+		<header class="header is-dark">
+			<div class="header-inner">
+				<div class="header-top">
+					<a class="logo" href="#">
+						<h1>로고</h1>
+					</a>
+				</div>
+				<div class="gnb">
+					<span class="gnb-line"></span>
+					<ul class="gnb-depth1">
+						<li class="gnb-depth1-li">
+							<a href="#" data-js-gnb="trigger"><strong>수석문화재단</strong></a>
+							<ul class="gnb-depth2" data-js-gnb="list">
+								<li class="gnb-depth2-li">
+									<a href="#">재단소개</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">이사장 인사말</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">함께하는 사람들</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">연혁</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">CI소개</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">정관</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">오시는 길</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#" data-js-gnb="trigger">운영공시</a>
+									<ul class="gnb-depth3">
+										<li>
+											<a href="#">결산서</a>
+										</li>
+										<li>
+											<a href="#">기부금 모금액 및 활용실적</a>
+										</li>
+										<li>
+											<a href="#">기부금 명세서</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="gnb-depth1-li">
+							<a href="#" data-js-gnb="trigger"><strong>사업소개</strong></a>
+							<ul class="gnb-depth2" data-js-gnb="list">
+								<li class="gnb-depth2-li">
+									<a href="#">장학사업</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">문화사업</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">출판사업</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#" data-js-gnb="trigger">학술사업</a>
+									<ul class="gnb-depth3">
+										<li>
+											<a href="#">함춘동의학상</a>
+										</li>
+										<li>
+											<a href="#">약사금탑상</a>
+										</li>
+									</ul>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#" data-js-gnb="trigger">교육사업</a>
+									<ul class="gnb-depth3">
+										<li>
+											<a href="#">평생교육사업</a>
+										</li>
+										<li>
+											<a href="#">교육복지사업</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="gnb-depth1-li">
+							<a href="#" data-js-gnb="trigger"><strong>커뮤니티</strong></a>
+							<ul class="gnb-depth2" data-js-gnb="list">
+								<li class="gnb-depth2-li">
+									<a href="#">재단소식</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">공지사항</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">문의하기</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="header-btnArea">
+					<a href="#none" class="btn-support">후원하기</a>
+					<button class="btn-menu">
+						<span class="line1"></span>
+						<span class="line2"></span>
+						<span class="line3"></span>
+					</button>
+				</div>
+			</div>
+			<nav class="nav">
+				<div class="nav-inner">
+					<div class="nav-info">
+						<div class="nav-support">
+							<strong class="nav-supportTit">
+                        나눔을 통해<br />
+                        미래 인재의 희망을<br />
+                        특별하고 소중하게<br />
+                        만들어보세요
+                    </strong>
+							<a href="#" class="nav-supportLink">후원 하러가기<i class="ico-arrowR"></i></a>
+						</div>
+						<ul class="nav-policy">
+							<li><a href="#"><em>개인정보보호정책</em></a></li>
+							<li><a href="#">이메일무단수집거부</a></li>
+						</ul>
+					</div>
+					<div class="nav-depth">
+						<ul class="nav-depth1">
+							<li class="nav-depth1-li">
+								<a href="">수석문화재단</a>
+								<ul class="nav-depth2">
+									<li class="nav-depth2-li">
+										<a href=""><span>재단소개</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>이사장 인사말</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>함께하는 사람들</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>연혁</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>CI소개</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>오시는 길</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="" class="has-dept3"><span>운영공시</span></a>
+										<ul class="nav-depth3">
+											<li><a href="">결산서</a></li>
+											<li><a href="">기부금 모금액 및 활용실적</a></li>
+											<li><a href="">기부금 명세서</a></li>
+										</ul>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>정관</span></a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-depth1-li">
+								<a href="">사업소개</a>
+								<ul class="nav-depth2">
+									<li class="nav-depth2-li">
+										<a href=""><span>장학사업</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>문화사업</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>출판사업</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="" class="has-dept3"><span>학술사업</span></a>
+										<ul class="nav-depth3">
+											<li><a href="">함춘동의학상</a></li>
+											<li><a href="">약사금탑상</a></li>
+										</ul>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="" class="has-dept3"><span>교육사업</span></a>
+										<ul class="nav-depth3">
+											<li><a href="">평생교육사업</a></li>
+											<li><a href="">교육복지사업</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-depth1-li">
+								<a href="">커뮤니티</a>
+								<ul class="nav-depth2">
+									<li class="nav-depth2-li">
+										<a href=""><span>재단소식</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>공지사항</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>문의하기</span></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->
+		<main class="wrapper">
+			<section class="sub-titB subCont bt-0">
+				<article class="subTit">
+					<div class="wrap-inner typeA">
+						<div class="subTit-a withVis">
+							<h2>장학사업</h2>
+						</div>
+					</div>
+					<div class="subVis-wrap">
+						<div class="subVis scholaship">
+							<div class="subVis-txt m">
+								<span class="subVis-t">타인과 교류하며 사회적 책임을 다하는</span>
+								<strong class="subVis-tit">차세대 리더를 육성합니다</strong>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+			<section class="sub-white subCont">
+				<article class="sub-cText">
+					<div class="wrap-inner typeA">
+						<div class="subCText ani btot">
+							<strong>
+                                학업 성적이 우수하고 타의 모범이 되는<br>
+                                고등학생과 대학생을 선발하여 장학금을 지원합니다
+                            </strong>
+							<p>
+								수석문화재단은 학업 성적이 우수하고 타의 모범이 되는 고등학생과 대학생을 학교장의 추천과 재단 이사회의 의결을 통해 선발하여 장학금을 지급하고 있습니다.<br>
+                                선발된 장학생들은 우수한 학업 성적뿐만 아니라 사회적 책임을 다하는 인재로 성장하고 있습니다. 설립 이래 36년간 중, 고등학생과 대학(원)생, 해외 의약대 학생 등 총 1,967명에게 38억 6천만 원의 장학금을 수여하였습니다.
+							</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="sub-table">
+					<div class="wrap-inner typeA">
+						<div class="scholarT">
+							<div class="scholaT-titBox">
+								<strong>장학금 지급액</strong>
+								<span class="scholaT-unit">단위 : 백만원</span>
+							</div>
+							<div class="scholarT-tableWrap">
+								<table class="scholarT-table">
+									<caption>장학금 지급액</caption>
+									<colgroup>
+										<col style="width: 13.3%" />
+										<col style="width: 11.7%" />
+										<col style="width: 13.3%" />
+										<col style="width: 15%" />
+										<col style="width: 11.7%" />
+										<col style="width: 12.5%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<th scope="col">년도</th>
+										<th scope="col">중학생</th>
+										<th scope="col">고등학생</th>
+										<th scope="col">대학(원)생</th>
+										<th scope="col">해외</th>
+										<th scope="col">계</th>
+										<th scope="col">지급액(원)</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<div class="footer">
+			<div class="footer-inner">
+				<div class="footer-logo">
+					<h2>LOGO <i class="ico-footLogo"></i></h2>
+				</div>
+				<div class="footer-left">
+					<div class="footer-info">
+						<div class="footer-link">
+							<div class="footer-linkContG">
+								<div class="footer-linkCont">
+									<strong>Address</strong>
+									<span class="hasIco"><i class="ico-pin"></i>서울시 동대문구 천호대로 64</span>
+								</div>
+								<div class="footer-linkCont">
+									<strong>Contact</strong>
+									<a class="hasIco" href="tel:02-920-8114"><i class="ico-phone"></i>02-920-8114</a>
+								</div>
+							</div>
+							<div class="footer-linkCont">
+								<ul>
+									<li>
+										<a href="#none"><strong>개인정보보호정책</strong></a>
+									</li>
+									<li>
+										<a href="#none">이메일무단수집거부</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-familySite">
+							<button class="footer-familySelect">
+								Family Site
+								<i class="ico-plus"></i>
+							</button>
+							<ul class="footer-familyList">
+								<li><a class="footer-familyLi">동아쏘시오홀딩스</a></li>
+								<li><a class="footer-familyLi">수석문화재단</a></li>
+								<li><a class="footer-familyLi">동아제약</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-bottom">
+						<ul class="footer-partner">
+							<li>
+								<a href="" class="footer-partnerLi">
+									<img src="../../static/images/partner01.svg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="" class="footer-partnerLi">
+									<img src="../../static/images/partner02.svg" alt="">
+								</a>
+							</li>
+						</ul>
+						<p class="footer-copyright">Copyright© SUSEOK CULTURAL FOUNDATION. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<a class="btn-top @@class" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+
+		<script>
+		</script>
+	</div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+</script>
+<!--//페이지 관련 스크립트 -->
+
+</html>

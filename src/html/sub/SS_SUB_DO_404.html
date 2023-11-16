@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>404 ERROR</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-error">
+                <article class="error-wrap">
+                    <div class="errorCont">
+                        <div class="errorCont-icon">
+                            <i class="ico-error404"></i>
+                        </div>
+                        <div class="errorCont-txt">
+                            <strong>요청하신 페이지를 찾을 수 없습니다.</strong>
+                            <p>
+                                페이지 주소가 잘못 입력되었거나, 변경 또는 삭제되어<br>
+                                원하시는 페이지를 찾을 수 없습니다.
+                            </p>
+                        </div>
+                        <div class="errorCont-btnArea">
+                            <button class="btn-t">
+                                메인으로 돌아가기
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>

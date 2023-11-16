@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>SYSTEM CHECK</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-error">
+                <article class="error-wrap">
+                    <div class="errorCont">
+                        <div class="errorCont-icon">
+                            <i class="ico-wifi"></i>
+                        </div>
+                        <div class="errorCont-txt">
+                            <strong>일시적인 서비스 장애 입니다.</strong>
+                            <p>
+                                불편을 드려 죄송합니다. 문제를 해결하고 있습니다. <br>
+                                잠시 후 다시 이용해 주세요.
+                            </p>
+                        </div>
+                        <div class="errorCont-btnArea">
+                            <button class="btn-t">
+                                재시도
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>

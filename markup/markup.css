@@ -34,13 +34,19 @@ html {font-family:Apple SD Gothic Neo, arial, sans-serif;}
 .notice p + p {margin-top:5px;}
 .notice .progress {text-decoration: underline;}
 .notice .progress strong {color:#3762c7;}
+.notice .progress-pc {color: #666;}
+.notice .progress-pc strong {color:darkorchid;}
 .state {padding-bottom:5px; text-align:right;}
 .state > * {margin-left:10px; padding:2px 5px; display:inline-block;}
 .state .allEnd {background-color:#1ea31e; color:#fff; font-weight:600;}
-.state .ing {color:red;}
-.state .end {background-color:rgb(253, 225, 134);;}
+.state .ing {color:darkorchid;}
+.state .pcend {background-color: #3762c7; color: #fff;}
+.state .moing {color: red;}
+.state .end {background-color:rgb(253, 225, 134);}
 .urlList {margin-top:5px; border-bottom:1px solid #414042; border-top:1px solid #414042; font-size:14px;}
-.urlList .ing .depth_2 {color:red;}
+.urlList .ing .depth_2 {color:darkorchid; font-weight: bold;}
+.urlList .pcend .depth_2 {background-color: #3762c7; color: #fff;}
+.urlList .moing .depth_2 {color: red; font-weight: bold;}
 .urlList .end .depth_2 {background-color:rgb(253, 225, 134);}
 .urlList .allEnd .depth_1 {background-color:#1ea31e; color:#fff;}
 .urlList .allEnd .depth_2 {background-color:transparent;}

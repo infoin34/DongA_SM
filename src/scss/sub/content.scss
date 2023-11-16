@@ -74,6 +74,11 @@ $color-A2A5BC : #A2A5BC;
     line-height: 2.8rem;
     letter-spacing: -0.02em;
 }
+@mixin txt-16x {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
 @mixin txt-14x {
     font-weight: 500;
     font-size: 1.4rem;
@@ -148,9 +153,7 @@ $color-A2A5BC : #A2A5BC;
     }
 
     &-infoNum {
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 2.4rem;
+        @include txt-16x;
         color: $color-444;
 
         strong {
@@ -264,9 +267,7 @@ $color-A2A5BC : #A2A5BC;
         }
 
         .imgLi-date{
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
+            @include txt-16x;
             color: $color-888;
         }
     }
@@ -508,9 +509,7 @@ $color-A2A5BC : #A2A5BC;
     &-titG {
         span {
             display: block;
-            font-weight: 600;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
+            @include txt-16x;
             color: $color-primaryNd;
         }
         strong {
@@ -704,9 +703,7 @@ $color-A2A5BC : #A2A5BC;
 
     &-position {
         display: block;
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 2.4rem;
+        @include txt-16x;
         margin-bottom: 0.8rem;
         color: $color-primary;
     }
@@ -847,9 +844,7 @@ $color-A2A5BC : #A2A5BC;
         margin-bottom: 3.2rem;
         span {
             display: block;
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
+            @include txt-16x;
             color: $color-888; 
         }
         strong {
@@ -1093,9 +1088,7 @@ $color-A2A5BC : #A2A5BC;
         }
 
         span {
-            font-weight: 600;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
+            @include txt-16x;
             color: $color-888;
             padding-bottom: 4px;
         }
@@ -1110,12 +1103,20 @@ $color-A2A5BC : #A2A5BC;
         flex-basis: 59.5%;
         flex-shrink: 1;
 
+        transition-delay: 0.7s !important;
+
         .root_daum_roughmap{
             width: 100%;
             height: 100%;
         
             .wrap_map {
                 height: 100%;
+            }
+
+            .wrap_btn_zoom {
+                height: auto;
+                top: auto;
+                bottom: 3rem;
             }
         }
         
@@ -1131,6 +1132,8 @@ $color-A2A5BC : #A2A5BC;
     &-txt {
         flex-basis: 40.5%;
         flex-shrink: 1;
+
+        transition-delay: 0.7s !important;
     }
 
     &-txtBox {
@@ -1246,6 +1249,138 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
+.error-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.errorCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+
+    &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        background-color: $color-primaryBgNd;
+
+        i {
+            display: block;
+            width: 8.4rem;
+            height: 8.4rem;
+        }
+    }
+
+    &-txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+
+        margin: 4rem auto 8rem;
+
+        strong {
+            @include txt-32x;
+        }
+
+        p {
+            @include txt-18x;
+            color: $color-666;
+        }
+    }
+
+    &-timeBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.4rem;
+        padding: 4rem 8rem;
+        background-color: $color-primaryBg;
+    }
+
+    &-timeWrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            @include txt-16x;
+            color: $color-primaryNd;
+        }
+    }
+
+    &-date {
+        display: inline-flex;
+        align-items: center;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 1.4rem;
+            margin: 0 1.2rem;
+            background-color: $color-medium;
+        }
+        &::before {
+            content: '';
+            display: inline-block;
+            width:2.4rem; 
+            height:2.4rem; 
+            margin-right: 4px;
+            background: svgIcoCalener('444'); 
+            background-size:100% 100%;
+        }
+    }
+
+    &-announce {
+        @include txt-18x;
+        color: $color-444;
+    }
+
+    &-btnArea {
+        margin-bottom: 4rem;
+    }
+}
+
+.popBanner {
+    width: calc(100vw - 4rem);
+    max-width: 50rem;
+    max-height: calc(100vh - 4rem);
+    background-color: #002C85 ;
+
+    &-btnG {
+        display: flex;
+        height: 5.6rem;
+    }
+    &-today {
+        flex-basis: 50%;
+        border: none;
+        @include txt-16x;
+        background-color: $color-medium;
+
+        cursor: pointer;
+    }
+    &-close {
+        flex-basis: 50%;
+        border: none;
+        @include txt-16x;
+        background-color: $color-accent;
+        color: $color-fff;
+
+        cursor: pointer;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .withPCont {
         grid-template-columns: 1fr 1fr 1fr;
@@ -1277,6 +1412,10 @@ $color-A2A5BC : #A2A5BC;
     .locationCont-map {
         flex-basis: auto;
         height: 500px;
+    }
+
+    .locationCont-txt {
+        transition-delay: 0s !important;
     }
 }
 
@@ -1310,11 +1449,11 @@ $color-A2A5BC : #A2A5BC;
             background: svgIcoArrowR('4B33ED');
             background-size: 100% 100%;
         }
+    }
 
-        .btn-down {
-            background: svgIcoDown('4B33ED'); 
-            background-size:100% 100%;
-        }
+    .clist-txtLi .btn-down:hover {
+        background: svgIcoDown('4B33ED'); 
+        background-size:100% 100%;
     }
 
     .viewCont-prev:hover{

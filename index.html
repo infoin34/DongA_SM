@@ -13,7 +13,7 @@
 	 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	 <script src="./markup/markup.js"></script>
 	<script>
-		//state-> 완료: end , 진행중: ing 		  
+		//state-> 완료: end , 모바일진행중: moing , PC완료: pcend , PC진행중: ing 	  
 		const markupList = [
 			{
 				'공통' : [
@@ -22,30 +22,30 @@
 					{'depth2': 'button', 'info': 'style', 'src': 'guide/etc?button'},
 					{'depth2': 'form', 'info': 'input, select', 'src': 'guide/etc?form'},
 					{'depth2': 'component', 'info': 'block요소 공통', 'src': 'guide/etc?component'},
-					{'depth2': 'popup', 'info': 'style', 'src': ''}
+					{'depth2': 'popup - banner', 'info': '배너팝업 ( SS_SUB_DO_POP )', 'src': 'guide/popup'}
 				]
 			},
 			{
 				'메인' : [
-					{'depth2': '메인',  'depth3': '', 'info': '','src': 'main/SS_MAIN_PAGE', 'state':'end'}
+					{'depth2': '메인',  'depth3': '', 'info': '','src': 'main/SS_MAIN_PAGE', 'state':'pcend'}
 				]
 			},	
 			{
 				'수석문화재단' : [
-					{'depth2': '재단소개', 'info': '','src': 'sub/SS_SUB_INT_FOUNDATION', 'state':'ing'},
-					{'depth2': '이사장 인사말', 'info': '','src': 'sub/SS_SUB_INT_CEO', 'state':'ing'},
-					{'depth2': '임원소개', 'info': '', 'src': 'sub/SS_SUB_INT_BOARDOFDIRECTORS', 'state':'ing'},
-					{'depth2': '연혁소개', 'info': '', 'src': 'sub/SS_SUB_INT_HISTORY', 'state':'ing'},
+					{'depth2': '재단소개', 'info': '','src': 'sub/SS_SUB_INT_FOUNDATION', 'state':'pcend'},
+					{'depth2': '이사장 인사말', 'info': '','src': 'sub/SS_SUB_INT_CEO', 'state':'pcend'},
+					{'depth2': '임원소개', 'info': '', 'src': 'sub/SS_SUB_INT_BOARDOFDIRECTORS', 'state':'pcend'},
+					{'depth2': '연혁소개', 'info': '', 'src': 'sub/SS_SUB_INT_HISTORY', 'state':'pcend'},
 					{'depth2': 'CI소개', 'info': '', 'src': 'sub/SS_SUB_INT_CI', 'state':'ing'},
-					{'depth2': '운영공시', 'info': '', 'src': 'sub/SS_SUB_INT_IR', 'state':'ing'},
-					{'depth2': '운영공시 - 상세', 'info': '', 'src': 'sub/SS_SUB_INT_IR_VIEW', 'state':'ing'},
-					{'depth2': '정관', 'info': '', 'src': 'sub/SS_SUB_INT_AOI', 'state':'ing'},
-					{'depth2': '오시는 길', 'info': '', 'src': 'sub/SS_SUB_INT_LOCATION', 'state':'ing'}
+					{'depth2': '운영공시', 'info': '', 'src': 'sub/SS_SUB_INT_IR', 'state':'pcend'},
+					{'depth2': '운영공시 - 상세', 'info': '', 'src': 'sub/SS_SUB_INT_IR_VIEW', 'state':'pcend'},
+					{'depth2': '정관', 'info': '', 'src': 'sub/SS_SUB_INT_AOI', 'state':'pcend'},
+					{'depth2': '오시는 길', 'info': '', 'src': 'sub/SS_SUB_INT_LOCATION', 'state':'pcend'}
 				]
 			},
 			{
 				'사업소개' : [
-					{'depth2': '장학사업', 'info': '', 'src': ''},
+					{'depth2': '장학사업', 'info': '', 'state':'ing', 'src': 'sub/SS_SUB_BUS_SCHOLARSHIP'},
 					// {'depth2': '학술사업', 'info': '팝업(#pop1, #pop2)', 'src': 'eee'},
 					{'depth2': '학술사업', 'info': '', 'src': ''},
 					{'depth2': '문화사업', 'info': '', 'src': ''},
@@ -55,16 +55,19 @@
 			},
 			{
 				'커뮤니티' : [
-					{'depth2': '재단소식', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NEWS', 'state':'ing'},
-					{'depth2': '재단소식 - 상세', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NEWS_VIEW', 'state':'ing'},
-					{'depth2': '공지사항', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE', 'state':'ing'},
-					{'depth2': '공지사항 - 상세', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE_VIEW', 'state':'ing'},
+					{'depth2': '재단소식', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NEWS', 'state':'pcend'},
+					{'depth2': '재단소식 - 상세', 'depth3': '', 'pcend': '','src': 'sub/SS_SUB_COM_NEWS_VIEW', 'state':'pcend'},
+					{'depth2': '공지사항', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE', 'state':'pcend'},
+					{'depth2': '공지사항 - 상세', 'depth3': '', 'info': '','src': 'sub/SS_SUB_COM_NOTICE_VIEW', 'state':'pcend'},
 					{'depth2': '문의하기', 'depth3': '', 'info': '','src': '', 'state':''},
 				]
 			},
 			{
 				'기타' : [
 					{'depth2': '후원하기', 'depth3': '', 'info': '','src': '', 'state':''},
+					{'depth2': '404 Error', 'depth3': '', 'info': '','src': 'sub/SS_SUB_DO_404', 'state':'pcend'},
+					{'depth2': 'System check notice', 'depth3': '', 'info': '','src': 'sub/SS_SUB_DO_SYS', 'state':'pcend'},
+					{'depth2': '500 Error', 'depth3': '', 'info': '','src': 'sub/SS_SUB_DO_500', 'state':'pcend'},
 				]
 			},
 		]
@@ -77,10 +80,11 @@
 			<div class="pcMarkup"> 
                 <div class="notice">
 					<p class="pub"><strong>*담당자: 안선영, 김예빈</strong></p>
-					<p class="progress">*총 페이지 <strong id="totalCnt"></strong>개 중 <strong id="endCnt"></strong>개 완료 (<strong id="endCntP"></strong>%)</p>
+					<p class="progress">*총 페이지 <strong id="totalCnt"></strong>개 중 PC + 모바일 <strong id="endCnt"></strong>개 완료 (<strong id="endCntP"></strong>%)</p>
+					<p class="progress-pc">*총 페이지 <strong id="pctotalCnt"></strong>개 중 PC <strong id="pcEndCnt"></strong>개 완료 (<strong id="pcEndCntP"></strong>%)</p>
 				</div>
                 <h2>수석문화재단</h2>
-                <div class="state"><span class="ing">진행중</span><span class="end">완료</span><span class="allEnd">모두완료</span></div>        
+                <div class="state"><span class="ing">pc진행중</span><span class="pcend">pc완료</span><span class="moing">모바일진행중</span><span class="end">완료</span><span class="allEnd">모두완료</span></div>        
                 <ul class="urlList"> 
                     <li class="head">
                         <div class="depth_1">1Depth (<span id="depth1Cnt"></span>)</div>

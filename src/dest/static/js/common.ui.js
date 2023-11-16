@@ -55,7 +55,7 @@
 			'use strict'
 			let $obj = obj,
 				$wrapper = $obj.find('.popup-wrap'),
-				$closeBtn = $obj.find('.close, .btn-close');
+				$closeBtn = $obj.find('[data-js-pop="close"]');
 
 			$.each(popup.targetArr, function(i) {
 				if (popup.targetArr[i].attr('data-pop') == $obj.attr('data-pop')) popup.targetArr.splice(i,1);
@@ -338,6 +338,14 @@
 				if($(item).hasClass('active')) {
 					$(item).removeClass('active');
 				}
+			}
+		});		
+
+		$('.oneTime').each(function(index, item){	
+			if(setScrT > $(item).offset().top) {											
+				if(!$(item).hasClass('active')){
+					$(item).addClass('active');					
+				}			
 			}
 		});
 

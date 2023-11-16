@@ -23,6 +23,9 @@
     .ico-arrowR{
         width:24px; height:24px; background: svgIcoArrowR('000'); background-size:100% 100%;
     }
+    .ico-calender{
+        width:24px; height:24px; background: svgIcoCalener('444'); background-size:100% 100%;
+    }
     .ico-file{
         width:24px; height:24px; background: svgIcoFile('444'); background-size:100% 100%;
     }
@@ -72,6 +75,15 @@
     }
     .ico-coin{
         width:16px; height:16px; background: svgIcoCoin('444444', '00D4CD'); background-size:100% 100%;
+    }
+    .ico-error500{
+        width:84px; height:84px; background: svgIcoError500(); background-size:100% 100%;
+    }
+    .ico-wifi{
+        width:84px; height:84px; background: svgIcoWifi(); background-size:100% 100%;
+    }
+    .ico-error404{
+        width:84px; height:84px; background: svgIcoError404(); background-size:100% 100%;
     }
     .ico-establish{
         width:100px; height:100px; background: svgIcoEstablish(); background-size:100% 100%;

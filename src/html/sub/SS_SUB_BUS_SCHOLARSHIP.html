@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>장학사업</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-titB subCont bt-0">
+                <article class="subTit">
+                    <div class="wrap-inner typeA">
+                        <div class="subTit-a withVis">
+                            <h2>장학사업</h2>
+                        </div>
+                    </div>
+					<div class="subVis-wrap">
+						<div class="subVis scholaship">
+							<div class="subVis-txt m">
+                                <span class="subVis-t">타인과 교류하며 사회적 책임을 다하는</span>
+                                <strong class="subVis-tit">차세대 리더를 육성합니다</strong>
+							</div>
+						</div>
+					</div>
+                </article>
+            </section>
+            <section class="sub-white subCont">
+                <article class="sub-cText">
+                    <div class="wrap-inner typeA">
+                        <div class="subCText ani btot">
+                            <strong>
+                                학업 성적이 우수하고 타의 모범이 되는<br>
+                                고등학생과 대학생을 선발하여 장학금을 지원합니다
+                            </strong>
+                            <p>
+                                수석문화재단은 학업 성적이 우수하고 타의 모범이 되는 고등학생과 대학생을 학교장의 추천과 재단 이사회의 의결을 통해 선발하여 장학금을 지급하고 있습니다.<br>
+                                선발된 장학생들은 우수한 학업 성적뿐만 아니라 사회적 책임을 다하는 인재로 성장하고 있습니다. 설립 이래 36년간 중, 고등학생과 대학(원)생, 해외 의약대 학생 등 총 1,967명에게 38억 6천만 원의 장학금을 수여하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="sub-table">
+                    <div class="wrap-inner typeA">
+                        <div class="scholarT">
+                            <div class="scholaT-titBox">
+                                <strong>장학금 지급액</strong>
+                                <span class="scholaT-unit">단위 : 백만원</span>
+                            </div>
+                            <div class="scholarT-tableWrap">
+                                <table class="scholarT-table">
+                                    <caption>장학금 지급액</caption>
+                                    <colgroup>
+                                        <col style="width: 13.3%" />
+                                        <col style="width: 11.7%" />
+                                        <col style="width: 13.3%" />
+                                        <col style="width: 15%" />
+                                        <col style="width: 11.7%" />
+                                        <col style="width: 12.5%" />
+                                        <col style="width: auto" />
+                                    </colgroup>
+                                    <thead>
+                                        <th scope="col">년도</th>
+                                        <th scope="col">중학생</th>
+                                        <th scope="col">고등학생</th>
+                                        <th scope="col">대학(원)생</th>
+                                        <th scope="col">해외</th>
+                                        <th scope="col">계</th>
+                                        <th scope="col">지급액(원)</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section> 
+        </main>
+        
+        @@include('../../include/footer.html', 
+        {page_scr : false})
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>

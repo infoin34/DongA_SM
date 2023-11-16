@@ -23,8 +23,11 @@ $(function(){
 		$('.urlList').append(str);		
 	});
 	$('#totalCnt').html(pageCnt);
+	$('#pctotalCnt').html(pageCnt);
 	$('#endCnt').html($('.sub:not(.guide) .end').length);
+	$('#pcEndCnt').html($('.sub:not(.guide) .pcend').length);
 	$('#endCntP').html(($('.sub:not(.guide) .end').length/pageCnt*100).toFixed(1))
+	$('#pcEndCntP').html(( ( $('.sub:not(.guide) .pcend').length + $('.sub:not(.guide) .end').length ) /pageCnt*100).toFixed(1))
 	$('#depth1Cnt').text(markupList.length-1); //공통 제외
 	$('.sub').each(function(i){
 		if($(this).find('li').length == $(this).find('.end').length) $(this).parent().addClass('allEnd');
