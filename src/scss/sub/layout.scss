@@ -677,7 +677,9 @@
         margin: 0 auto;
 
         h2 {
-            @include txt-48x; 
+            font-weight: 700;
+            font-size: 5.6rem;
+            line-height: 8rem;
         }
 
         &.withVis {
@@ -699,7 +701,9 @@
             opacity: 0;
             transform: translateX(-100%);
             align-self: flex-start;
-            @include txt-48x;
+            font-weight: 700;
+            font-size: 5.6rem;
+            line-height: 8rem;
 
             animation: 0.7s 0.15s subTitB01 forwards $cubicTxt;
 
@@ -1462,7 +1466,7 @@
 
     &-tit {
         display: block;
-        @include txt-60x;
+        @include txt-48x;
         color: $color-fff;
         text-align: center;
     }
@@ -1534,6 +1538,9 @@
     }
     &.paward {
         background-image: url(../../../dest/static/images/subVis-paward.png);
+    }
+    &.culture {
+        background-image: url(../../../dest/static/images/subVis-culture.png);
     }
 }
 

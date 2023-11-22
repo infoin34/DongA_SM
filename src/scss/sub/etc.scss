@@ -405,6 +405,15 @@
     &-education{
         background: svgIcoEducation(); background-size:100% 100%;
     }
+    &-poetry{
+        background: svgIcoPoetry(); background-size:100% 100%;
+    }
+    &-prose{
+        background: svgIcoProse(); background-size:100% 100%;
+    }
+    &-fairyTale{
+        background: svgIcoFairyTale(); background-size:100% 100%;
+    }
 }
 
 // 메인섹션 스크롤 다운

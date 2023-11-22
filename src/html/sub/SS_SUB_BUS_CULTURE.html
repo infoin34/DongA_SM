@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>학술사업</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-titB subCont bt-0">
+                <article class="subTit">
+                    <div class="wrap-inner typeA">
+                        <div class="subTit-a withVis">
+                            <h2>문화사업</h2>
+                        </div>
+                    </div>
+					<div class="subVis-wrap">
+						<div class="subVis culture">
+							<div class="subVis-txt m">
+                                <span class="subVis-t">창의적인 여성의 문학 인구 저변 확대를 위한</span>
+                                <strong class="subVis-tit">문화의 감동을 선사합니다</strong>
+							</div>
+						</div>
+					</div>
+                </article>
+            </section>
+            <section class="sub-white subCont">
+                <article class="sub-cText">
+                    <div class="wrap-inner typeA">
+                        <div class="subCText ani btot">
+                            <strong>
+                                여성의 문학 인구의 저변 확대와 문예 창작 활동의<br>
+                                활성화를 도모하기 위해 매년 가을에 개최하는 여성문화행사입니다
+                            </strong>
+                            <p>
+                                40회를 맞이한 ‘마로니에 여성 백일장은 여성 문학 인구의 저변 확대와 문예 창작 활동의 활성화를 도모하기 위해 매년 가을에 개최하는 여성문화 행사합니다. 마로니에 여성 백일장은 한국 문화예술위원회가 주최하고, 동아쏘시오 그룹과 수석문화재단이 후원하는 행사로 여성이라면 누구나 참여할 수 있습니다. ‘시 · 산문 · 아동문학’의 3개 부문 총 30명을 선발해 총 상금 2,000만원을 수여합니다.  코로나 이후 3년 만에 대면 오프라인 행사에서는 서울 대학로 마로니에 공원 일대에서 진행되었으며, 500명이 넘는 많은 참가자가 참여하였습니다. 2022년으로부터 40주년을 맞이한 행사인 만큼 다채로운 프로그램도 진행되었습니다. 나태주 시인의 문학강연과 가수 요조의 토크 콘서트도 함께 열렸습니다.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section> 
+            <section class="sub-view-g subCont">
+                <article class="sub-comNews-gallery">
+                    <div class="galleryCont">
+                        <div class="galleryCont-tit">
+                            <i class="galleryCont-titIco award"></i>
+                            <div class="galleryCont-titG">
+                                <span>마로니에 여성 백일장</span>
+                                <strong>분야별 수상자</strong>
+                            </div>
+                        </div>
+                        <div class="wrap-inner typeA">
+                            <div class="contestField-area ani btot-s">
+                                <ul class="contestField">
+                                    <li class="contestField-li">
+                                        <i class="ico-poetry"></i>
+                                        <div class="contestField-txt">
+                                            <span class="contestField-cate">시</span>
+                                            <div class="contestField-name">
+                                                <strong class="contestField-work">숨바꼭질</strong>
+                                                <span class="contestField-person">허승화</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="contestField-li">
+                                        <i class="ico-prose"></i>
+                                        <div class="contestField-txt">
+                                            <span class="contestField-cate">산문</span>
+                                            <div class="contestField-name">
+                                                <strong class="contestField-work">통조리 시점</strong>
+                                                <span class="contestField-person">조민아</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="contestField-li">
+                                        <i class="ico-fairyTale"></i>
+                                        <div class="contestField-txt">
+                                            <span class="contestField-cate">아동문학·동화</span>
+                                            <div class="contestField-name">
+                                                <strong class="contestField-work">앞짐 아이 사용법</strong>
+                                                <span class="contestField-person">곽윤숙</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="contestWin-area  ani btot-s">
+                                <div class="contestWin">
+                                    <strong class="contestWin-tit">
+                                        제 40회 마로니에 여성 백일장 수상작
+                                    </strong>
+                                    <div class="contestWin-img">
+                                        <img src="../../../dest/static/images/contestWin.png" alt="">
+                                    </div>
+                                    <div class="contestWin-txtArea">
+                                        <div class="contestWin-nameG">
+                                            <strong class="contestWin-workName">숨바꼭질</strong>
+                                            <span class="contestWin-personName">허승화</span>
+                                        </div>
+                                        <div class="contestWin-contG">
+                                            <div class="contestWin-cont">
+                                                <p>
+                                                    가만히 있는 할머니에게 기억이 자꾸 숨바꼭질을 하자고 한다<br>
+                                                    오늘은 글자도 모르면서 도서관에서 어제를 잔뜩 빌려왔다. 글자 모른다는 걸 까먹었다나?<br>
+                                                    <br><br>             
+                                                    할머니는 마늘을 까다 빌려온 어제를 하나 까먹고 말았다<br>
+                                                    어데 숨었노?<br>
+                                                    <br><br>
+                                                    자꾸 왜 그래. 할머니<br>
+                                                    까려면 마늘이나 까야지!<br>
+                                                    <br><br>
+                                                    뭔가 중요한 사실을 얘기할 차례가 될까 두려워진 나는<br>
+                                                    할머니를 잃어버린 작정으로 데리고 밖에 나갔다<br>
+                                                    흰 머리속에 숨었던 어제들이 하나씩 나타나 나에 대해<br>
+                                                    자세히도 말해 주었다<br>
+                                                    아랑곳 않고<br>
+                                                    나는 할머니를 도서관에 버렸다<br>
+                                                    책인 척 꽂아두자,<br>
+                                                    할머니는 부서진 글자처럼 구겨졌다<br>
+                                                    할머니 꼭꼭 숨어, 머리카라 보일라<br>
+                                                    놓고 떠나려는데 할머니는 숨바꼭질을 하는 거냐며<br>
+                                                    버려진 줄도 모르고 예쁘게 웃었다<br>
+                                                    꼭 그림 같았다
+                                                </p>
+                                            </div>
+                                            <div class="contestWin-cont">
+                                                <p>
+                                                    나는 엉덩이가 다 보이게 숨은 그녀를<br>
+                                                    다시 찾아낼 수밖에 없었다<br>
+                                                    <br><br>
+                                                    할머니는 모든 것을 까먹고도 기어코 나를 찾아낼 사람이라서 나는 질 수밖에 없다<br>
+                                                    <br><br>
+                                                    집에가자 할머니는 아주 오래 묵은 된장으로 직접 깐 마늘을 넣은 된장찌개를 능숙하게 끓여냈다<br>
+                                                    그 안에서 잃어버린 어제가 불쑥 모습을 드러냈다<br>
+                                                    할머니가 먹느라 정신 팔린 사이,<br>
+                                                    나는 할머니보다 먼저 오늘을 숨겨버리기로 했다<br>
+                                                    결국 할머니는 찾아낼 테지만.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        @@include('../../include/footer.html', 
+        {page_scr : false})
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+    $(function() {
+        $('.awardCS-li').css('width','800px');
+    $('.awardCS-li').eq(0).css('width','1200px');
+        var partnerSlide = new Swiper(".awardCS", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        threshold: 50,
+        on: {
+            slidePrevTransitionEnd : function() {
+                //$('.awardCS-li').css('width','800px');
+                $('.awardCS-li').eq(0).css('width','1200px');
+            }
+        },
+        
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: ".awardCS-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".awardCS-next",
+            prevEl: ".awardCS-prev",
+        },
+
+        });
+        
+    });
+    
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>

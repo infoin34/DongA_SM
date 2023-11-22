@@ -44,7 +44,7 @@ $color-A2A5BC : #A2A5BC;
 @mixin txt-48x {
     font-weight: 700;
     font-size: 4.8rem;
-    line-height: 6.3rem;
+    line-height: 6.4rem;
 }
 @mixin txt-40x {
     font-weight: 700;
@@ -699,6 +699,9 @@ $color-A2A5BC : #A2A5BC;
         display: flex;
         flex-direction: column;
         gap: 5rem;
+        &:nth-child(-n + 4) {
+            transition-delay: 0.6s !important;
+        }
     }
 
     &-img {
@@ -995,7 +998,6 @@ $color-A2A5BC : #A2A5BC;
 
     &-name {
         display: inline-flex;
-        gap: 1rem;
         align-items: center;
         font-weight: 700;
         font-size: 2rem;
@@ -1007,13 +1009,18 @@ $color-A2A5BC : #A2A5BC;
             width: 2px;
             height: 1.6rem;
             background-color: $color-medium;
-            margin: 0 0.6rem;
+            margin: 0 1rem;
         }
     }
 
     &-sign {
         display: block;
         width: 9rem;
+    }
+
+    &-position {
+        @include txt-18x;
+        color: $color-666;
     }
 }
 
@@ -1625,13 +1632,14 @@ $color-A2A5BC : #A2A5BC;
     width: 100%;
 
     &-img {
+        display: flex;
+        align-items: center;
         flex-basis: 40.5%;
         flex-shrink: 1;
+        background-color: $color-fff;
 
         img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
     }
 
@@ -1835,6 +1843,9 @@ $color-A2A5BC : #A2A5BC;
         transform: translateY(3rem);
         transition: 0s;
         transition-delay: 0s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
     &-li {
@@ -1850,7 +1861,7 @@ $color-A2A5BC : #A2A5BC;
                     display: block;
                     flex-basis: 57%;
                     opacity: 1;
-                    padding: 6rem;
+                    padding: 6rem 5rem 6rem 6rem;
                 }
                 .awardCS-txt {
                     opacity: 1;
@@ -1882,6 +1893,7 @@ $color-A2A5BC : #A2A5BC;
         display: block;
         margin-bottom: 2.4rem;
         color: $color-primary;
+        flex-shrink: 0;
     }
 
     &-name {
@@ -1889,12 +1901,20 @@ $color-A2A5BC : #A2A5BC;
         font-size: 3.2rem;
         line-height: 4.2rem;
         letter-spacing: -0.02em;
+        flex-shrink: 0;
     }
 
     &-cont {
         margin-top: 3.2rem;
-        @include txt-18x;
-        color: $color-666;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        overflow: auto;
+
+        p {
+            @include txt-18x;
+            color: $color-666;
+            padding-right: 1rem;
+        }
     }
 
     &-nav {
@@ -1949,9 +1969,158 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
+.contestField{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-fff;
+
+    padding: 6rem 8rem 6rem 1rem;
+
+    &-area {
+        margin-bottom: 10rem;
+    }
+
+    &-li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 4rem;
+        padding-left: 7rem;
+        flex-basis: 100%;
+        flex-shrink: 1;
+        border-right: 1px solid $color-default;
+
+        &:last-of-type {
+            border-right: none;
+        }
+
+        > i {
+            display: block;
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+    }
+
+    &-txt {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    &-cate {
+        @include txt-16x;
+        color: $color-primary;
+    }
+
+    &-name {
+        display: flex;
+        align-items: center;
+    }
+
+    &-work {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        color: $color-444;
+    }
+
+    &-person {
+        display: flex;
+        align-items: center;
+        @include txt-18x;
+        color: $color-666;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 1.6rem;
+            background-color: $color-medium;
+            margin: 0 1rem;
+        }
+    }
+}
+
+.contestWin {
+    width: 100%;
+
+    &-tit {
+        display: block;
+        @include txt-24x;
+        color: $color-222;
+        margin-bottom: 2.4rem;
+    }
+
+    &-img {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+    &-txtArea {
+        display: flex;
+        gap: 24rem;
+        align-items: flex-start;
+        margin-top: 4rem;
+    }
+
+    &-nameG {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    &-workName {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        color: $color-444;
+    }
+
+    &-personName {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        color: $color-666;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 1.6rem;
+            background-color: $color-medium;
+            margin: 0 1rem;
+        }
+    }
+
+    &-contG {
+        display: flex;
+        gap: 4.8rem;
+        justify-content: space-between;
+    }
+
+    &-cont {
+        flex-basis: 100%;
+        flex-shrink: 1;
+
+        p {
+            @include txt-18x;
+            color: $color-666;
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .withPCont {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .withPCont-li:nth-child(n+4) {
+        transition-delay: 0s !important;
     }
 
     .locationCont-group {
@@ -1972,6 +2141,10 @@ $color-A2A5BC : #A2A5BC;
     
     .withPCont {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .withPCont-li:nth-child(n+3) {
+        transition-delay: 0s !important;
     }
 
     .locationCont {
@@ -2005,6 +2178,38 @@ $color-A2A5BC : #A2A5BC;
     .awardCS-nav {
         top: -3.2rem;
         transform: translateY(-100%);
+    }
+
+    .contestField {
+        flex-direction: column;
+        padding: 6rem 8rem ;
+    }
+
+    .contestField-li {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 3.5rem 0;
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+        position: relative;
+        
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+        &:last-of-type {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    .contestWin-txtArea {
+        flex-direction: column;
+    }
+
+    .contestWin-contG {
+        flex-direction: column;
     }
 }
 
