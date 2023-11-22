@@ -663,7 +663,7 @@
 				<article class="sub-comNews-gallery">
 					<div class="galleryCont">
 						<div class="galleryCont-tit">
-							<i class="galleryCont-titIco"></i>
+							<i class="galleryCont-titIco scholarship"></i>
 							<div class="galleryCont-titG">
 								<span>꿈꾸는 인재들의</span>
 								<strong>장학금 수여식</strong>
@@ -673,19 +673,55 @@
 							<div class="awardSlide">
 								<ul class="awardSlide-wrap swiper-wrapper">
 									<li class="awardSlide-li swiper-slide">
-										<div class="awardSlide-img">
-											<img src="../../../dest/static/images/awardSlide01.png" alt="">
+										<div class="awardSlide-box">
+											<div class="awardSlide-img">
+												<img src="../../../dest/static/images/awardSlide1.png" alt="">
+											</div>
+											<div class="awardSlide-txt">
+												<div class="awardSlide-tgroup">
+													<span class="awardSlide-name">이수림</span>
+													<span class="awardSlide-position">장학생</span>
+												</div>
+												<div class="awardSlide-tgroup">
+													<span class="awardSlide-name">박광순 이사장</span>
+													<span class="awardSlide-position">수석문화재단</span>
+												</div>
+											</div>
 										</div>
-										<div class="awardSlide-txt"></div>
 									</li>
 									<li class="awardSlide-li swiper-slide">
-										2
+										<div class="awardSlide-box">
+											<div class="awardSlide-img">
+												<img src="../../../dest/static/images/awardSlide2.png" alt="">
+											</div>
+											<div class="awardSlide-txt">
+												<div class="awardSlide-tgroup">
+													<span class="awardSlide-name">이경민</span>
+													<span class="awardSlide-position">장학생</span>
+												</div>
+												<div class="awardSlide-tgroup">
+													<span class="awardSlide-name">정재훈 사장</span>
+													<span class="awardSlide-position">동아쏘시오홀딩스</span>
+												</div>
+											</div>
+										</div>
 									</li>
 									<li class="awardSlide-li swiper-slide">
-										3
-									</li>
-									<li class="awardSlide-li swiper-slide">
-										4
+										<div class="awardSlide-box">
+											<div class="awardSlide-img">
+												<img src="../../../dest/static/images/awardSlide3.png" alt="">
+											</div>
+											<div class="awardSlide-txt">
+												<div class="awardSlide-tgroup">
+													<span class="awardSlide-name">정주은</span>
+													<span class="awardSlide-position">장학생</span>
+												</div>
+												<div class="awardSlide-tgroup">
+													<span class="awardSlide-name">최호진 부회장</span>
+													<span class="awardSlide-position">동아제약</span>
+												</div>
+											</div>
+										</div>
 									</li>
 								</ul>
 							</div>
@@ -775,7 +811,7 @@
 		let startCnt = $(".awardSlide .awardSlide-li").length < 3 ? 0 : 1;
 
 		var gallerySwiper = new Swiper(".awardSlide", {
-			slidesPerView: 3,
+			slidesPerView: 1,
 			initialSlide: startCnt,
 			centeredSlides: true,
 			slideToClickedSlide: true,
@@ -785,6 +821,17 @@
 			navigation: {
 				nextEl: ".gallerySlide-next",
 				prevEl: ".gallerySlide-prev",
+			},
+
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					centeredSlides: false,
+				},
+				992: {
+					slidesPerView: 3,
+					centeredSlides: true,
+				},
 			},
 		});
 	});

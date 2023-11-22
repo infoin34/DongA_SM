@@ -369,15 +369,6 @@
 		lastScr = currentScr;
 	}
 	
-	/* 서브 비주얼 불러오기 이벤트 */
-	// function subVisScrLoad() {
-	// 	$(".subVisScr").each(function(){
-	// 		let $this = $(this);
-	// 		setTimeout(function(){
-	// 			$this.addClass("active");
-	// 		}, 2500)
-	// 	});
-	// } 
 
 	$(window).on('scroll', function(){
 		scrollEv();
@@ -417,6 +408,22 @@
 		$(".cSelect").each(function(){
 			$(this).niceSelect();
 		})
+	};
+
+	/* 탭 이벤트 */
+	function tabEvt(){
+		$(".cTab").each(function(){
+			let $tab = $(this);
+			let $btn = $tab.find(".cTab-btn");
+			$btn.each(function(){
+				$(this).on({
+					click: function(){
+						$(this).addClass("on");
+						$btn.not( $(this) ).removeClass("on")
+					}
+				});
+			})
+		})
 	}
 
     exports.scrollMove = scrollMove;
@@ -430,7 +437,7 @@
 		toggleFamily()
 		textFeildEvt()
 		selectNice()
-		subVisScrLoad()
+		tabEvt()
 		// scrTit()
 	});
 })(window, jQuery);
