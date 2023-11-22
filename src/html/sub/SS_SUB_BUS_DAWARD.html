@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>학술사업</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-titB subCont bt-0">
+                <article class="subTit">
+                    <div class="wrap-inner typeA">
+                        <div class="subTit-a withVis">
+                            <h2>학술사업</h2>
+                        </div>
+                    </div>
+					<div class="subVis-wrap">
+						<div class="subVis paward">
+							<div class="subVis-txt m">
+                                <span class="subVis-t">의료문화를 발전시키고 건강한 사회를 만들 수 있도록</span>
+                                <strong class="subVis-tit">연구비를 지원합니다.</strong>
+							</div>
+						</div>
+					</div>
+                </article>
+            </section>
+            <section class="sub-white subCont">
+                <article class="sub-cText">
+                    <div class="wrap-inner typeA">
+                        <div class="cTab ani btot">
+                            <div class="cTab-btnG">
+                                <button class="cTab-btn">함춘동아의학상</button>
+                                <button class="cTab-btn on">약사금탑상</button>
+                            </div>
+                            <div class="cTab-cont">
+                                <div class="subCText">
+                                    <strong>
+                                        사회 각계에서 건강한 사회를 만드는 약사들의<br>
+                                        연구 및 발전 부문을 시상합니다
+                                    </strong>
+                                    <p>
+                                        1973년 대한약사회 기관지인 약사공론 창간 기념사업으로 시작한 약사금탑상은 그동안 사회 각계에서 건강한 사회를 만들기 위해 정성을 다하는 약사들의 노고를 기리기 위해 동아제약과 약사공론이 제작한 상입니다. 1993년부터 수석문화재단이 후원을 시작한 약사금탑상은 매년 ‘개국 약사, 약학 연구, 제약, 사회봉사, 약사회 발전’의 5개 부문에 걸쳐 시상하고 있습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section> 
+            <section class="sub-view-g subCont">
+                <article class="sub-comNews-gallery">
+                    <div class="galleryCont">
+                        <div class="galleryCont-tit">
+                            <i class="galleryCont-titIco award"></i>
+                            <div class="galleryCont-titG">
+                                <span>건강한 사회를 위한 발걸음</span>
+                                <strong>약사금탑상 수상자</strong>
+                            </div>
+                        </div>
+                        <div class="awardCS-area">
+                            <div class="awardCS-slide">
+                                <div class="awardCS">
+                                    <ul class="awardCS-wrap swiper-wrapper">
+                                        <li class="awardCS-li swiper-slide">
+                                            <div class="awardCS-imgG">
+                                                <img src="../../../dest/static/images/awardCS1.png" alt="">
+                                                <span>유정사 약사</span>
+                                            </div>
+                                            <div class="awardCS-txtWrap">
+                                                <div class="awardCS-txt">
+                                                    <span class="awardCS-part">사회봉사 부문</span>
+                                                    <strong class="awardCS-name">유정사 약사</strong>
+                                                    <p class="awardCS-cont">1984년 약국을 개설하여 2009년까지 25여 년간 약국을 운영하면서 국민건강 향상에 기여하고 1973년 영등포구약사회 개국약사위원장, 이사, 부의장, 분회장으로서 약사회 회무 발전을 위해 적극 노력함. 양평동 노인정 건립, 삼풍백화점 사고 봉사약국 참여, 지역 내 저소득 주민을 위한 후원, 과내 경찰서 등 구급약 전달, 보육시설 후원하였음.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="awardCS-li swiper-slide">
+                                            <div class="awardCS-imgG">
+                                                <img src="../../../dest/static/images/awardCS1.png" alt="">
+                                                <span>유정사 약사</span>
+                                            </div>
+                                            <div class="awardCS-txtWrap">
+                                                <div class="awardCS-txt">
+                                                    <span class="awardCS-part">사회봉사 부문</span>
+                                                    <strong class="awardCS-name">유정사 약사</strong>
+                                                    <p class="awardCS-cont">1984년 약국을 개설하여 2009년까지 25여 년간 약국을 운영하면서 국민건강 향상에 기여하고 1973년 영등포구약사회 개국약사위원장, 이사, 부의장, 분회장으로서 약사회 회무 발전을 위해 적극 노력함. 양평동 노인정 건립, 삼풍백화점 사고 봉사약국 참여, 지역 내 저소득 주민을 위한 후원, 과내 경찰서 등 구급약 전달, 보육시설 후원하였음.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="awardCS-li swiper-slide">
+                                            <div class="awardCS-imgG">
+                                                <img src="../../../dest/static/images/awardCS1.png" alt="">
+                                                <span>유정사 약사</span>
+                                            </div>
+                                            <div class="awardCS-txtWrap">
+                                                <div class="awardCS-txt">
+                                                    <span class="awardCS-part">사회봉사 부문</span>
+                                                    <strong class="awardCS-name">유정사 약사</strong>
+                                                    <p class="awardCS-cont">1984년 약국을 개설하여 2009년까지 25여 년간 약국을 운영하면서 국민건강 향상에 기여하고 1973년 영등포구약사회 개국약사위원장, 이사, 부의장, 분회장으로서 약사회 회무 발전을 위해 적극 노력함. 양평동 노인정 건립, 삼풍백화점 사고 봉사약국 참여, 지역 내 저소득 주민을 위한 후원, 과내 경찰서 등 구급약 전달, 보육시설 후원하였음.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="awardCS-li swiper-slide">
+                                            <div class="awardCS-imgG">
+                                                <img src="../../../dest/static/images/awardCS1.png" alt="">
+                                                <span>유정사 약사</span>
+                                            </div>
+                                            <div class="awardCS-txtWrap">
+                                                <div class="awardCS-txt">
+                                                    <span class="awardCS-part">사회봉사 부문</span>
+                                                    <strong class="awardCS-name">유정사 약사</strong>
+                                                    <p class="awardCS-cont">1984년 약국을 개설하여 2009년까지 25여 년간 약국을 운영하면서 국민건강 향상에 기여하고 1973년 영등포구약사회 개국약사위원장, 이사, 부의장, 분회장으로서 약사회 회무 발전을 위해 적극 노력함. 양평동 노인정 건립, 삼풍백화점 사고 봉사약국 참여, 지역 내 저소득 주민을 위한 후원, 과내 경찰서 등 구급약 전달, 보육시설 후원하였음.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="awardCS-nav">
+                                <button class="awardCS-prev"></button>
+                                <span class="awardCS-pagination"></span>
+                                <button class="awardCS-next"></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        @@include('../../include/footer.html', 
+        {page_scr : false})
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+    $(function() {
+        $('.awardCS-li').css('width','800px');
+    $('.awardCS-li').eq(0).css('width','1200px');
+        var partnerSlide = new Swiper(".awardCS", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        threshold: 50,
+        on: {
+            slidePrevTransitionEnd : function() {
+                //$('.awardCS-li').css('width','800px');
+                $('.awardCS-li').eq(0).css('width','1200px');
+            }
+        },
+        
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: ".awardCS-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".awardCS-next",
+            prevEl: ".awardCS-prev",
+        },
+
+        });
+        
+    });
+    
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>

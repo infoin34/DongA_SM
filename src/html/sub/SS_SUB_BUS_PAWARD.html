@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>학술사업</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-titB subCont bt-0">
+                <article class="subTit">
+                    <div class="wrap-inner typeA">
+                        <div class="subTit-a withVis">
+                            <h2>학술사업</h2>
+                        </div>
+                    </div>
+					<div class="subVis-wrap">
+						<div class="subVis paward">
+							<div class="subVis-txt m">
+                                <span class="subVis-t">의료문화를 발전시키고 건강한 사회를 만들 수 있도록</span>
+                                <strong class="subVis-tit">연구비를 지원합니다.</strong>
+							</div>
+						</div>
+					</div>
+                </article>
+            </section>
+            <section class="sub-white subCont">
+                <article class="sub-cText">
+                    <div class="wrap-inner typeA">
+                        <div class="cTab ani btot">
+                            <div class="cTab-btnG">
+                                <button class="cTab-btn on">함춘동아의학상</button>
+                                <button class="cTab-btn">약사금탑상</button>
+                            </div>
+                            <div class="cTab-cont">
+                                <div class="subCText">
+                                    <strong>
+                                        우수한 연구 업적을 남긴 의사에게 연구비를 지원하고 연구 업적이 담긴 의학 저서 및 논문을 선정하여 시상합니다
+                                    </strong>
+                                    <p>
+                                        수석문화재단은 의료 문화를 발전시키고 최신 의학에 대한 연구 의욕을 고취시키기 위해 매년 우수한 연구 성과를 보인 의사에게 연구비를 지원하고 있습니다. 서울대 의과대학 동창회와 서울대학교 의과대학 동창회 학술연구재단이 매년 우수한 연구 업적이 담긴 의학 저서 및 논문을 선정하여 시상하는 ‘함춘의학상’은 수석문화재단이 2009년부터 후원을 시작하였으며, 의료계에서 역사와 전통을 자랑하며 최고의 권위를 인정받고 있습니다. 한편 2010년부터 ‘함춘의학상’의 명칭을 ‘함춘동아의학상’으로 변경하였습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section> 
+            <section class="sub-view-g subCont">
+                <article class="sub-comNews-gallery">
+                    <div class="galleryCont">
+                        <div class="galleryCont-tit">
+                            <i class="galleryCont-titIco award"></i>
+                            <div class="galleryCont-titG">
+                                <span>연구에 한 획을 그은</span>
+                                <strong>함춘동아의학상 수상자</strong>
+                            </div>
+                        </div>
+                        <div class="awardCont-fix">
+                            <div class="awardFix">
+                                <div class="awardFix-img">
+                                    <img src="../../../dest/static/images/awardCont-fix.png" alt="">
+                                </div>
+                                <div class="awardFix-txt">
+                                    <div class="awardFix-titBox">
+                                        <span class="awardFix-stit">
+                                            2022년도 수상내용
+                                        </span>
+                                        <strong class="awardFix-tit">
+                                            만성 B형간염 및 항바이러스제 치료와 간외 악성종양 발생 사이의 연관 관계에 대한 연구
+                                        </strong>
+                                        <div class="awardFix-nameG">
+                                            <span class="awardFix-name">이정훈 교수</span>
+                                            <span class="awardFix-affiliation">서울대학교병원 내과</span>
+                                        </div>
+                                    </div>
+                                    <div class="awardFix-career">
+                                        <strong class="awardFix-careerTit">학력</strong>
+                                        <div class="awardFix-careerBox">
+                                            <span class="awardFix-date">2009년 2월</span>
+                                            <span class="awardFix-cont">서울대학교 의과대학 의학과 내과학교실 박사</span>
+                                        </div>
+                                        <div class="awardFix-careerBox">
+                                            <span class="awardFix-date">2007년 2월</span>
+                                            <span class="awardFix-cont">서울대학교 의과대학 의학과 내과학교실 석사</span>
+                                        </div>
+                                        <div class="awardFix-careerBox">
+                                            <span class="awardFix-date">2002년 2월</span>
+                                            <span class="awardFix-cont">서울대학교 의과대학 의학과 학사</span>
+                                        </div>
+                                    </div>
+                                    <div class="awardFix-career w-200x">
+                                        <strong class="awardFix-careerTit">경력</strong>
+                                        <div class="awardFix-careerBox">
+                                            <span class="awardFix-date ">2021년 3월 ~ 현재</span>
+                                            <span class="awardFix-cont">서울대학교병원 내과 교수</span>
+                                        </div>
+                                        <div class="awardFix-careerBox">
+                                            <span class="awardFix-date">2016년 3월 ~ 2021년 2월</span>
+                                            <span class="awardFix-cont">서울대학교병원 내과 부교수</span>
+                                        </div>
+                                        <div class="awardFix-careerBox">
+                                            <span class="awardFix-date">2010년 3월 ~ 2016년 2월</span>
+                                            <span class="awardFix-cont">서울대학교병원 내과 조교수</span>
+                                        </div>
+                                        <div class="awardFix-careerBox">
+                                            <span class="awardFix-date">2007년 3월 ~ 2010년 2월</span>
+                                            <span class="awardFix-cont">서울대학교병원 내과 전임의</span>
+                                        </div>
+                                        <div class="awardFix-careerBox">
+                                            <span class="awardFix-date">2003년 3월 ~ 2007년 2월</span>
+                                            <span class="awardFix-cont">서울대학교병원 내과 전공의</span>
+                                        </div>
+                                        <div class="awardFix-careerBox">
+                                            <span class="awardFix-date">2002년 2월 ~ 2003년 2월</span>
+                                            <span class="awardFix-cont">서울대학교병원 인턴</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        @@include('../../include/footer.html', 
+        {page_scr : false})
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>
