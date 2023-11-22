@@ -160,18 +160,10 @@
 <!-- 페이지 관련 스크립트 -->
 <script>
     $(function() {
-        $('.awardCS-li').css('width','800px');
-    $('.awardCS-li').eq(0).css('width','1200px');
         var partnerSlide = new Swiper(".awardCS", {
         slidesPerView: 1,
         spaceBetween: 24,
         threshold: 50,
-        on: {
-            slidePrevTransitionEnd : function() {
-                //$('.awardCS-li').css('width','800px');
-                $('.awardCS-li').eq(0).css('width','1200px');
-            }
-        },
         
         keyboard: {
             enabled: true,

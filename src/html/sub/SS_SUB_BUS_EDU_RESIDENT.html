@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>교육사업</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-titB subCont bt-0">
+                <article class="subTit">
+                    <div class="wrap-inner typeA">
+                        <div class="subTit-a withVis">
+                            <h2>교육사업</h2>
+                        </div>
+                    </div>
+					<div class="subVis-wrap">
+						<div class="subVis eduresident">
+							<div class="subVis-txt m">
+                                <span class="subVis-t">다양한 프로그램을 통해</span>
+                                <strong class="subVis-tit">경험을 지원하고 나눔의 기회를 제공합니다</strong>
+							</div>
+						</div>
+					</div>
+                </article>
+            </section>
+            <section class="sub-white subCont">
+                <article class="sub-cText">
+                    <div class="wrap-inner typeA">
+                        <div class="cTab ani btot">
+                            <div class="cTab-btnG">
+                                <button class="cTab-btn on">교육복지사업</button>
+                                <button class="cTab-btn">평생교육사업</button>
+                            </div>
+                            <div class="cTab-cont">
+                                <div class="subCText">
+                                    <strong>
+                                        사회경제적 어려운 학생들에게<br>
+                                        교육, 복지, 문화 프로그램 등을 제공합니다
+                                    </strong>
+                                    <p>
+                                        수석문화재단은 서울시 동부교육지원청이 주관하는 교육복지사업에 참여하고 있습니다. 동부교육지원청이 교육복지 특별 지원 학교로 선정한 학교 중, 중학교 학생을 대상으로 교육, 복지, 문화 프로그램 등을 제공합니다. 행복 나눔 봉사단은 중학생으로 구성된 봉사단으로 어르신들을 매주 찾아뵙고 말벗이 되어드리는 활동을 진행하여 어르신은 삶의 활력을 되찾고, 청소년은 나눔을 실천할 수 있는 기회를 통해 건강한 어른으로 성장할 수 있도록 후원하고 있습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section> 
+            <section class="sub-view-g subCont">
+                <article class="sub-comNews-gallery">
+                    <div class="galleryCont">
+                        <div class="galleryCont-tit">
+                            <i class="galleryCont-titIco resident"></i>
+                            <div class="galleryCont-titG">
+                                <span>타인을 위해 봉사하는</span>
+                                <strong>행복나눔봉사단</strong>
+                            </div>
+                        </div>
+                        <div class="serviceCont-area">
+                            <div class="wrap-inner typeA">
+                                <div class="serviceCont-slide">
+                                    <ul class="serviceCont-wrap swiper-wrapper">
+                                        <li class="serviceCont-li swiper-slide">
+                                            <div class="serviceCont-img">
+                                                <img src="../../../dest/static/images/serviceCont1.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li class="serviceCont-li swiper-slide">
+                                            <div class="serviceCont-img">
+                                                <img src="../../../dest/static/images/serviceCont2.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li class="serviceCont-li swiper-slide">
+                                            <div class="serviceCont-img">
+                                                <img src="../../../dest/static/images/serviceCont3.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li class="serviceCont-li swiper-slide">
+                                            <div class="serviceCont-img">
+                                                <img src="../../../dest/static/images/serviceCont4.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li class="serviceCont-li swiper-slide">
+                                            <div class="serviceCont-img">
+                                                <img src="../../../dest/static/images/serviceCont1.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li class="serviceCont-li swiper-slide">
+                                            <div class="serviceCont-img">
+                                                <img src="../../../dest/static/images/serviceCont2.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li class="serviceCont-li swiper-slide">
+                                            <div class="serviceCont-img">
+                                                <img src="../../../dest/static/images/serviceCont3.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li class="serviceCont-li swiper-slide">
+                                            <div class="serviceCont-img">
+                                                <img src="../../../dest/static/images/serviceCont4.png" alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="serviceCont-nav">
+                                    <div class="serviceCont-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        @@include('../../include/footer.html', 
+        {page_scr : false})
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+    $(function() {
+        var service = new Swiper(".serviceCont-slide", {
+        slidesPerView: "auto",
+        spaceBetween: 24,
+        freeMode: true,
+        mousewheel: true,
+        
+        keyboard: {
+            enabled: true,
+        },
+
+        pagination: {
+            el: ".serviceCont-pagination",
+            type: "progressbar",
+        },
+
+        });
+        
+    });
+    
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>

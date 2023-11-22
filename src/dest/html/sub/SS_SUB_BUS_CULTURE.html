@@ -11,7 +11,7 @@
 
 
 
-	<title>학술사업</title>
+	<title>문화사업</title>
 	<!-- css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../../static/css/common.css">
@@ -474,35 +474,6 @@
 </body>
 <!-- 페이지 관련 스크립트 -->
 <script>
-	$(function() {
-		$('.awardCS-li').css('width', '800px');
-		$('.awardCS-li').eq(0).css('width', '1200px');
-		var partnerSlide = new Swiper(".awardCS", {
-			slidesPerView: 1,
-			spaceBetween: 24,
-			threshold: 50,
-			on: {
-				slidePrevTransitionEnd: function() {
-					//$('.awardCS-li').css('width','800px');
-					$('.awardCS-li').eq(0).css('width', '1200px');
-				}
-			},
-
-			keyboard: {
-				enabled: true,
-			},
-			pagination: {
-				el: ".awardCS-pagination",
-				type: "fraction",
-			},
-			navigation: {
-				nextEl: ".awardCS-next",
-				prevEl: ".awardCS-prev",
-			},
-
-		});
-
-	});
 </script>
 <!--//페이지 관련 스크립트 -->
 
