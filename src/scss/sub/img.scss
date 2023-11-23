@@ -9,7 +9,16 @@
         width:246px; height:212px; background: svgFootlogo('fff'); background-size:100% 100%;
     }
     .svg-logoHorizon{
-        width:375px; height:320px; background: svgLogohorizon('1D2087'); background-size:100% 100%;
+        width:306px; height:260px; background: svgLogohorizon('1D2087'); background-size:100% 100%;
+    }
+    .svg-logoKo{
+        width:306px; height:260px; background: svgLogoKo('1D2087'); background-size:100% 100%;
+    }
+    .svg-logoEn{
+        width:306px; height:260px; background: svgLogoEn('1D2087'); background-size:100% 100%;
+    }
+    .svg-logoSymbol{
+        width:125px; height:125px; background: svgLogosymbol('fff'); background-size:100% 100%;
     }
     .ico-link{
         width:12px; height:12px; background: svgIcoLink('fff'); background-size:100% 100%;
@@ -54,6 +63,9 @@
         width:40px; height:40px; background: svgIcoPaginlast('000'); background-size:24px 24px;
         background-position: center;
         background-repeat: no-repeat;
+    }
+    .ico-plus2{
+        width:44px; height:44px; background: svgIcoPlus2('ccc'); background-size:100% 100%;
     }
     .ico-tfdelete{
         width:26px; height:26px; background: svgIcoTfDelte('909090'); background-size:100% 100%;
@@ -114,6 +126,9 @@
     }
     .ico-resident{
         width:100px; height:100px; background: #fff svgIcoResident() no-repeat center ; border-radius: 50%;
+    }
+    .ico-books{
+        width:100px; height:100px; background: #fff svgIcoBooks() no-repeat center ; border-radius: 50%;
     }
     .ico-promote{
         width:72px; height:72px; background: svgIcoPromote(); background-size:100% 100%;

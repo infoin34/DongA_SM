@@ -416,6 +416,24 @@
     }
 }
 
+// svg 
+.svg {
+    &-logoBasic {
+        background: svgLogoKo('1D2087'); 
+        background-size:100% 100%;
+    }
+
+    &-logoKo {
+        background: svgLogohorizon('1D2087'); 
+        background-size:100% 100%;
+    }
+
+    &-logoEn {
+        background: svgLogoEn('1D2087'); 
+        background-size:100% 100%;
+    }
+}
+
 // 메인섹션 스크롤 다운
 .scrollDown {
     display: flex;

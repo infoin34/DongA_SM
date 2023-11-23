@@ -85,6 +85,34 @@ $color-A2A5BC : #A2A5BC;
     line-height: 1.7rem;
 }
 
+@mixin c-nameBox {
+    display: flex;
+    align-items: center;
+
+    &-l {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        color: $color-444;
+    }
+
+    &-r {
+        display: flex;
+        align-items: center;
+        @include txt-18x;
+        color: $color-666;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 1.6rem;  
+            background-color: $color-medium;
+            margin: 0 1rem;
+        }
+    }
+}
+
 
 // 텍스트 필드
 .txtField { 
@@ -514,6 +542,9 @@ $color-A2A5BC : #A2A5BC;
         }
         &.resident {
             background: #fff svgIcoResident() no-repeat center ; 
+        }
+        &.books {
+            background: #fff svgIcoBooks() no-repeat center ; 
         }
     }
     &-titG {
@@ -1115,6 +1146,10 @@ $color-A2A5BC : #A2A5BC;
 
         strong {
             @include txt-32x;
+
+            &.em {
+                color: $color-primary;
+            }
         }
 
         span {
@@ -1122,6 +1157,244 @@ $color-A2A5BC : #A2A5BC;
             color: $color-888;
             padding-bottom: 4px;
         }
+    }
+
+    &-text{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 1.6rem;
+        margin-bottom: 2rem;
+
+        strong {
+            @include txt-24x;
+            color: $color-222;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $color-444;
+        }
+    }
+
+    &-box {
+        margin-bottom: 18rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.ciMotive {
+
+    &-text {
+        display: block;
+        @include txt-32x;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &-imgBox {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        margin-top: 10rem;
+        background-color: #FAFAFA;
+        padding: 9.8rem 8rem;
+    }
+
+    &-imgGroup {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $color-medium;
+
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+    }
+
+    &-img {
+        display: flex;
+        flex-basis: 41.5%;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: #DCE4F0;
+        border: 4rem solid $color-primaryBgNd;
+        border-radius: 50%;
+
+        &::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        &-s {
+            display: flex;
+            flex-basis: 23.2%;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $color-medium;
+            background-color: $color-fff;
+            position: relative;
+            border-radius: 50%;
+
+            &::after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                &.img-s {
+                    width: 41.2%;
+                }
+                &.img-pillar {
+                    width: 53.6%;
+                }
+            }
+        }
+    }
+
+    &-ico {
+        display: block;
+        width: 68%;
+        background-color: #1D2088;
+        border-radius: 50%;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        i {
+            display: block;
+            width: 44%;
+            height: 44%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: svgLogosymbol('fff');
+            background-size:100% 100%;
+        }
+    }
+
+    &-symbolGroup {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 4rem;
+    }
+
+    &-symbol {
+        flex-basis: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-plus {
+        width:44px;
+        height:44px;
+        background: svgIcoPlus2('ccc');
+        background-size:100% 100%;
+    }
+
+    // &-symbol {
+    //     &-top {
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    // }
+}
+
+.ciUsage {
+    &-box {
+        margin-bottom: 14rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.ciBi {
+    display: flex;
+    background-color: #FAFAFA;
+    padding: 6rem;
+    gap: 8rem;
+
+    &-typeBox {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        flex-basis: calc(100% / 3);
+        flex-shrink: 1;
+    }
+
+    &-ico { 
+        width: 100%;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            padding-bottom: 85%;
+        }
+
+        i {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &-type {
+        display: block;
+        text-align: center;
+        
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2.8rem;
+
+        color: $color-444;
+    }
+}
+
+.ciIdentifier {
+    padding: 4rem;
+    background-color: #FAFAFA;
+
+    img {
+        width: 100%;
     }
 }
 
@@ -1541,39 +1814,13 @@ $color-A2A5BC : #A2A5BC;
         margin-top: 3.2rem;
     }
 
-    &-tgroup {
-        display: flex;
+    &-name {
+        @include c-nameBox;
         justify-content: flex-start;
-        align-items: center;
         margin-top: 1.6rem;
 
         &:first-of-type {
             margin-top: 0;
-        }
-    }
-
-    &-name {
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 2.8rem;
-        color: $color-444;
-    }
-
-    &-position {
-        @include txt-18x;
-        margin-left: 2.2rem;
-        color: $color-666;
-        position: relative;
-
-        &::before {
-            content: '';
-            display: block;
-            width: 2px;
-            height: 1.6rem;
-            background-color: $color-medium;
-            position: absolute;
-            left: -1rem;
-            top: calc(50% - 0.8rem);
         }
     }
 
@@ -1643,6 +1890,9 @@ $color-A2A5BC : #A2A5BC;
 
         img {
             width: 100%;
+            height: 100%;
+            max-height: 70rem;
+            object-fit: cover;
         }
     }
 
@@ -1672,36 +1922,11 @@ $color-A2A5BC : #A2A5BC;
         word-break: keep-all;
     }
 
-    &-nameG {
-        margin-top: 3.2rem;
-        display: flex;
-        gap: 2.2rem;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    
     &-name {
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 2.8rem;
-        color: $color-444;
-    }
+        margin-top: 3.2rem;
 
-    &-affiliation {
-        @include txt-18x;
-        color: $color-666;
-        position: relative;
-
-        &::before {
-            content: '';
-            display: inline-block;
-            width: 2px;
-            height: 1.6rem;
-            position: absolute;
-            top: calc(50% - 0.8rem);
-            left: -1.1rem;
-            background-color: $color-medium;
-        }
+        @include c-nameBox;
+        justify-content: flex-start;
     }
 
     &-career {
@@ -1864,7 +2089,7 @@ $color-A2A5BC : #A2A5BC;
                     display: block;
                     flex-basis: 57%;
                     opacity: 1;
-                    padding: 6rem 5rem 6rem 6rem;
+                    padding: 6rem 4.4rem 6rem 6rem;
                 }
                 .awardCS-txt {
                     opacity: 1;
@@ -1916,7 +2141,7 @@ $color-A2A5BC : #A2A5BC;
         p {
             @include txt-18x;
             color: $color-666;
-            padding-right: 1rem;
+            padding-right: 1.6rem;
         }
     }
 
@@ -2017,31 +2242,7 @@ $color-A2A5BC : #A2A5BC;
     }
 
     &-name {
-        display: flex;
-        align-items: center;
-    }
-
-    &-work {
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 2.8rem;
-        color: $color-444;
-    }
-
-    &-person {
-        display: flex;
-        align-items: center;
-        @include txt-18x;
-        color: $color-666;
-
-        &::before {
-            content: '';
-            display: inline-block;
-            width: 2px;
-            height: 1.6rem;
-            background-color: $color-medium;
-            margin: 0 1rem;
-        }
+        @include c-nameBox;
     }
 }
 
@@ -2069,35 +2270,9 @@ $color-A2A5BC : #A2A5BC;
         margin-top: 4rem;
     }
 
-    &-nameG {
-        display: flex;
-        align-items: center;
+    &-name {
+        @include c-nameBox;
         flex-shrink: 0;
-    }
-
-    &-workName {
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 2.8rem;
-        color: $color-444;
-    }
-
-    &-personName {
-        display: flex;
-        align-items: center;
-        font-weight: 400;
-        font-size: 2rem;
-        line-height: 2.8rem;
-        color: $color-666;
-
-        &::before {
-            content: '';
-            display: inline-block;
-            width: 2px;
-            height: 1.6rem;
-            background-color: $color-medium;
-            margin: 0 1rem;
-        }
     }
 
     &-contG {
@@ -2144,6 +2319,129 @@ $color-A2A5BC : #A2A5BC;
         .swiper-pagination-progressbar-fill{
             background-color: $color-accentNd;
         }
+    }
+}
+
+.bookCont{
+    display: flex;
+
+    &-img {
+        display: flex;
+        align-items: center;
+        flex-basis: 40.5%;
+        flex-shrink: 1;
+        background-color: #fff;
+        
+        img{
+            width: 100%;
+        }
+    }
+
+    &-txt {    
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50.5%;
+        flex-shrink: 1;
+        flex-grow: 1;
+        background-color: #fff;
+        padding: 6rem 8.4rem 9rem 10rem;
+    }
+
+    &-stit {
+        display: block;
+        @include txt-16x;
+        margin-bottom: 1rem;
+        color: $color-primary;
+
+        flex-shrink: 0;
+    }
+
+    &-tit {
+        display: block;
+        @include txt-24x;
+
+        flex-shrink: 0;
+    }
+
+    &-name {
+        @include c-nameBox;
+        margin: 3.2rem 0 6rem;
+
+        flex-shrink: 0;
+    }
+
+    &-cont {
+        flex-basis: 100%;
+        flex-shrink: 1;
+        overflow: auto;
+        max-height: 30rem;
+        padding-right: 1.6rem;
+
+        p {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+
+            color: $color-666;
+        }
+    }
+}
+
+
+.ciGuide {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12rem;
+    padding: 6rem;
+    background-color: #FAFAFA;
+
+    &-box {
+        flex-basis: 100%;
+        flex-shrink: 1;
+    }
+
+    &-tit {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.8rem;
+        margin-bottom: 3rem;
+    }
+
+    &-titEng {
+        @include txt-24x;
+        color: $color-222;
+    }
+
+    &-titKo {
+        @include txt-16x;
+        color: $color-888;
+    }
+
+    &-img {
+        margin-bottom: 2.2rem;
+
+        img { 
+            display: block;
+        }
+
+        .guide-system {
+            margin: 0 auto;
+            padding: 1.3rem 0;
+            width: calc(100% - 12.4rem);
+        }
+
+        .guide-space {
+            margin: 0 auto;
+            width: calc(100% - 5.2rem);
+        }
+    }
+
+    &-txt {
+        @include txt-18x;
+        color: $color-444;
+
+        word-break: keep-all;
     }
 }
 
@@ -2260,6 +2558,10 @@ $color-A2A5BC : #A2A5BC;
     }
 
     .awardFix {
+        flex-direction: column;
+    }
+
+    .bookCont {
         flex-direction: column;
     }
 }

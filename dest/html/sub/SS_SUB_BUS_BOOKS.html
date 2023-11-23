@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+
+
+
+
+	<title>출판사업 </title>
+	<!-- css -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="../../static/css/common.css">
+	<link rel="stylesheet" href="../../static/css/locomotive-scroll.css">
+	<!--//css -->
+
+
+	<!-- srcipt -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="../../static/js/locomotive-scroll.min.js"></script>
+	<script src="../../static/js/common.ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+
+	<!--//srcipt -->
+</head>
+
+<body>
+	<div id="wrap" role="main">
+
+		<header class="header is-dark">
+			<div class="header-inner">
+				<div class="header-top">
+					<a class="logo" href="#">
+						<h1>로고</h1>
+					</a>
+				</div>
+				<div class="gnb">
+					<span class="gnb-line"></span>
+					<ul class="gnb-depth1">
+						<li class="gnb-depth1-li">
+							<a href="#" data-js-gnb="trigger"><strong>수석문화재단</strong></a>
+							<ul class="gnb-depth2" data-js-gnb="list">
+								<li class="gnb-depth2-li">
+									<a href="#">재단소개</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">이사장 인사말</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">함께하는 사람들</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">연혁</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">CI소개</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">정관</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">오시는 길</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#" data-js-gnb="trigger">운영공시</a>
+									<ul class="gnb-depth3">
+										<li>
+											<a href="#">결산서</a>
+										</li>
+										<li>
+											<a href="#">기부금 모금액 및 활용실적</a>
+										</li>
+										<li>
+											<a href="#">기부금 명세서</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="gnb-depth1-li">
+							<a href="#" data-js-gnb="trigger"><strong>사업소개</strong></a>
+							<ul class="gnb-depth2" data-js-gnb="list">
+								<li class="gnb-depth2-li">
+									<a href="#">장학사업</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">문화사업</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">출판사업</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#" data-js-gnb="trigger">학술사업</a>
+									<ul class="gnb-depth3">
+										<li>
+											<a href="#">함춘동의학상</a>
+										</li>
+										<li>
+											<a href="#">약사금탑상</a>
+										</li>
+									</ul>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#" data-js-gnb="trigger">교육사업</a>
+									<ul class="gnb-depth3">
+										<li>
+											<a href="#">평생교육사업</a>
+										</li>
+										<li>
+											<a href="#">교육복지사업</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="gnb-depth1-li">
+							<a href="#" data-js-gnb="trigger"><strong>커뮤니티</strong></a>
+							<ul class="gnb-depth2" data-js-gnb="list">
+								<li class="gnb-depth2-li">
+									<a href="#">재단소식</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">공지사항</a>
+								</li>
+								<li class="gnb-depth2-li">
+									<a href="#">문의하기</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="header-btnArea">
+					<a href="#none" class="btn-support">후원하기</a>
+					<button class="btn-menu">
+						<span class="line1"></span>
+						<span class="line2"></span>
+						<span class="line3"></span>
+					</button>
+				</div>
+			</div>
+			<nav class="nav">
+				<div class="nav-inner">
+					<div class="nav-info">
+						<div class="nav-support">
+							<strong class="nav-supportTit">
+                        나눔을 통해<br />
+                        미래 인재의 희망을<br />
+                        특별하고 소중하게<br />
+                        만들어보세요
+                    </strong>
+							<a href="#" class="nav-supportLink">후원 하러가기<i class="ico-arrowR"></i></a>
+						</div>
+						<ul class="nav-policy">
+							<li><a href="#"><em>개인정보보호정책</em></a></li>
+							<li><a href="#">이메일무단수집거부</a></li>
+						</ul>
+					</div>
+					<div class="nav-depth">
+						<ul class="nav-depth1">
+							<li class="nav-depth1-li">
+								<a href="">수석문화재단</a>
+								<ul class="nav-depth2">
+									<li class="nav-depth2-li">
+										<a href=""><span>재단소개</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>이사장 인사말</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>함께하는 사람들</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>연혁</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>CI소개</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>오시는 길</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="" class="has-dept3"><span>운영공시</span></a>
+										<ul class="nav-depth3">
+											<li><a href="">결산서</a></li>
+											<li><a href="">기부금 모금액 및 활용실적</a></li>
+											<li><a href="">기부금 명세서</a></li>
+										</ul>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>정관</span></a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-depth1-li">
+								<a href="">사업소개</a>
+								<ul class="nav-depth2">
+									<li class="nav-depth2-li">
+										<a href=""><span>장학사업</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>문화사업</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>출판사업</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="" class="has-dept3"><span>학술사업</span></a>
+										<ul class="nav-depth3">
+											<li><a href="">함춘동의학상</a></li>
+											<li><a href="">약사금탑상</a></li>
+										</ul>
+									</li>
+									<li class="nav-depth2-li">
+										<a href="" class="has-dept3"><span>교육사업</span></a>
+										<ul class="nav-depth3">
+											<li><a href="">평생교육사업</a></li>
+											<li><a href="">교육복지사업</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-depth1-li">
+								<a href="">커뮤니티</a>
+								<ul class="nav-depth2">
+									<li class="nav-depth2-li">
+										<a href=""><span>재단소식</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>공지사항</span></a>
+									</li>
+									<li class="nav-depth2-li">
+										<a href=""><span>문의하기</span></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title</div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->
+		<main class="wrapper">
+			<section class="sub-titB subCont bt-0">
+				<article class="subTit">
+					<div class="wrap-inner typeA">
+						<div class="subTit-a withVis">
+							<h2>출판사업</h2>
+						</div>
+					</div>
+					<div class="subVis-wrap">
+						<div class="subVis books">
+							<div class="subVis-txt m">
+								<span class="subVis-t">풍부한 언어를 습득하고 미래에 대비하는</span>
+								<strong class="subVis-tit">인재로 성장할 수 있도록 지원합니다</strong>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+			<section class="sub-white subCont">
+				<article class="sub-cText">
+					<div class="wrap-inner typeA">
+						<div class="subCText ani btot">
+							<strong>
+                                한자문화권의 올바른 이해법을 위해 기업과 학교 및 단체에<br>
+                                무상으로 제공하며 한자를 널리 보급하는 데 앞장서고 있습니다
+                            </strong>
+							<p>
+								생활한자 3,000자 발행. 한자의 중요성을 강조해 온 강신호 명예이사장은 지난 2006년 11월부터 한문 교육용 기초 한자 1,800자와 기타 주요 한자 1,200자 총 3,000자를 간추려 ‘생활한자 3,000자’를 발행하고 있습니다. 이는 우리나라와 중국, 일본을 비롯한 동아시아에서 표음, 표의, 표어문자로 널리 사용되고 있는 한자를 필요에 따라 활용함으로써 우리말을 보다 올바르게 이해하고 한자문화권에서 뒤떨어지지 않도록 하기 위한 것입니다. 현재까지 총 3만 7천부를 제작, 여러 기업과 학교 및 단체에 무상으로 제공하며 한자를 널리 보급하는 데 앞장서고 있습니다.
+							</p>
+						</div>
+					</div>
+				</article>
+			</section>
+			<section class="sub-view-g subCont">
+				<article class="sub-comNews-gallery">
+					<div class="galleryCont">
+						<div class="galleryCont-tit">
+							<i class="galleryCont-titIco books"></i>
+							<div class="galleryCont-titG">
+								<span>동아쏘시오그룹 강신호 회장이 엮은</span>
+								<strong>출판 서적을 소개합니다</strong>
+							</div>
+						</div>
+						<div class="wrap-inner typeA">
+							<div class="bookCont-wrap">
+								<div class="bookCont">
+									<div class="bookCont-img">
+										<img src="../../../dest/static/images/bookcont.png" alt="">
+									</div>
+									<div class="bookCont-txt">
+										<span class="bookCont-stit">아카데미아</span>
+										<strong class="bookCont-tit">생활한자 3000자</strong>
+										<div class="bookCont-name">
+											<strong class="bookCont-name-l">강신호 저</strong>
+											<span class="bookCont-name-r">2012년 03월 09일</span>
+										</div>
+										<div class="bookCont-cont">
+											<p>동아제약 강신호 회장이 직접 편찬한 책은 한자와 중국어 학습을 지원하는 뛰어난 자원입니다. 이 책은 총 3,000자의 한자를 다루며, 중국어 발음까지 표기하여 중국어 학습을 돕는 특징을 가지고 있습니다. 뿐만 아니라 중국 정부가 공표한 2,236자의 간체자를 수록하여 중국어 기초를 강화합니다. 또한 흔하게 사용되는 단어와 예문을 제공하여 학습효과를 높입니다.<br><br>
+                                            이 책은 말의 이해를 높이는데 중요한 역할을 하며, 한자의 정확한 이해는 동음이의어로 인한 뜻의 혼동을 방지합니다. 강신호 회장은 한자 공부의 중요성을 강조하며, 현대 사회에서 중국어와의 교류가 증가하고 있는 상황에서 한자 공부를 통해 미래에 대비하길 바랍니다.<br>
+                                            이 책을 통해 정확하고 풍부한 언어 능력을 갖출 수 있으며, 중국어의 기초도 강화할 수 있을 것입니다. 수익금은 사회봉사를 지원하는 수석문화재단을 통해 사용됩니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<div class="footer">
+			<div class="footer-inner">
+				<div class="footer-logo">
+					<h2>LOGO <i class="ico-footLogo"></i></h2>
+				</div>
+				<div class="footer-left">
+					<div class="footer-info">
+						<div class="footer-link">
+							<div class="footer-linkContG">
+								<div class="footer-linkCont">
+									<strong>Address</strong>
+									<span class="hasIco"><i class="ico-pin"></i>서울시 동대문구 천호대로 64</span>
+								</div>
+								<div class="footer-linkCont">
+									<strong>Contact</strong>
+									<a class="hasIco" href="tel:02-920-8114"><i class="ico-phone"></i>02-920-8114</a>
+								</div>
+							</div>
+							<div class="footer-linkCont">
+								<ul>
+									<li>
+										<a href="#none"><strong>개인정보보호정책</strong></a>
+									</li>
+									<li>
+										<a href="#none">이메일무단수집거부</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-familySite">
+							<button class="footer-familySelect">
+								Family Site
+								<i class="ico-plus"></i>
+							</button>
+							<ul class="footer-familyList">
+								<li><a class="footer-familyLi">동아쏘시오홀딩스</a></li>
+								<li><a class="footer-familyLi">수석문화재단</a></li>
+								<li><a class="footer-familyLi">동아제약</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-bottom">
+						<ul class="footer-partner">
+							<li>
+								<a href="" class="footer-partnerLi">
+									<img src="../../static/images/partner01.svg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="" class="footer-partnerLi">
+									<img src="../../static/images/partner02.svg" alt="">
+								</a>
+							</li>
+						</ul>
+						<p class="footer-copyright">Copyright© SUSEOK CULTURAL FOUNDATION. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<a class="btn-top @@class" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+
+		<script>
+		</script>
+	</div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+</script>
+<!--//페이지 관련 스크립트 -->
+
+</html>
