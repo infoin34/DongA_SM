@@ -1177,6 +1177,12 @@ $color-A2A5BC : #A2A5BC;
             line-height: 2.4rem;
             color: $color-444;
         }
+
+        &.colum {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 6rem;
+        }
     }
 
     &-box {
@@ -1395,6 +1401,145 @@ $color-A2A5BC : #A2A5BC;
 
     img {
         width: 100%;
+    }
+}
+
+.ciIncorrect{
+    
+    &-type {
+        @include txt-20x;
+        color: $color-444;
+    }
+
+    &-imgGroup {
+        display: flex;
+    }
+    &-imgBox {
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        margin-bottom: 4rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &-txtG {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 1.6rem;
+    }
+    &-ex {
+        flex-basis: 100%;
+        flex-shrink: 1;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: $color-666;
+        word-break: keep-all;
+        padding: 0 1rem;
+    }
+}
+
+.ciColor{
+    display: flex;
+
+    &-box {
+        display: flex;
+        flex-direction: column;    
+        gap: 10rem;
+        align-items: flex-start;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        padding: 2rem;
+
+        &.blue {
+            background-color: #182088;
+            color: $color-fff;
+        }
+
+        &.gold {
+            background-color: #C9A063;
+            color: $color-fff;
+        }
+
+        &.white {
+            background-color: $color-fff;
+            color: #182088;
+            border: 1px solid $color-default
+        }
+    }
+
+    &-colorName {
+        @include txt-16x;
+    }
+
+    &-color {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-end;
+    }
+
+    &-value {
+        display: flex;
+        flex-direction: column;    
+        align-items: flex-start;
+        min-width: 5rem;
+    }
+    &-valueCont{
+        @include txt-16x;
+        font-weight: 400;
+    }
+}
+
+.ciCB {
+    width: 100%;
+    margin-top: 4rem;
+
+    img {
+        width: 100%;
+    }
+}
+
+.ciType{
+    &-box {
+        padding: 6rem 6rem 6.2rem;
+        background-color: #FAFAFA;
+        margin-bottom: 2rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &-lng {
+        @include txt-20x;
+        color: $color-primaryNd;
+    }
+    &-fontG {
+        margin-top: 2.4rem;
+
+        &:first-of-type {
+            margin-top: 3rem;
+        }
+
+        span {
+            display: block;
+            margin-bottom: 1.6rem;
+            @include txt-16x;
+            color: $color-666;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
     }
 }
 
@@ -2387,7 +2532,6 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
-
 .ciGuide {
     display: flex;
     justify-content: space-between;
@@ -2444,6 +2588,7 @@ $color-A2A5BC : #A2A5BC;
         word-break: keep-all;
     }
 }
+
 
 @media screen and (max-width: 1200px) {
     .withPCont {
@@ -2562,6 +2707,10 @@ $color-A2A5BC : #A2A5BC;
     }
 
     .bookCont {
+        flex-direction: column;
+    }
+
+    .ciColor {
         flex-direction: column;
     }
 }
