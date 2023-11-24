@@ -3,7 +3,7 @@
 html {font-size:62.5%; }
 html, body	{margin:0; padding:0; box-sizing:border-box;}
 xmp, form, input, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd {margin:0; padding:0;}
-body, h1, h2, h3, h4, h5, h6, th, td, input, textarea, select, option, a, button { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; }
+body, h1, h2, h3, h4, h5, h6, th, td, input, textarea, select, option, a, button, span { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; }
 ul, ol, li	{list-style:none; appearance: none;}
 img		{border:0;}
 table	{border-collapse:collapse; border-spacing:0;} 
@@ -69,7 +69,7 @@ body::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:i
 .ell-2 {display:block; display:-webkit-box !important; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-break:break-all;}
 .ell-3 {display:block; display:-webkit-box !important; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:3; -webkit-box-orient:vertical; word-break:break-all;}
 
-.no-scr {width:100%; height:100%; overflow:hidden;}
+.no-scr { overflow:hidden;}
 .noScr, .scr-x { -ms-overflow-style:none; /* IE and Edge */ scrollbar-width:none; /* Firefox */ } .scroll_container::-webkit-scrollbar{ display: none; width: 0; /* Remove scrollbar space */ height: 0; background: transparent; /* Optional: just make scrollbar invisible */ -webkit-appearance: none;}
 .scr-x {display:inline-flex; width:100%; white-space:nowrap; justify-content:flex-start; overflow-x:auto; overflow-y:hidden;}
 .scr-x::-webkit-scrollbar { display:none; width:0; /* Remove scrollbar space */ height: 0; background: transparent; /* Optional: just make scrollbar invisible */ -webkit-appearance: none; }

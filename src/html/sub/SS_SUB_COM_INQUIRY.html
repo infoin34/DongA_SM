@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>문의하기</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <main class="wrapper">
+            <section class="sub-titB subCont">
+                <article class="subTit">
+                    <div class="wrap-inner typeA">
+                        <div class="subTit-b">
+                            <h2>문의하기</h2>
+                            <p>수석문화재단에 문의사항이 있으신가요?</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="sub-list subCont">
+                <article class="sub-comNoti">
+                    <div class="wrap-inner typeA">
+                        <div class="clist-top clist-top-right">
+                            <span class="inqueryCont-top">필수 입력 사항입니다.</span>
+                        </div>
+                        <div class="inqueryCont-wrap">
+                            <div class="inqueryCont-inputGroup">
+                                <div class="inqueryCont-inputBox">
+                                    <div class="inqueryCont-nameBox important">
+                                        <span class="inqueryCont-name">이름</span>
+                                        <span class="inqueryCont-eng">Name</span>
+                                    </div>
+                                    <div class="inqueryCont-inputWrap">
+                                        <input type="text" class="c-input" placeholder="이름을 입력해주세요.">
+                                    </div>
+                                </div>
+                                <div class="inqueryCont-inputBox">
+                                    <div class="inqueryCont-nameBox important">
+                                        <span class="inqueryCont-name">연락 받으실 메일</span>
+                                        <span class="inqueryCont-eng">E-Mail</span>
+                                    </div>
+                                    <div class="inqueryCont-inputWrap">
+                                        <input type="text" class="c-input" placeholder="예: susuk0101@gmail.com">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inqueryCont-inputGroup">
+                                <div class="inqueryCont-inputBox">
+                                    <div class="inqueryCont-nameBox important">
+                                        <span class="inqueryCont-name">문의사항</span>
+                                        <span class="inqueryCont-eng">Question</span>
+                                    </div>
+                                    <div class="inqueryCont-inputWrap">
+                                        <div class="c-textarea">
+                                            <textarea name="" id="" placeholder="문의사항을 남겨주세요. (2000자 이내)" maxlength="2000"></textarea>
+                                            <div class="maximumG">
+                                                <span class="maximum-now">0</span> /
+                                                <span class="maximum-text">2000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inqueryCont-inputGroup">
+                                <div class="inqueryCont-inputBox">
+                                    <div class="inqueryCont-nameBox important">
+                                        <span class="inqueryCont-name">개인정보 수집 및 이용 정보 동의</span>
+                                    </div>
+                                    <div class="termsBox-wrap">
+                                        <div class="termsBox">
+                                            <div class="termsBox-cont">
+                                                <!-- 개발 시 아래 내용 지워주세요 -->
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">1. 개인정보 수집 항목</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">이름, 이메일  및 그 외 개인이 직접 입력한 내용</p>
+                                                <br><br><br>
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">2. 이용목적</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와 같이 관계법령에서 정한 일정 기간 동안 개인정보를 보관할 수 있습니다.<br><br><br>
+                                                <em style="font-weight: 600;">· 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</em><br><br>
+                                                ※ 개인정보 수집 및  이용, 보유기간에 동의해야 서비스 이용이 가능합니다.
+                                                </p><br><br><br>
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">1. 개인정보 수집 항목</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">이름, 이메일  및 그 외 개인이 직접 입력한 내용</p>
+                                                <br><br>
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">2. 이용목적</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와 같이 관계법령에서 정한 일정 기간 동안 개인정보를 보관할 수 있습니다.<br><br>
+                                                <em style="font-weight: 600;">· 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</em><br><br>
+                                                ※ 개인정보 수집 및  이용, 보유기간에 동의해야 서비스 이용이 가능합니다.
+                                                </p>
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">1. 개인정보 수집 항목</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">이름, 이메일  및 그 외 개인이 직접 입력한 내용</p>
+                                                <br><br>
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">2. 이용목적</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와 같이 관계법령에서 정한 일정 기간 동안 개인정보를 보관할 수 있습니다.<br><br>
+                                                <em style="font-weight: 600;">· 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</em><br><br>
+                                                ※ 개인정보 수집 및  이용, 보유기간에 동의해야 서비스 이용이 가능합니다.
+                                                </p>
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">1. 개인정보 수집 항목</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">이름, 이메일  및 그 외 개인이 직접 입력한 내용</p>
+                                                <br><br>
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">2. 이용목적</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와 같이 관계법령에서 정한 일정 기간 동안 개인정보를 보관할 수 있습니다.<br><br>
+                                                <em style="font-weight: 600;">· 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</em><br><br>
+                                                ※ 개인정보 수집 및  이용, 보유기간에 동의해야 서비스 이용이 가능합니다.
+                                                </p>
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">1. 개인정보 수집 항목</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">이름, 이메일  및 그 외 개인이 직접 입력한 내용</p>
+                                                <br><br>
+                                                <strong style="font-weight: 500; font-size: 18px; line-height: 2.8rem; letter-spacing: -0.02em; color: #444;">2. 이용목적</strong><br><br>
+                                                <p style="font-weight: 400; font-size: 16px; line-height: 2.4rem; color: #666;">원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와 같이 관계법령에서 정한 일정 기간 동안 개인정보를 보관할 수 있습니다.<br><br>
+                                                <em style="font-weight: 600;">· 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</em><br><br>
+                                                ※ 개인정보 수집 및  이용, 보유기간에 동의해야 서비스 이용이 가능합니다.
+                                                </p>
+                                                <!-- 개발 시 아래 내용 지워주세요 // -->
+                                            </div>
+                                        </div>
+                                        <div class="termsBox-check">
+                                            <label class="c-check">
+                                                <input type="checkbox" name="chk">
+                                                개인정보 수집 및 이용에 동의합니다.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inqueryCont-btnWrap">
+                                <button class="btn-t"  onclick="popup.open('.alert-name');">
+                                    문의 등록
+                                </button>
+
+                                <!-- 이름 미입력시 onclick="popup.open('.alert-name');" -->
+
+                                <!-- 이메일 미입력시 onclick="popup.open('.alert-email');"-->
+
+                                <!-- 이메일 형식 아닐시 onclick="popup.open('.alert-emailform');" -->
+
+                                <!-- 문의사항 미입력시 onclick="popup.open('.alert-question');" -->
+
+                                <!-- 개인정보 수집 및 이용 정보 동의 미입력시  onclick="popup.open('.alert-information');" -->
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!-- 이름 미입력시 팝업 -->
+        @@include('../popoup/SS_SUB_COM_POP_NAME.html')
+        <!-- 이름 미입력시 팝업 // -->
+    
+        <!-- 이메일 미입력시 팝업 -->
+        @@include('../popoup/SS_SUB_COM_POP_EMAIL.html')
+        <!-- 이메일 미입력시 팝업 // -->
+    
+        <!-- 이메일 형식 아닐시 팝업 -->
+        @@include('../popoup/SS_SUB_COM_POP_EMAILFORM.html')
+        <!-- 이메일 형식 아닐시 팝업 // -->
+    
+        <!-- 문의사항 미입력시 팝업 -->
+        @@include('../popoup/SS_SUB_COM_POP_QUESTIONS.html')
+        <!-- 문의사항 미입력시 팝업 // -->
+    
+        <!-- 개인정보 수집 및 이용 정보 동의 미입력시 팝업 -->
+        @@include('../popoup/SS_SUB_COM_POP_INFORMATION.html')
+        <!-- 개인정보 수집 및 이용 정보 동의 미입력시 팝업 // -->
+        
+        @@include('../../include/footer.html', 
+        {page_scr : false})
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+    
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>

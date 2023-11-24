@@ -354,6 +354,14 @@
         background: svgIcoPhone('6B7684'); 
         background-size:100% 100%;
     }
+    &-call {
+        background: svgIcoPhone('444'); 
+        background-size:100% 100%;
+    }
+    &-responsibility {
+        background: svgIcoResponsibility('444'); 
+        background-size:100% 100%;
+    }
     &-coin {
         background: svgIcoCoin('444444', '00D4CD'); 
         background-size:100% 100%;
@@ -368,6 +376,10 @@
     }
     &-error404 {
         background: svgIcoError404(); 
+        background-size:100% 100%;
+    }
+    &-registration {
+        background: svgIcoRegistration(); 
         background-size:100% 100%;
     }
     &-establish {
@@ -413,6 +425,9 @@
     }
     &-fairyTale{
         background: svgIcoFairyTale(); background-size:100% 100%;
+    }
+    &-alert{
+        background: svgIcoAlert(); background-size:100% 100%;
     }
 }
 
@@ -643,6 +658,96 @@
         }
     }
 }
+
+.c-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: $color-primaryBg;
+    box-sizing: border-box;
+    @include txt-18x;
+    height: 6rem;
+    line-height: 6rem;
+    padding: 0 2.5rem;    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid $color-medium;
+    @include transition(all, 0.3s, $cubicTxt);
+
+    &:focus {
+        border-bottom: 1px solid $color-primary;
+    }
+
+    &::placeholder {
+        color: $color-888;
+    }
+
+    &.err {
+        border: 1px solid #FF3D3D;
+        padding-right: 6.4rem;
+        background: svgIcoErr('FF3D3D')  #f8f9fc no-repeat;
+        background-size: 2.4rem 2.4rem ;
+        background-position: calc(100% - 2.4rem);
+    }
+}
+
+.c-textarea {
+    background-color: $color-primaryBg;
+    padding: 2.4rem;
+    border: 1px solid $color-medium;
+
+    textarea {
+        display: block;
+        width: 100%;
+        height: 30.8rem;
+        border: none ;
+        resize: none;
+        outline: none;
+        background-color: transparent;
+
+        @include txt-18x;
+        color: $color-222;
+
+        &::placeholder {
+            color: $color-888;
+        }
+
+        &::-webkit-scrollbar-track { background-color: transparent !important; }
+        &::-webkit-scrollbar-thumb { background-color: #CCCCCC !important; border-radius: 0; }
+    }
+
+    .maximumG {
+        margin-top: 1.4rem;
+        text-align: right;
+        @include txt-18x;
+        color: $color-888;
+    }
+}
+
+.c-check {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    @include txt-18x;
+    color: $color-444;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        width: 2.4rem;
+        height: 2.4rem;
+        border: 2px solid $color-default;
+        @include transition(all, 0.2s, $cubicTxt);
+        cursor: pointer;
+
+        &:checked {
+            background: svgIcoCheck('fff') $color-accent;
+            border-color: $color-accent;
+        }
+    }
+}
+
+textarea::-webkit-scrollbar-track { background-color: $color-medium !important; }
+textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
 
 @media screen and (max-width: 992px) {
     .scrollDown-line{

@@ -35,6 +35,9 @@
     .ico-calender{
         width:24px; height:24px; background: svgIcoCalener('444'); background-size:100% 100%;
     }
+    .ico-error{
+        width:24px; height:24px; background: svgIcoErr('FF3D3D'); background-size:100% 100%;
+    }
     .ico-file{
         width:24px; height:24px; background: svgIcoFile('444'); background-size:100% 100%;
     }
@@ -88,11 +91,20 @@
     .ico-fairyTale{
         width:48px; height:48px; background: svgIcoFairyTale(); background-size:100% 100%;
     }
+    .ico-alert{
+        width:48px; height:48px; background: svgIcoAlert(); background-size:100% 100%;
+    }
     .ico-pin{
         width:20px; height:20px; background: svgIcoPin('fff'); background-size:100% 100%;
     }
     .ico-phone{
         width:20px; height:20px; background: svgIcoPhone('fff'); background-size:100% 100%;
+    }
+    .ico-responsibility{
+        width:20px; height:20px; background: svgIcoResponsibility('fff'); background-size:100% 100%;
+    }
+    .ico-check{
+        width:24px; height:24px; background: svgIcoCheck('fff'); background-size:100% 100%;
     }
     .ico-coin{
         width:16px; height:16px; background: svgIcoCoin('444444', '00D4CD'); background-size:100% 100%;
@@ -105,6 +117,9 @@
     }
     .ico-error404{
         width:84px; height:84px; background: svgIcoError404(); background-size:100% 100%;
+    }
+    .ico-registration{
+        width:84px; height:84px; background: svgIcoRegistration(); background-size:100% 100%;
     }
     .ico-establish{
         width:100px; height:100px; background: svgIcoEstablish(); background-size:100% 100%;

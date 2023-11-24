@@ -1543,6 +1543,63 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
+.ciGuide {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12rem;
+    padding: 6rem;
+    background-color: #FAFAFA;
+
+    &-box {
+        flex-basis: 100%;
+        flex-shrink: 1;
+    }
+
+    &-tit {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.8rem;
+        margin-bottom: 3rem;
+    }
+
+    &-titEng {
+        @include txt-24x;
+        color: $color-222;
+    }
+
+    &-titKo {
+        @include txt-16x;
+        color: $color-888;
+    }
+
+    &-img {
+        margin-bottom: 2.2rem;
+
+        img { 
+            display: block;
+        }
+
+        .guide-system {
+            margin: 0 auto;
+            padding: 1.3rem 0;
+            width: calc(100% - 12.4rem);
+        }
+
+        .guide-space {
+            margin: 0 auto;
+            width: calc(100% - 5.2rem);
+        }
+    }
+
+    &-txt {
+        @include txt-18x;
+        color: $color-444;
+
+        word-break: keep-all;
+    }
+}
+
 .locationCont {
     display: flex;
     gap: 10rem;
@@ -1701,7 +1758,7 @@ $color-A2A5BC : #A2A5BC;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100vh;
 }
 
@@ -1797,6 +1854,51 @@ $color-A2A5BC : #A2A5BC;
 
     &-btnArea {
         margin-bottom: 4rem;
+    }
+}
+
+.popAlert {
+    display: flex;
+    width: 48rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3.2rem 4rem;
+    background-color: $color-fff;
+
+    &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 10rem;
+        background-color: #F8F8F8;
+        border-radius: 50%;
+        margin-bottom: 2.4rem;
+
+        i {
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+    }
+
+    &-text {
+        min-height: 6.4rem;
+        text-align: center;
+
+        span {
+            @include txt-24x;
+        }
+    }
+
+    &-btnWrap {
+        width: 100%;
+        margin-top: 4rem;
+
+        .btn-t{
+            width: 100%;
+        }
     }
 }
 
@@ -2489,7 +2591,7 @@ $color-A2A5BC : #A2A5BC;
         flex-shrink: 1;
         flex-grow: 1;
         background-color: #fff;
-        padding: 6rem 8.4rem 9rem 10rem;
+        padding: 6rem 8.3rem 9rem 10rem;
     }
 
     &-stit {
@@ -2532,63 +2634,138 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
-.ciGuide {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12rem;
-    padding: 6rem;
-    background-color: #FAFAFA;
+.inqueryCont {
+    &-top {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: $color-666;
 
-    &-box {
+        &::before {
+            content: '*';
+            margin-right: 4px;
+            color: #E02D3C;
+        }
+    }
+
+    &-wrap {
+        margin-top: 4rem;
+    }
+
+    &-inputGroup {
+        display: flex;
+        gap: 8rem;
+        align-items: flex-start;
+        margin-top: 6rem;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    &-inputBox {
         flex-basis: 100%;
         flex-shrink: 1;
     }
 
-    &-tit {
-        display: flex;
+    &-nameBox {
+        display: inline-flex;
+        margin-bottom: 1.6rem;
         align-items: flex-end;
-        gap: 0.8rem;
-        margin-bottom: 3rem;
+
+        &.important::after{
+            content: '*';
+            margin-left: 2px;
+            @include txt-20x;
+            color: #E02D3C;
+        }
     }
 
-    &-titEng {
-        @include txt-24x;
-        color: $color-222;
+    &-name {
+        @include txt-20x;
+        color: $color-444;   
     }
 
-    &-titKo {
-        @include txt-16x;
+    &-eng {
+        @include txt-16x; 
         color: $color-888;
+        margin-left: 0.6rem;
     }
 
-    &-img {
-        margin-bottom: 2.2rem;
-
-        img { 
-            display: block;
-        }
-
-        .guide-system {
-            margin: 0 auto;
-            padding: 1.3rem 0;
-            width: calc(100% - 12.4rem);
-        }
-
-        .guide-space {
-            margin: 0 auto;
-            width: calc(100% - 5.2rem);
-        }
-    }
-
-    &-txt {
-        @include txt-18x;
-        color: $color-444;
-
-        word-break: keep-all;
+    &-btnWrap {
+        margin-top: 8rem;
+        text-align: center;
     }
 }
 
+.termsBox {
+    border: 1px solid $color-medium;
+    padding: 4rem 2.4rem;
+    height: 42.8rem;
+    overflow: hidden;
+
+    &-cont {
+        height: 100%;
+        padding-right: 2.4rem;
+        overflow: auto;
+
+        &::-webkit-scrollbar-track { background-color: transparent !important; }
+        &::-webkit-scrollbar-thumb { background-color: #CCCCCC !important; border-radius: 0; }
+    }
+
+    &-wrap {
+    }
+
+    &-check {
+        margin-top: 2.4rem;
+    }
+
+    
+}
+
+.sponsorCont {
+    margin: 14.2rem 0 8rem;
+}
+
+.responsibilityCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 6.2rem 0;
+    background-color: $color-primaryBg;
+
+    &-box {
+        display: flex;
+        align-items: center;
+
+        &:first-child::after {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 3rem;
+            margin: 0 8rem;
+            background-color: $color-default;
+        }
+    }
+
+    &-ico {
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 1.6rem;
+
+        i {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-text {
+        @include c-nameBox;
+        color: $color-444;
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .withPCont {
@@ -2667,7 +2844,7 @@ $color-A2A5BC : #A2A5BC;
         text-align: center;
         padding: 3.5rem 0;
         border-right: none;
-        border-bottom: 1px solid #e2e2e2;
+        border-bottom: 1px solid $color-default;
         position: relative;
         
 
@@ -2712,6 +2889,13 @@ $color-A2A5BC : #A2A5BC;
 
     .ciColor {
         flex-direction: column;
+    }
+
+    .inqueryCont-inputGroup {
+        flex-direction: column;
+    }
+    .inqueryCont-inputBox {
+        width: 100%;
     }
 }
 

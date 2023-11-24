@@ -1033,7 +1033,7 @@
         }
     }
     &-txt {
-        @include txt-14x;
+        @include txt-18x;
         color: $color-666;
     }
 }
@@ -1547,6 +1547,9 @@
     }
     &.books {
         background-image: url(../../../dest/static/images/subVis-book.png);
+    }
+    &.sponsor {
+        background-image: url(../../../dest/static/images/subVis-sponsor.png);
     }
 }
 
