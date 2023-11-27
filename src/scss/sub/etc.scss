@@ -534,6 +534,12 @@
     transform: translateX(-30%);
     opacity: 0;
     @include transition(all, 1s, $cubicTxt);
+
+    &-s {
+        transform: translateX(30rem);
+        opacity: 1;
+        @include transition(all, 1s, $cubicTxt);
+    }
 }
 
 .ani {
@@ -554,6 +560,11 @@
         &.ltor {
             transform: translateX(0%);
             opacity: 1;
+
+            &-s {
+                transform: translateX(30rem);
+                opacity: 1;
+            }
         }
     }
 }
@@ -576,6 +587,11 @@
         &.ltor {
             transform: translateX(0%);
             opacity: 1;
+
+            &-s{
+                transform: translateX(0%);
+                opacity: 1;
+            }
         }
 
         .btot {
@@ -594,6 +610,11 @@
         .ltor {
             transform: translateX(0%);
             opacity: 1;
+
+            &-s{
+                transform: translateX(0%);
+                opacity: 1;
+            }
         }
     }
 }

@@ -152,7 +152,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th>셀렉트 박스</th>
+							<th>인풋</th>
 							<td>
 								<select name="" id="" class="cSelect">
 									<option value="opt1">옵션1</option>
@@ -165,6 +165,51 @@
                                         &lt;option value="opt1"&gt;옵션1&lt;/option&gt;
                                         &lt;option value="opt2"&gt;옵션2&lt;/option&gt;
                                     &lt;/select&gt;
+                                </pre>
+							</td>
+						</tr>
+						<tr>
+							<th>input - text</th>
+							<td>
+								<input type="text" class="c-input">
+								<input type="text" class="c-input" placeholder="입력해주세요" style="margin-top: 20px;">
+							</td>
+							<td>
+								<pre class="view-code">
+                                    &lt;input type="text" class="c-input" placeholder=""&gt;
+                                </pre>
+							</td>
+						</tr>
+						<tr>
+							<th>input - text(error)</th>
+							<td>
+								<input type="text" class="c-input err">
+							</td>
+							<td>
+								<pre class="view-code">
+                                    &lt;input type="text" class="c-input" placeholder=""&gt;
+                                </pre>
+							</td>
+						</tr>
+						<tr>
+							<th>textarea</th>
+							<td>
+								<div class="c-textarea">
+									<textarea name="" id="" placeholder="문의사항을 남겨주세요. (2000자 이내)" maxlength="2000"></textarea>
+									<div class="maximumG">
+										<span class="maximum-now">0</span> /
+										<span class="maximum-text">2000</span>
+									</div>
+								</div>
+							</td>
+							<td>
+								<pre class="view-code">
+                                    &lt;div class="c-textarea"&gt;
+                                    &lt;textarea name="" id="" placeholder="" maxlength="2000"&gt;
+                                    &lt;div class="maximumG"&gt;
+                                    &lt;span class="maximum-now"&gt;0&lt;/span&gt; /&lt;span class="maximum-text"&gt;2000&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;/div&gt;
                                 </pre>
 							</td>
 						</tr>
@@ -186,6 +231,20 @@
 						</tr>
 					</thead>
 					<tbody>
+						<tr>
+							<th>checkbox</th>
+							<td>
+								<div class="code-box">
+									<p>check-a </p>
+									<div class="code-view">
+										<label class="c-check">
+											<input type="checkbox" name="chk">
+											개인정보 수집 및 이용에 동의합니다.
+										</label>
+									</div>
+								</div>
+							</td>
+						</tr>
 						<tr>
 							<th>Text Field</th>
 							<td>
@@ -353,29 +412,6 @@
 													<a class="cpagin-last" href="#none">마지막페이지</a>
 												</div>
 											</div>
-										</div>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>checkbox</th>
-							<td>
-								<div class="code-box">
-									<p>check-a</p>
-									<div class="code-view">
-										<div class="check-a">
-											<input type="checkbox" name="chk" id="chk1">
-											<label for="chk1">체크박스</label>
-										</div>
-									</div>
-								</div>
-								<div class="code-box">
-									<p>check-b</p>
-									<div class="code-view">
-										<div class="check-b">
-											<input type="checkbox" name="chk" id="chk2">
-											<label for="chk2">체크박스</label>
 										</div>
 									</div>
 								</div>
