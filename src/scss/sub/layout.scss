@@ -1050,7 +1050,6 @@
         display: flex;
         justify-content: flex-start;
         width: 100%;
-        padding-right: 10rem;
         position: relative;
     }
     &-info {
@@ -1059,18 +1058,18 @@
         flex-grow: 0;
         display: inline-flex;
         justify-content: space-between;
-        flex-basis: 41.5rem;
+        flex-basis: 40.25%;
         overflow: hidden;
         vertical-align: bottom;
         flex-direction: column;
-        margin-right: 10.2rem;
+        margin-right: 12.4rem;
     }
     &-img {
         position: absolute;
-        left: calc(50% - 13rem);
+        left: calc(40.25% + 8.4rem);
         bottom: -4rem;
         padding: 4rem 0 4rem 4rem;
-        width: calc(50vw + 13rem);
+        width: calc(50vw + 12.4rem);
         display: flex;
         align-items: flex-end;
         vertical-align: bottom;
@@ -1120,29 +1119,49 @@
     }
     &-navTop {
         display: flex;
+        width: 100%;
         justify-content: flex-end;
         align-items: center;
         color: #4E79B3;
     }
-    &-pagination {
-        width: 7.9rem !important;
-        text-align: center;
+    &-paginationG {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        color: $color-fff;
         @include txt-18x;
+        font-weight: 500;
+        justify-content: center;
+        width: 6.2rem;
+
+        &.all {
+            font-weight: 400;
+        }
+    }
+    &-pagination {
+        display: flex;
+        align-items: center;
+        font-size: 0;    
+        width: auto !important;
+
 
         .swiper-pagination-current {
             color: $color-fff;
+            text-align: center;
+            @include txt-18x;
+            font-weight: 500;
         }
         .swiper-pagination-total {
             color: #4E79B3;
         }
     }
+
+
     &-next {
-        width: 3.2rem;
-        height: 3.2rem;
+        flex-shrink: 0;
     }
     &-prev {
-        width: 3.2rem;
-        height: 3.2rem;
+        flex-shrink: 0;
     }
 
     &.active .swiper-slide-active {
@@ -1160,10 +1179,12 @@
 // 메인 비지니스 슬라이드 - 이미지
 .imgSlide{
     width: calc(14.6vw + 24px);
+    max-width: 28.2rem;
     overflow: visible;
 
     &-wrap {
         width: 14.6vw !important;
+        max-width: 28.2rem;
         align-items: flex-end;
     }
     &-li {
@@ -1172,14 +1193,19 @@
             overflow: visible;
             position: relative;
             width: 14.6vw;
-            height: 14.6vw;
+            height: 15.2vw;
+            max-width: 28.2rem;
+            max-height: 29.4rem;
+            
             .imgGroup{
                 position: absolute;
                 bottom: 0;
                 right: 0;
 
                 width: 14.6vw;
-                height: 14.6vw;
+                height: 15.2vw;
+                max-width: 28.2rem;
+                max-height: 29.4rem;
                 
                 @include transition(all, 0.4s, ease);
             }
@@ -1187,10 +1213,17 @@
 
             &.swiper-slide-active {
                 width: 30.5vw !important;
-                height: 30.5vw !important;
+                height: 31.65vw !important;
+
+                max-width: 58.8rem;
+                max-height: 61rem;
+
                 .imgGroup{
-                    width: 30.5vw;
-                    height: 30.5vw;
+                    width: 30.5vw !important;
+                    height: 31.65vw !important;
+    
+                    max-width: 58.8rem;
+                    max-height: 61rem;
                 }
             }
 
@@ -1220,6 +1253,28 @@
 
         .swiper-pagination-progressbar-fill {
             background-color: $color-accentNd !important;
+        }
+    }
+
+    &-playtime {
+        width: 100%;
+        height: 4px;
+        background-color:#4E79B3;
+        position: relative;
+        overflow: hidden; 
+        
+        svg { 
+            --progress: 0;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            z-index: 10;
+            width: 100%;
+            stroke-width: 5px;
+            stroke: #fff;
+            fill: none;
+            stroke-dashoffset: calc(314 * (1 - var(--progress)));
+            stroke-dasharray: 314;
         }
     }
 
@@ -1690,10 +1745,10 @@
         margin-bottom: 4.8rem;
     }
 
-    .businessCont-img{
-        left: 50%;
-        width: 50vw;
-    }
+    // .businessCont-img{
+    //     left: 50%;
+    //     width: 50vw;
+    // }
 
     .footer-inner {
         flex-direction: column;
@@ -1735,7 +1790,6 @@
     .infoSlide-nav {
         margin-top: 3.2rem;
     }
-
     .businessCont-img {
         position: relative;
         width: 100%;

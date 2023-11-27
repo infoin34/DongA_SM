@@ -31,6 +31,8 @@
 
 	<!--//srcipt -->
 	<script src="../../../dest/static/js/countUp.min.js"></script>
+	<style>
+	</style>
 </head>
 
 <body>
@@ -472,7 +474,20 @@
 									<div class="infoSlide-nav">
 										<div class="infoSlide-navTop">
 											<button class="infoSlide-prev btn-pre"></button>
-											<div class="infoSlide-pagination"></div>
+
+											<div class="infoSlide-paginationG">
+												0<div class="infoSlide-pagination"></div>
+											</div>
+											<div class="imgSlide-playtime">
+												<svg viewBox="0 0 314 4">
+													<line x1="0" y1="0" x2="314" y2="0">
+												</svg>
+											</div>
+
+											<div class="infoSlide-paginationG all ">
+												05
+											</div>
+
 											<button class="infoSlide-next btn-next"></button>
 										</div>
 										<div class="imgSlide-navBottom">
@@ -742,12 +757,17 @@
 
 
 		/* 사업 슬라이드 */
+
+
+		const progressLine = document.querySelector(".imgSlide-playtime svg");
+
 		var infoSlide = new Swiper(".infoSlide", {
 			slidesPerView: 1,
 			spaceBetween: 0,
 			speed: 700,
 			threshold: 150,
-			// loop: true,
+			rewind: true,
+			// loopAdditionalSlides: 1,
 
 			keyboard: {
 				enabled: true,
@@ -756,13 +776,19 @@
 				el: ".infoSlide-pagination",
 				type: "fraction",
 			},
-			autoplay: {
-				delay: 5000,
-			},
 			navigation: {
 				nextEl: ".infoSlide-next",
 				prevEl: ".infoSlide-prev",
 			},
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			on: {
+				autoplayTimeLeft(s, time, progress) {
+					progressLine.style.setProperty("--progress", 1 - progress)
+				}
+			}
 		});
 
 		var imgSlide = new Swiper(".imgSlide", {
@@ -771,13 +797,10 @@
 			speed: 700,
 			threshold: 500,
 			slideToClickedSlide: true,
+			rewind: true,
 
 			keyboard: {
 				enabled: true,
-			},
-			pagination: {
-				el: ".imgSlide-pagination",
-				type: "progressbar",
 			},
 		});
 
