@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    @@include('../../include/meta.html')    
+    <title>404 ERROR</title>
+    @@include('../../include/resource.html')
+</head>
+<body>    
+    <div id="wrap" role="main">   
+        @@include('../../include/header.html', {"class" : "is-dark"})
+        <!-- 
+            ** include 조건 줘서 class나 태그 다르게 가져오기 가능**
+            
+            예시)
+            
+            << contents.html >>
+            include('../include/header.html',{
+                "type" : "light",
+                "title" : "제목22"
+            }) 
+
+            << include-header.html >>
+            if(type == "light"){<div class="header--light">@@title </div>}
+            if(type == "dark"){<div class="header--dark">@@title</div>} 
+        
+        -->       
+        <main class="wrapper">
+            <section class="sub-error">
+                <article class="error-wrap">
+                    <div class="errorCont">
+                        <div class="errorCont-icon">
+                            <i class="ico-email"></i>
+                        </div>
+                        <div class="errorCont-txt">
+                            <strong>수석문화재단은 이메일무단수집을 거부합니다</strong>
+                            <p>
+                                본 웹사이트에 공개되어있는 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며,<br>
+                                이를 위반시 정보통신망법에 의해 형사처벌 됨을 유의하시길 바랍니다.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        @@include('../../include/footer.html', 
+        {page_scr : false})
+    </div>
+</body>
+<!-- 페이지 관련 스크립트 -->
+<script>
+</script>
+<!--//페이지 관련 스크립트 -->
+</html>
