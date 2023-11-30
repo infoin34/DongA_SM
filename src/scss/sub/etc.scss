@@ -325,6 +325,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: $color-fff;
+            @include transition(all, 0.5s, $cubicTxt);
         }
         &::before {
             content: '';
@@ -336,6 +337,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: $color-fff;
+            @include transition(all, 0.5s, $cubicTxt);
         }
     }
     &-link {
@@ -660,9 +662,14 @@
         left: -1px;
         border: 1px solid $color-default !important;
         border-radius: 0;
+        padding: 0;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-        padding: 3rem 2.4rem;
         cursor: auto;
+        max-height: 0px !important;
+        overflow: hidden;
+        transform: scale(1);
+        @include transition(all, 0.4s, $cubicTxt);
+        opacity: 0;
     }
 
     .option {
@@ -672,12 +679,18 @@
         line-height: 1.9rem;
         min-height: auto;
         padding: 0;
+        margin: 0 2.4rem;
 
         &.selected {
             font-weight: 400;
             color: $color-accent;
         }
     }
+}
+
+.nice-select.open .list {
+    max-height: 100vh !important;
+    padding: 3rem 0;
 }
 
 .c-input {
