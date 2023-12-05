@@ -141,23 +141,6 @@
 			_.open('.pop-confirm');			
 		}		
 	};
-
-    // function swiperSlide(target){
-	// 	var swiper = new Swiper(target + ' .swiper-container', {
-	// 		slidesPerView: 'auto',
-    //         spaceBetween: 0,
-    //         navigation: {
-    //             nextEl: target + ' .slider-navigation .swiper-button-next',
-    //             prevEl: target + ' .slider-navigation .swiper-button-prev',
-    //         },
-	//  		pagination: {
-	//			 	el: target +  '.swiper-pagination',
-	//			 	clickable: true,
-	//			 },
-    //     });
-	// 	return swiper;
-	// } 
-
 	/* 헤더 */
 	function headerEvt(){
 		let $body = $("body");
@@ -306,7 +289,8 @@
 		var $list = $footer.find($(".footer-familyList"));
 
 		$button.off('click.button').on('click.button', function(){
-			$list.stop().slideToggle()
+			$list.toggleClass("on");
+			$button.toggleClass("on");
 		});
 	}
 
@@ -368,13 +352,35 @@
 		// 현재 스크롤값은 저장
 		lastScr = currentScr;
 	}
+
+	function cSlide(){
+		if( $('.cslide-slide').length ) {
+			var cSlide = new Swiper(".cslide-slide", {
+				slidesPerView: "2",
+				spaceBetween: 24,
+				// freeMode: true,
+				mousewheel: true,
+				threshold: 50,
+				
+				keyboard: {
+					enabled: true,
+				},
+		
+				pagination: {
+					el: ".cslide-pagination",
+					type: "progressbar",
+				},		
+			});
+		}
+	}
 	
 
 	$(window).on('scroll', function(){
 		scrollEv();
 	});
 	$(window).ready(function(){
-		scrollEv();
+		scrollEv(); 
+		cSlide()
 	});
 	
 	// let $trigger = $('[data-js-gnb="trigger"]');
@@ -389,6 +395,10 @@
 			$input.on({
 				focus: function(){
 					$delete.addClass("on");
+					$this.addClass("focus");
+				},
+				blur: function(){
+					$this.removeClass("focus");
 				}
 			});
 
