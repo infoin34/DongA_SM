@@ -149,17 +149,18 @@
 		let $list = $('[data-js-gnb="list"]');
 		let $nav = $header.find(".nav");
 		let $navBtn = $header.find(".btn-menu");
-		let $headerH
+		let $headerH = $header.height();
 		
 		function windowSize(){
-			if($(window).width() < 992) {
+			$header.height( $header.css('min-height'));
+			$headerH = $header.height();
+
+			if( $(window).width() < 992) {
 				$gnb.hide();
-			}else if($(window).width() < 768){
-				$headerH = '6.4rem'
-			}else {
-				$gnb.show();
-				$headerH = '10rem'
 			}
+			else {
+				$gnb.show();
+			}		
 		}
 
 		if(!window.isMobile){//---pc일때
@@ -167,12 +168,6 @@
 			$navBtn.on({
 				click: function(){
 					$(this).siblings(".btn-support").toggleClass("hide");
-
-					if (window.innerWidth > 992) {
-						$gnb.stop().fadeToggle();
-					}else {
-						$gnb.hide();
-					}
 				}
 			})
 		
@@ -183,9 +178,8 @@
 	
 				load : function() {
 					windowSize();
-				}
+				},
 			})			
-			$gnb.show();
 		}else{//---mo 일때
 			$nav.addClass('isMo');
 
@@ -213,7 +207,7 @@
 				})
 			})
 
-			$gnb.addClass("hide");		
+			// $gnb.addClass("hide");		
 		}
 		  
 		// gnb 진입시 open
@@ -222,18 +216,7 @@
 				$header.addClass("open");
 			}
 		})
-		
-		$(window).on ({
-			resize : function(){
-				$headerH = $header.height();
-				return $headerH
-			},
 
-			load : function() {
-				$headerH = $header.height();
-				return $headerH
-			}
-		})
 		// 헤더 벗어날 때 close
 		$header.on({
 			mouseleave: function(){
@@ -303,7 +286,6 @@
 				$header.toggleClass("is-full");
 				$list.hide();
 				$header.find(".header-top").stop().fadeToggle();
-				// $(this).siblings(".btn-support").toggleClass("hide");
 				$nav.stop().fadeToggle();
 				$line.css({ "opacity" : 0 })
 
@@ -312,11 +294,12 @@
 				let $line2 = $(this).find(".line2");
 				let $line3 = $(this).find(".line3");
 				let $lineW = $line1.width();
-
-				if (window.innerWidth > 992) {
-					$gnb.stop().fadeToggle();
-				}else {
-					$gnb.hide();
+				if(!window.isMobile){//---pc일때
+					if (window.innerWidth > 992) {
+						$gnb.stop().fadeToggle();
+					}else {
+						$gnb.hide();
+					}
 				}
 
 				if( $(this).hasClass("on") === true){
@@ -354,60 +337,6 @@
 				}
 			}
 		})
-
-		if(!window.isMobile){//---pc일때
-			$nav.addClass('isPc');	
-			$navBtn.on({
-				click: function(){
-					$(this).siblings(".btn-support").toggleClass("hide");
-
-					if (window.innerWidth > 992) {
-						$gnb.stop().fadeToggle();
-					}else {
-						$gnb.hide();
-					}
-				}
-			})
-		
-			$(window).on ({
-				resize : function(){ 
-					windowSize();
-				},
-	
-				load : function() {
-					windowSize();
-				}
-			})			
-			$gnb.show();
-		}else{//---mo 일때
-			$nav.addClass('isMo');
-
-			let $depth1Btn = $nav.find(".nav-depth1-li > a");
-			let $depth3Btn = $nav.find(".has-dept3");
-
-			$depth1Btn.each(function(item) {
-				$(this).attr('href', "javascript:void(0);");
-				let $depth2 = $(this).siblings(".nav-depth2");
-				$(this).on({
-					click: function(){
-						$depth2.stop().slideToggle();
-					}
-				})
-			})
-
-			$depth3Btn.each(function(item) {
-				$(this).attr('href', "javascript:void(0);");
-				let $depth3 = $(this).siblings(".nav-depth3");
-				$(this).on({
-					click: function(){
-						$(this).toggleClass("on")
-						$depth3.stop().slideToggle();
-					}
-				})
-			})
-
-			$gnb.addClass("hide");		
-		}
 	}
 
 	/* 푸터 패밀리 사이트 */

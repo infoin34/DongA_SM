@@ -5,6 +5,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 10rem;
+    min-height: 10rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -1342,6 +1343,8 @@
                 max-width: 58.8rem;
                 max-height: 61rem;
 
+                z-index: 10;
+
                 .imgGroup{
                     width: 30.5vw !important;
                     height: 31.65vw !important;
@@ -1891,6 +1894,8 @@
     .header {
         padding: 0 1.6rem;
         height: 6.4rem;
+        min-height: 6.4rem;
+
         &-top {
             width: 12.7rem;
             height: 2rem;
@@ -2133,6 +2138,9 @@
 
 /* 호버 */
 @media(hover: hover) and (pointer: fine) {
+    .gnb {
+        display: block;
+    }
     .gnb-depth2-li:hover > a {
         color: $color-fff;
         &::after {
