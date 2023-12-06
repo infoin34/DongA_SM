@@ -13,11 +13,17 @@
         background-color: $color-fff;
         font-weight: 600;
         font-size: 1.4rem;
+        @include transition(all, 0.3s, $cubicTxt);
         
         .ico-coin{
             display: inline-block;
             width: 1.6rem;
             height: 1.6rem;
+        }
+
+        &.hide {
+            opacity: 0;
+            pointer-events: none;
         }
     }
     &-menu {
@@ -30,21 +36,21 @@
 
         span {
             display: block;
-            width: 26px;
-            height: 2px;
+            width: 2.6rem;
+            height: 0.2rem;
             background-color: $color-fff;
             position: absolute;
             transform-origin: center;
-            left: calc(50% - 13px);
+            left: calc(50% - 1.3rem);
 
             &.line1 {
-                top: 8px;
+                top: 0.8rem;
             }
             &.line2 {
-                top: calc(50% - 1px);
+                top: calc(50% - 0.1rem);
             }
             &.line3 {
-                bottom: 8px;
+                bottom: 0.8rem;
             }
         }
     }
@@ -788,10 +794,33 @@ textarea::-webkit-scrollbar-track { background-color: $color-medium !important; 
 textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
 
 @media screen and (max-width: 992px) {
-    .scrollDown-line{
-        height: 10rem;
-        &::after {
-            height: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+    .btn{
+        &-support {
+            width: 7.7rem;
+            height: 3rem;
+            font-size: 1.3rem;
+        }
+        // &-menu {
+        //     span.line1 {
+        //         top: 10px;
+        //     }
+        //     span.line3 {
+        //         bottom: 10px;
+        //     }
+        // }
+    }
+    .scrollDown{
+        &-line{
+            height: 6rem;
+            &::after {
+                height: 2rem;
+            }
+        }
+        &-txt {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
         }
     }
 }

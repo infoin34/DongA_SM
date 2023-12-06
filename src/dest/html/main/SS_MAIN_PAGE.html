@@ -272,13 +272,13 @@
 					<div class="mainSlide">
 						<ul class="mainSlide-wrap swiper-wrapper">
 							<li class="mainSlide-li swiper-slide">
-								<div class="wrap-inner">
+								<div class="wrap-inner typeA">
 									<div class="main-tit">
 										<div class="line"><span>수석문화재단</span></div>
 										<div class="line"><span>나눔을 잇는 사랑의 시작</span></div>
 									</div>
 									<p class="main-txt">
-										<span>꿈과 미래를 향한 나눔의 시작, 사랑을  이어주는  첫 걸음. 더 나은 사회발전을 위해 노력하겠습니다.</span>
+										<span>꿈과 미래를 향한 나눔의 시작,</span> <span>사랑을  이어주는  첫 걸음. 더 나은 사회발전을 위해</span> <span>노력하겠습니다.</span>
 									</p>
 								</div>
 								<img class="main-bg" src="../../../dest/static/images/mainVisual01.png" alt="">
@@ -489,9 +489,6 @@
 											</div>
 
 											<button class="infoSlide-next btn-next"></button>
-										</div>
-										<div class="imgSlide-navBottom">
-											<div class="imgSlide-pagination"></div>
 										</div>
 									</div>
 								</div>
@@ -793,7 +790,7 @@
 
 		var imgSlide = new Swiper(".imgSlide", {
 			slidesPerView: 1,
-			spaceBetween: 24,
+			spaceBetween: 8,
 			speed: 700,
 			threshold: 500,
 			slideToClickedSlide: true,
@@ -801,6 +798,12 @@
 
 			keyboard: {
 				enabled: true,
+			},
+
+			breakpoints: {
+				768: {
+					spaceBetween: 24,
+				},
 			},
 		});
 
@@ -843,11 +846,10 @@
 		for (var i = 1; i < 4; i++) {
 			$thisId = 'countUP0' + i;
 			$thisNum = $('#' + $thisId).text();
-
 			countUp[`countUP${i}`] = new CountUp($thisId, 0, $thisNum, 0, 0.7, {
 				useEasing: true,
 				useGrouping: true,
-				separator: ',',
+				separator: '',
 				decimal: '.'
 			});
 		}

@@ -1,11 +1,9 @@
 'use strict';
 
 ((exports, $)=>{
+	window.isMobile = 'ontouchstart' in window || window.DocumentTouch  && document instanceof DocumentTouch;
+	// window.isMain = window.isMain || undefined;
 
-    // $('#btn-top').on('click', function(){
-    //     $('html, body').animate({scrollTop: 0}, 'linear');
-    //     return false;
-    // });   
 
     /* 로딩 후 콜백 */
 	function afterLoading(cb){
@@ -149,17 +147,93 @@
 		let $line = $gnb.find(".gnb-line");
 		let $trigger = $('[data-js-gnb="trigger"]');
 		let $list = $('[data-js-gnb="list"]');
-		let $headerH = $header.height();
 		let $nav = $header.find(".nav");
 		let $navBtn = $header.find(".btn-menu");
+		let $headerH
+		
+		function windowSize(){
+			if($(window).width() < 992) {
+				$gnb.hide();
+			}else if($(window).width() < 768){
+				$headerH = '6.4rem'
+			}else {
+				$gnb.show();
+				$headerH = '10rem'
+			}
+		}
 
+		if(!window.isMobile){//---pc일때
+			$nav.addClass('isPc');	
+			$navBtn.on({
+				click: function(){
+					$(this).siblings(".btn-support").toggleClass("hide");
+
+					if (window.innerWidth > 992) {
+						$gnb.stop().fadeToggle();
+					}else {
+						$gnb.hide();
+					}
+				}
+			})
+		
+			$(window).on ({
+				resize : function(){ 
+					windowSize();
+				},
+	
+				load : function() {
+					windowSize();
+				}
+			})			
+			$gnb.show();
+		}else{//---mo 일때
+			$nav.addClass('isMo');
+
+			let $depth1Btn = $nav.find(".nav-depth1-li > a");
+			let $depth3Btn = $nav.find(".has-dept3");
+
+			$depth1Btn.each(function(item) {
+				$(this).attr('href', "javascript:void(0);");
+				let $depth2 = $(this).siblings(".nav-depth2");
+				$(this).on({
+					click: function(){
+						$depth2.stop().slideToggle();
+					}
+				})
+			})
+
+			$depth3Btn.each(function(item) {
+				$(this).attr('href', "javascript:void(0);");
+				let $depth3 = $(this).siblings(".nav-depth3");
+				$(this).on({
+					click: function(){
+						$(this).toggleClass("on")
+						$depth3.stop().slideToggle();
+					}
+				})
+			})
+
+			$gnb.addClass("hide");		
+		}
+		  
 		// gnb 진입시 open
 		$gnb.on({
 			mouseenter: function(){
 				$header.addClass("open");
 			}
 		})
+		
+		$(window).on ({
+			resize : function(){
+				$headerH = $header.height();
+				return $headerH
+			},
 
+			load : function() {
+				$headerH = $header.height();
+				return $headerH
+			}
+		})
 		// 헤더 벗어날 때 close
 		$header.on({
 			mouseleave: function(){
@@ -229,7 +303,7 @@
 				$header.toggleClass("is-full");
 				$list.hide();
 				$header.find(".header-top").stop().fadeToggle();
-				$(this).siblings(".btn-support").stop().fadeToggle(200);
+				// $(this).siblings(".btn-support").toggleClass("hide");
 				$nav.stop().fadeToggle();
 				$line.css({ "opacity" : 0 })
 
@@ -251,11 +325,11 @@
 					$btnAni.set( $line2, { width: $lineW })
 					$btnAni.set( $line3, { y: 0, rotate: 0 })
 
-					$btnAni.to( $line1, 0.15,{ y: 11, rotate: 0 })
-					$btnAni.to( $line3, 0.15,{ y: -11, rotate: 0 }, "<")
+					$btnAni.to( $line1, 0.15,{ y: '1.1rem', rotate: 0 })
+					$btnAni.to( $line3, 0.15,{ y: '-1.1rem', rotate: 0 }, "<")
 					$btnAni.to( $line2, 0,{ width: 0 })
-					$btnAni.to( $line1, 0.2,{ y: 11, rotate: 45 }, ">0.15")
-					$btnAni.to( $line3, 0.2,{ y: -11, rotate: -45 }, "<")
+					$btnAni.to( $line1, 0.2,{ y: '1.1rem', rotate: 45 }, ">0.15")
+					$btnAni.to( $line3, 0.2,{ y: '-1.1rem', rotate: -45 }, "<")
 
 
 					setTimeout(function(){
@@ -280,6 +354,60 @@
 				}
 			}
 		})
+
+		if(!window.isMobile){//---pc일때
+			$nav.addClass('isPc');	
+			$navBtn.on({
+				click: function(){
+					$(this).siblings(".btn-support").toggleClass("hide");
+
+					if (window.innerWidth > 992) {
+						$gnb.stop().fadeToggle();
+					}else {
+						$gnb.hide();
+					}
+				}
+			})
+		
+			$(window).on ({
+				resize : function(){ 
+					windowSize();
+				},
+	
+				load : function() {
+					windowSize();
+				}
+			})			
+			$gnb.show();
+		}else{//---mo 일때
+			$nav.addClass('isMo');
+
+			let $depth1Btn = $nav.find(".nav-depth1-li > a");
+			let $depth3Btn = $nav.find(".has-dept3");
+
+			$depth1Btn.each(function(item) {
+				$(this).attr('href', "javascript:void(0);");
+				let $depth2 = $(this).siblings(".nav-depth2");
+				$(this).on({
+					click: function(){
+						$depth2.stop().slideToggle();
+					}
+				})
+			})
+
+			$depth3Btn.each(function(item) {
+				$(this).attr('href', "javascript:void(0);");
+				let $depth3 = $(this).siblings(".nav-depth3");
+				$(this).on({
+					click: function(){
+						$(this).toggleClass("on")
+						$depth3.stop().slideToggle();
+					}
+				})
+			})
+
+			$gnb.addClass("hide");		
+		}
 	}
 
 	/* 푸터 패밀리 사이트 */
@@ -449,5 +577,12 @@
 		selectNice()
 		tabEvt()
 		// scrTit()
+
+		if(!window.isMobile){//---pc일때
+			$('html').addClass('window-pc');	
+		}else{//---mo 일때
+			$('html').addClass('window-mo');
+		}
+
 	});
 })(window, jQuery);
