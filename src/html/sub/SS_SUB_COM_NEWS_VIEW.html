@@ -93,6 +93,8 @@
                                 <div class="gallerySlide-next btn-next-b"></div>
                                 <div class="gallerySlide-prev btn-pre-b"></div>
                             </div>
+                            <div class="gallerySlide-progress">
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -111,17 +113,30 @@
         let startCnt = $(".gallerySlide .gallerySlide-li").length < 3 ? 0 : 1;
       
         var gallerySwiper = new Swiper(".gallerySlide", {
-            slidesPerView: 2,
-            spaceBetween: 100,
+            slidesPerView: 1,
+            spaceBetween: 8,
             initialSlide: startCnt,
-            centeredSlides: true,
+            centeredSlides: false,
             slideToClickedSlide : true,
+
             keyboard: {
                 enabled: true,
             },
             navigation: {
                 nextEl: ".gallerySlide-next",
                 prevEl: ".gallerySlide-prev",
+            },
+            pagination: {
+                el: ".gallerySlide-progress",
+                type: "progressbar",
+            },
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 100,
+                    centeredSlides: true,
+                },
             },
         });
     });

@@ -272,13 +272,13 @@
 					<div class="mainSlide">
 						<ul class="mainSlide-wrap swiper-wrapper">
 							<li class="mainSlide-li swiper-slide">
-								<div class="wrap-inner">
+								<div class="wrap-inner typeA">
 									<div class="main-tit">
 										<div class="line"><span>수석문화재단</span></div>
 										<div class="line"><span>나눔을 잇는 사랑의 시작</span></div>
 									</div>
 									<p class="main-txt">
-										<span>꿈과 미래를 향한 나눔의 시작, 사랑을  이어주는  첫 걸음. 더 나은 사회발전을 위해 노력하겠습니다.</span>
+										<span>꿈과 미래를 향한 나눔의 시작,</span> <span>사랑을  이어주는  첫 걸음. 더 나은 사회발전을 위해</span> <span>노력하겠습니다.</span>
 									</p>
 								</div>
 								<img class="main-bg" src="../../../dest/static/images/mainVisual01.png" alt="">
@@ -490,9 +490,6 @@
 
 											<button class="infoSlide-next btn-next"></button>
 										</div>
-										<div class="imgSlide-navBottom">
-											<div class="imgSlide-pagination"></div>
-										</div>
 									</div>
 								</div>
 								<div class="businessCont-img">
@@ -543,8 +540,8 @@
 								<strong>새로운 소식을 확인하세요</strong>
 							</div>
 							<div class="newsCont-inner">
-								<ul class="newsCont-list">
-									<li class="newsCont-li">
+								<ul class="newsCont-list swiper-wrapper">
+									<li class="newsCont-li swiper-slide">
 										<a href="#none">
 											<div class="newsCont-img">
 												<img src="../../../dest/static/images/mainNew01.png" alt="">
@@ -557,7 +554,7 @@
 											</div>
 										</a>
 									</li>
-									<li class="newsCont-li">
+									<li class="newsCont-li swiper-slide">
 										<a href="#none">
 											<div class="newsCont-img">
 												<img src="../../../dest/static/images/mainNew02.png" alt="">
@@ -570,7 +567,7 @@
 											</div>
 										</a>
 									</li>
-									<li class="newsCont-li">
+									<li class="newsCont-li swiper-slide">
 										<a href="#none">
 											<div class="newsCont-img">
 												<img src="../../../dest/static/images/mainNew03.png" alt="">
@@ -584,6 +581,9 @@
 										</a>
 									</li>
 								</ul>
+								<div class="newsCont-nav">
+									<div class="newsCont-pagination"></div>
+								</div>
 								<div class="newsCont-btnArea">
 									<button class="btn-ti b">
 										더보기<i class="ico-arrow"></i>
@@ -793,14 +793,20 @@
 
 		var imgSlide = new Swiper(".imgSlide", {
 			slidesPerView: 1,
-			spaceBetween: 24,
+			spaceBetween: 8,
 			speed: 700,
-			threshold: 500,
+			threshold: 50,
 			slideToClickedSlide: true,
 			rewind: true,
 
 			keyboard: {
 				enabled: true,
+			},
+
+			breakpoints: {
+				768: {
+					spaceBetween: 24,
+				},
 			},
 		});
 
@@ -810,9 +816,10 @@
 
 		/* 파트너 슬라이드  */
 		var partnerSlide = new Swiper(".partnerSlide", {
-			slidesPerView: 1,
+			slidesPerView: 2,
 			spaceBetween: 0,
 			loop: true,
+			centeredSlides: true,
 			autoplay: {
 				delay: 3000,
 			},
@@ -829,13 +836,41 @@
 			breakpoints: {
 				768: {
 					slidesPerView: 3,
+					centeredSlides: false,
 				},
 				992: {
-					slidesPerView: 4, //브라우저가 768보다 클 때
+					slidesPerView: 4,
+					centeredSlides: false, //브라우저가 768보다 클 때
 				},
 			},
 
 		});
+
+
+		var newsSlide = undefined;
+		/* 소식 슬라이드  */
+		function newsToSlide() {
+			if ($(window).width() < 768 && newsSlide == undefined) {
+				newsSlide = new Swiper(".newsCont-inner", {
+					slidesPerView: 1,
+					spaceBetween: 8,
+					centeredSlides: true,
+
+					keyboard: {
+						enabled: true,
+					},
+					pagination: {
+						el: ".newsCont-pagination",
+					},
+
+				});
+			} else if ($(window).width() >= 768 && newsSlide != undefined) {
+				newsSlide.destroy();
+				newsSlide = undefined;
+			}
+		}
+
+		newsToSlide()
 
 
 		/* 숫자 카운터 */
@@ -843,31 +878,35 @@
 		for (var i = 1; i < 4; i++) {
 			$thisId = 'countUP0' + i;
 			$thisNum = $('#' + $thisId).text();
-
 			countUp[`countUP${i}`] = new CountUp($thisId, 0, $thisNum, 0, 0.7, {
 				useEasing: true,
 				useGrouping: true,
-				separator: ',',
+				separator: '',
 				decimal: '.'
 			});
 		}
 
-		$(window).on('scroll', function() {
-			$(".supportCont-li").each(function(i, item) {
-				let $contScr = $(item).offset().top;
-				let $currentScr = $(window).scrollTop();
-				let $setScr = parseInt($currentScr + ($(window).height() * 0.9));
-				let $endScr = $(".main-support").offset().top + $(".main-support").height() + $(window).height();
+		$(window).on({
+			scroll: function() {
+				$(".supportCont-li").each(function(i, item) {
+					let $contScr = $(item).offset().top;
+					let $currentScr = $(window).scrollTop();
+					let $setScr = parseInt($currentScr + ($(window).height() * 0.9));
+					let $endScr = $(".main-support").offset().top + $(".main-support").height() + $(window).height();
 
 
-				if ($endScr > $setScr && $setScr > $contScr) {
-					let key = 'countUP' + (i + 1);
-					countUp[key].start()
-				} else {
-					let key = 'countUP' + (i + 1);
-					countUp[key].reset()
-				}
-			})
+					if ($endScr > $setScr && $setScr > $contScr) {
+						let key = 'countUP' + (i + 1);
+						countUp[key].start()
+					} else {
+						let key = 'countUP' + (i + 1);
+						countUp[key].reset()
+					}
+				})
+			},
+			resize: function() {
+				newsToSlide()
+			}
 		});
 
 

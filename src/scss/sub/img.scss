@@ -103,6 +103,12 @@
     .ico-phone{
         width:20px; height:20px; background: svgIcoPhone('fff'); background-size:100% 100%;
     }
+    .ico-phone2{
+        width:20px; height:20px; background: svgIcoPhone2('fff'); background-size:100% 100%;
+    }
+    .ico-email2{
+        width:20px; height:20px; background: svgIcoEmail2('fff'); background-size:100% 100%;
+    }
     .ico-responsibility{
         width:20px; height:20px; background: svgIcoResponsibility('fff'); background-size:100% 100%;
     }
@@ -165,6 +171,21 @@
     }
     .ico-education{
         width:72px; height:72px; background: svgIcoEducation(); background-size:100% 100%;
+    }
+    .ico-heart{
+        width:100px; height:100px; background: #fff svgIcoHeart() no-repeat center ; border-radius: 50%;
+    }
+    .ico-inquiry{
+        width:100px; height:100px;  background: svgIcoInquiry();background-size:100% 100%;
+    }
+    .ico-document{
+        width:100px; height:100px;  background: svgIcoDocument();background-size:100% 100%;
+    }
+    .ico-donation{
+        width:100px; height:100px;  background: svgIcoDonation();background-size:100% 100%;
+    }
+    .ico-receipts{
+        width:100px; height:100px;  background: svgIcoReceipts();background-size:100% 100%;
     }
   
 }

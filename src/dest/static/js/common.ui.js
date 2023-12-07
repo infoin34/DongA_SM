@@ -305,12 +305,12 @@
 				if( $(this).hasClass("on") === true){
 					$header.css('height', '100vh');
 					$btnAni.set( $line1, { y: 0, rotate: 0 })
-					$btnAni.set( $line2, { width: $lineW })
+					$btnAni.set( $line2, { maxWidth: $lineW })
 					$btnAni.set( $line3, { y: 0, rotate: 0 })
 
 					$btnAni.to( $line1, 0.15,{ y: '1.1rem', rotate: 0 })
 					$btnAni.to( $line3, 0.15,{ y: '-1.1rem', rotate: 0 }, "<")
-					$btnAni.to( $line2, 0,{ width: 0 })
+					$btnAni.to( $line2, 0,{ maxWidth: 0 })
 					$btnAni.to( $line1, 0.2,{ y: '1.1rem', rotate: 45 }, ">0.15")
 					$btnAni.to( $line3, 0.2,{ y: '-1.1rem', rotate: -45 }, "<")
 
@@ -322,12 +322,12 @@
 				}else {
 					$header.css('height', $headerH);
 					$btnAni.set( $line1, { y: 11, rotate: 45 })
-					$btnAni.set( $line2, { width: 0 })
+					$btnAni.set( $line2, { maxWidth: 0 })
 					$btnAni.set( $line3, { y: -11, rotate: -45 })
 
 					$btnAni.to( $line1, 0.2,{ y: 11, rotate: 0 })
 					$btnAni.to( $line3, 0.2,{ y: -11, rotate: 0 }, "<")
-					$btnAni.to( $line2, 0,{ width: $lineW })
+					$btnAni.to( $line2, 0,{ maxWidth: $lineW })
 					$btnAni.to( $line1, 0.15,{ y: 0, rotate: 0 }, ">0.15")
 					$btnAni.to( $line3, 0.15,{ y: 0, rotate: 0 }, "<")
 

@@ -1,11 +1,9 @@
 'use strict';
 
 ((exports, $)=>{
+	window.isMobile = 'ontouchstart' in window || window.DocumentTouch  && document instanceof DocumentTouch;
+	// window.isMain = window.isMain || undefined;
 
-    // $('#btn-top').on('click', function(){
-    //     $('html, body').animate({scrollTop: 0}, 'linear');
-    //     return false;
-    // });   
 
     /* 로딩 후 콜백 */
 	function afterLoading(cb){
@@ -149,10 +147,69 @@
 		let $line = $gnb.find(".gnb-line");
 		let $trigger = $('[data-js-gnb="trigger"]');
 		let $list = $('[data-js-gnb="list"]');
-		let $headerH = $header.height();
 		let $nav = $header.find(".nav");
 		let $navBtn = $header.find(".btn-menu");
+		let $headerH = $header.height();
+		
+		function windowSize(){
+			$header.height( $header.css('min-height'));
+			$headerH = $header.height();
 
+			if( $(window).width() < 992) {
+				$gnb.hide();
+			}
+			else {
+				$gnb.show();
+			}		
+		}
+
+		if(!window.isMobile){//---pc일때
+			$nav.addClass('isPc');	
+			$navBtn.on({
+				click: function(){
+					$(this).siblings(".btn-support").toggleClass("hide");
+				}
+			})
+		
+			$(window).on ({
+				resize : function(){ 
+					windowSize();
+				},
+	
+				load : function() {
+					windowSize();
+				},
+			})			
+		}else{//---mo 일때
+			$nav.addClass('isMo');
+
+			let $depth1Btn = $nav.find(".nav-depth1-li > a");
+			let $depth3Btn = $nav.find(".has-dept3");
+
+			$depth1Btn.each(function(item) {
+				$(this).attr('href', "javascript:void(0);");
+				let $depth2 = $(this).siblings(".nav-depth2");
+				$(this).on({
+					click: function(){
+						$depth2.stop().slideToggle();
+					}
+				})
+			})
+
+			$depth3Btn.each(function(item) {
+				$(this).attr('href', "javascript:void(0);");
+				let $depth3 = $(this).siblings(".nav-depth3");
+				$(this).on({
+					click: function(){
+						$(this).toggleClass("on")
+						$depth3.stop().slideToggle();
+					}
+				})
+			})
+
+			// $gnb.addClass("hide");		
+		}
+		  
 		// gnb 진입시 open
 		$gnb.on({
 			mouseenter: function(){
@@ -229,7 +286,6 @@
 				$header.toggleClass("is-full");
 				$list.hide();
 				$header.find(".header-top").stop().fadeToggle();
-				$(this).siblings(".btn-support").stop().fadeToggle(200);
 				$nav.stop().fadeToggle();
 				$line.css({ "opacity" : 0 })
 
@@ -238,24 +294,25 @@
 				let $line2 = $(this).find(".line2");
 				let $line3 = $(this).find(".line3");
 				let $lineW = $line1.width();
-
-				if (window.innerWidth > 992) {
-					$gnb.stop().fadeToggle();
-				}else {
-					$gnb.hide();
+				if(!window.isMobile){//---pc일때
+					if (window.innerWidth > 992) {
+						$gnb.stop().fadeToggle();
+					}else {
+						$gnb.hide();
+					}
 				}
 
 				if( $(this).hasClass("on") === true){
 					$header.css('height', '100vh');
 					$btnAni.set( $line1, { y: 0, rotate: 0 })
-					$btnAni.set( $line2, { width: $lineW })
+					$btnAni.set( $line2, { maxWidth: $lineW })
 					$btnAni.set( $line3, { y: 0, rotate: 0 })
 
-					$btnAni.to( $line1, 0.15,{ y: 11, rotate: 0 })
-					$btnAni.to( $line3, 0.15,{ y: -11, rotate: 0 }, "<")
-					$btnAni.to( $line2, 0,{ width: 0 })
-					$btnAni.to( $line1, 0.2,{ y: 11, rotate: 45 }, ">0.15")
-					$btnAni.to( $line3, 0.2,{ y: -11, rotate: -45 }, "<")
+					$btnAni.to( $line1, 0.15,{ y: '1.1rem', rotate: 0 })
+					$btnAni.to( $line3, 0.15,{ y: '-1.1rem', rotate: 0 }, "<")
+					$btnAni.to( $line2, 0,{ maxWidth: 0 })
+					$btnAni.to( $line1, 0.2,{ y: '1.1rem', rotate: 45 }, ">0.15")
+					$btnAni.to( $line3, 0.2,{ y: '-1.1rem', rotate: -45 }, "<")
 
 
 					setTimeout(function(){
@@ -265,12 +322,12 @@
 				}else {
 					$header.css('height', $headerH);
 					$btnAni.set( $line1, { y: 11, rotate: 45 })
-					$btnAni.set( $line2, { width: 0 })
+					$btnAni.set( $line2, { maxWidth: 0 })
 					$btnAni.set( $line3, { y: -11, rotate: -45 })
 
 					$btnAni.to( $line1, 0.2,{ y: 11, rotate: 0 })
 					$btnAni.to( $line3, 0.2,{ y: -11, rotate: 0 }, "<")
-					$btnAni.to( $line2, 0,{ width: $lineW })
+					$btnAni.to( $line2, 0,{ maxWidth: $lineW })
 					$btnAni.to( $line1, 0.15,{ y: 0, rotate: 0 }, ">0.15")
 					$btnAni.to( $line3, 0.15,{ y: 0, rotate: 0 }, "<")
 
@@ -449,5 +506,12 @@
 		selectNice()
 		tabEvt()
 		// scrTit()
+
+		if(!window.isMobile){//---pc일때
+			$('html').addClass('window-pc');	
+		}else{//---mo 일때
+			$('html').addClass('window-mo');
+		}
+
 	});
 })(window, jQuery);

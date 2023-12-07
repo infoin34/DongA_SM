@@ -363,11 +363,15 @@
         background-size:100% 100%;
     }
     &-call {
-        background: svgIcoPhone('444'); 
+        background: svgIcoPhone('1800B7'); 
+        background-size:100% 100%;
+    }
+    &-call2 {
+        background: svgIcoPhone2('1800B7'); 
         background-size:100% 100%;
     }
     &-responsibility {
-        background: svgIcoResponsibility('444'); 
+        background: svgIcoResponsibility('1800B7'); 
         background-size:100% 100%;
     }
     &-coin {
@@ -392,6 +396,10 @@
     }
     &-email {
         background: svgIcoEmail(); 
+        background-size:100% 100%;
+    }
+    &-email2 {
+        background: svgIcoEmail2('1800B7'); 
         background-size:100% 100%;
     }
     &-establish {
@@ -440,6 +448,18 @@
     }
     &-alert{
         background: svgIcoAlert(); background-size:100% 100%;
+    }
+    &-inquiry{
+        background: svgIcoInquiry(); background-size:100% 100%;
+    }
+    &-document{
+        background: svgIcoDocument(); background-size:100% 100%;
+    }
+    &-donation{
+        background: svgIcoDonation(); background-size:100% 100%;
+    }
+    &-receipts{
+        background: svgIcoReceipts(); background-size:100% 100%;
     }
 }
 
@@ -802,14 +822,35 @@ textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
             height: 3rem;
             font-size: 1.3rem;
         }
-        // &-menu {
-        //     span.line1 {
-        //         top: 10px;
-        //     }
-        //     span.line3 {
-        //         bottom: 10px;
-        //     }
-        // }
+        &-ti {
+            width: 100%;
+            border-width: 0.15rem;
+            font-size: 1.5rem;
+            line-height: 4.8rem;
+
+            &.b {
+                border-color: $color-accent;
+                color: $color-accent;
+
+                .ico-arrow::after {
+                    background-image: svgIcoArrowR('4B33ED');
+                }
+            }
+
+            &.s {
+                line-height: 4rem;
+                padding: 0 1.6rem;
+                gap: 4px;
+            }
+        }
+        &-t {
+            line-height: 4.8rem;
+            font-size: 1.5rem;
+        }
+        &-down {
+            width: 2rem;
+            height: 2rem;
+        }
     }
     .scrollDown{
         &-line{
@@ -826,37 +867,40 @@ textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
 }
 
 @media(hover: hover) and (pointer: fine) {
-    .btn-support:hover {
-        color: $color-accent;
-    }
-    .btn-ti {
-        &:hover {
-            background-color: $color-fff;
-            color: $color-accent;          
-            .ico-arrow {
-                &::after {
-                    left: calc(100% + 16px);
-                    opacity: 0;
-                }
-                &::before {
-                    left: 0;
-                    opacity: 1;
-                }
-            }  
+    .btn{
+        &-support:hover {
+            color: $color-accent;
         }
-        &.b:hover {
-            background-color: $color-accent;
-            border-color: $color-accent;
-            color: $color-fff;          
+        &-ti {
+            &:hover {
+                background-color: $color-fff;
+                color: $color-accent;          
+                .ico-arrow {
+                    &::after {
+                        left: calc(100% + 16px);
+                        opacity: 0;
+                    }
+                    &::before {
+                        left: 0;
+                        opacity: 1;
+                    }
+                }  
+            }
+            &.b:hover {
+                background-color: $color-accent;
+                border-color: $color-accent;
+                color: $color-fff;          
+            }
+            &.s:hover {
+                background-color: transparent;
+                border-color: $color-accent;
+                color: $color-accent;          
+            }
         }
-        &.s:hover {
-            background-color: transparent;
-            border-color: $color-accent;
-            color: $color-accent;          
-        }
-    }
 
-    .btn-t:not(.s):hover {
-        background-color: $color-primary;
+        &-t:not(.s):hover {
+            background-color: $color-primary;
+        }
+        
     }
 }

@@ -301,8 +301,8 @@
                                 <strong>새로운 소식을 확인하세요</strong>
                             </div>
                             <div class="newsCont-inner">
-                                <ul class="newsCont-list">
-                                    <li class="newsCont-li">
+                                <ul class="newsCont-list swiper-wrapper">
+                                    <li class="newsCont-li swiper-slide">
                                         <a href="#none">
                                             <div class="newsCont-img">
                                                 <img src="../../../dest/static/images/mainNew01.png" alt="">
@@ -315,7 +315,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="newsCont-li">
+                                    <li class="newsCont-li swiper-slide">
                                         <a href="#none">
                                             <div class="newsCont-img">
                                                 <img src="../../../dest/static/images/mainNew02.png" alt="">
@@ -327,8 +327,8 @@
                                                 <i class="newsCont-ico"></i>
                                             </div>
                                         </a>
-                                    </li>
-                                    <li class="newsCont-li">
+                                    </li> 
+                                    <li class="newsCont-li swiper-slide">
                                         <a href="#none">
                                             <div class="newsCont-img">
                                                 <img src="../../../dest/static/images/mainNew03.png" alt="">
@@ -342,6 +342,9 @@
                                         </a>
                                     </li>
                                 </ul>
+                                <div class="newsCont-nav">
+                                    <div class="newsCont-pagination"></div>
+                                </div>
                                 <div class="newsCont-btnArea">
                                     <button class="btn-ti b">
                                         더보기<i class="ico-arrow"></i>
@@ -489,7 +492,7 @@
 			slidesPerView: 1,
 			spaceBetween: 8,
 			speed: 700,
-			threshold: 500,
+			threshold: 50,
 			slideToClickedSlide: true,
 			rewind: true,
 
@@ -510,9 +513,10 @@
 
 		/* 파트너 슬라이드  */
 		var partnerSlide = new Swiper(".partnerSlide", {
-			slidesPerView: 1,
+			slidesPerView: 2,
 			spaceBetween: 0,
 			loop: true,
+            centeredSlides: true,
 			autoplay: {
 				delay: 3000,
 			},
@@ -529,13 +533,41 @@
 			breakpoints: {
 				768: {
 					slidesPerView: 3,
+                    centeredSlides: false,
 				},
 				992: {
-					slidesPerView: 4, //브라우저가 768보다 클 때
+					slidesPerView: 4,
+                    centeredSlides: false, //브라우저가 768보다 클 때
 				},
 			},
 
 		});
+
+
+        var newsSlide = undefined;
+		/* 소식 슬라이드  */
+		function newsToSlide() {  
+            if ( $(window).width() < 768 && newsSlide == undefined ) {
+                newsSlide = new Swiper(".newsCont-inner", {
+                    slidesPerView: 1,
+                    spaceBetween: 8,
+                    centeredSlides: true,
+
+                    keyboard: {
+                        enabled: true,
+                    },
+                    pagination: {
+                        el: ".newsCont-pagination",
+                    },
+
+                });
+            }else if ( $(window).width() >= 768 && newsSlide != undefined ) {
+                newsSlide.destroy();
+                newsSlide = undefined;
+            } 
+        }      
+
+        newsToSlide()
 
 
 		/* 숫자 카운터 */
@@ -551,23 +583,28 @@
 			});
 		}
 
-		$(window).on('scroll', function() {
-			$(".supportCont-li").each(function(i, item) {
-				let $contScr = $(item).offset().top;
-				let $currentScr = $(window).scrollTop();
-				let $setScr = parseInt($currentScr + ($(window).height() * 0.9));
-				let $endScr = $(".main-support").offset().top + $(".main-support").height() + $(window).height();
+		$(window).on({
+            scroll : function() {
+                $(".supportCont-li").each(function(i, item) {
+                    let $contScr = $(item).offset().top;
+                    let $currentScr = $(window).scrollTop();
+                    let $setScr = parseInt($currentScr + ($(window).height() * 0.9));
+                    let $endScr = $(".main-support").offset().top + $(".main-support").height() + $(window).height();
 
 
-				if ($endScr > $setScr && $setScr > $contScr) {
-					let key = 'countUP' + (i + 1);
-					countUp[key].start()
-				} else {
-					let key = 'countUP' + (i + 1);
-					countUp[key].reset()
-				}
-			})
-		});
+                    if ($endScr > $setScr && $setScr > $contScr) {
+                        let key = 'countUP' + (i + 1);
+                        countUp[key].start()
+                    } else {
+                        let key = 'countUP' + (i + 1);
+                        countUp[key].reset()
+                    }
+                })
+            },
+            resize : function(){
+                newsToSlide()
+            }
+        });
 
 
 		// 호버시 click 따라다님
