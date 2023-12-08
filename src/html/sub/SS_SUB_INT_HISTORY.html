@@ -361,6 +361,13 @@
             let $index = $this.parent().index();
             let $year = $(".subHistory-box").eq( $index ).offset().top;
             let $height = parseInt( $(".tabCont-swipArea").css("padding-top") );
+		
+			$(window).on ({
+				resize : function(){ 
+					$year = $(".subHistory-box").eq( $index ).offset().top;
+                    $height = parseInt( $(".tabCont-swipArea").css("padding-top") );
+				},
+			})	
 
             $this.on({
                 click: function(){

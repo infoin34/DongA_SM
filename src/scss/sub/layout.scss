@@ -2253,10 +2253,19 @@
         &-titV {
             padding-bottom: 4.8rem !important;
         }
+        &-white {
+            padding-top: 4.8rem;
+        }
     }
 
     .subTit {
         margin-top: 12.4rem;
+        &-a {
+            h2 {
+                font-size: 3.2rem;
+                line-height: 4.2rem;
+            }
+        }
 
         &-b{
             h2 {
@@ -2281,6 +2290,29 @@
 
         &:last-of-type{
             padding-bottom: 8rem;
+        }
+
+        &.hasTab {
+            padding-top: 0;
+        }
+    }
+
+    .subVis {
+        height: 32.3rem;
+
+        &-date {
+            margin-bottom: 1rem;
+            span {
+                font-weight: 400;
+                font-size: 1.5rem;
+                line-height: 2.4rem;
+            }
+        }
+
+        &-t {
+            font-size: 1.6rem;
+            line-height: 2.4rem;  
+            margin-bottom: 0.8rem; 
         }
     }
 }

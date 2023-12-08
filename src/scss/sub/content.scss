@@ -40,6 +40,11 @@ $color-A2A5BC : #A2A5BC;
     font-weight: 700;
     font-size: 6rem;
     line-height: 8rem;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+    }
 }
 @mixin txt-48x {
     font-weight: 700;
@@ -149,6 +154,13 @@ $color-A2A5BC : #A2A5BC;
             height: 1.6rem;  
             background-color: $color-medium;
             margin: 0 1rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &-l {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
         }
     }
 }
@@ -2043,6 +2055,7 @@ $color-A2A5BC : #A2A5BC;
 
 .scholarT {
     display: block;
+    overflow-x: auto;
 
     &-titBox {
         display: flex;
@@ -2050,6 +2063,7 @@ $color-A2A5BC : #A2A5BC;
         align-items: flex-end;
         width: 100%;
         margin: 14rem auto 2rem;
+        min-width: 76.5rem;
 
         strong {
             @include txt-32x;
@@ -2068,6 +2082,8 @@ $color-A2A5BC : #A2A5BC;
         width: 100%;
         border-top: 2px solid $color-444;
         border-bottom: 1px solid $color-strong;
+
+        min-width: 76.5rem;
     }
 
     &-table {
@@ -2245,6 +2261,11 @@ $color-A2A5BC : #A2A5BC;
         flex-shrink: 1;
         background-color: $color-fff;
 
+        picture {
+            width: 100%;
+            height: 100%;
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -2318,7 +2339,7 @@ $color-A2A5BC : #A2A5BC;
     &-careerBox {
         margin-top: 2px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 4px;
 
         &:first-child {
@@ -2333,6 +2354,8 @@ $color-A2A5BC : #A2A5BC;
         line-height: 2.4rem;
         padding-left: 1.2rem;
         position: relative;
+
+        flex-shrink: 0;
 
         color: $color-444;
 
@@ -3069,9 +3092,6 @@ $color-A2A5BC : #A2A5BC;
 }
 
 @media screen and (max-width: 1200px) {
-    .withPCont {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
 
     .locationCont{
         &-group {
@@ -3088,7 +3108,7 @@ $color-A2A5BC : #A2A5BC;
 @media screen and (max-width: 992px) {
     
     .withPCont {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .locationCont {
@@ -3196,6 +3216,11 @@ $color-A2A5BC : #A2A5BC;
             flex-basis: 100%;
             width: 100%;
         }
+        &-select {
+            flex-basis: 100%;
+            width: 100%;
+            padding-bottom: 4rem;
+        }
     }
     .imgLi{
         padding: 2.4rem 0;
@@ -3222,7 +3247,8 @@ $color-A2A5BC : #A2A5BC;
         }
     }
 
-    .sub-comNoti{
+    .sub{
+        &-comNoti{
         .txtLi{
             display: block;
             position: relative;
@@ -3263,52 +3289,43 @@ $color-A2A5BC : #A2A5BC;
             }
         }
         
-    }
-    .sub-operation{
-        .txtLi{
-            display: block;
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            padding: 2.4rem 2.8rem 2.4rem 0;
-    
-            &-num {
-                display: none;
-            }
-
-            &-down {
-                width: 2.4rem;
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            // &-ico {
-            //     display: none;
-            // }
-            &-name {
+        }
+        &-operation{
+            .txtLi{
                 display: block;
-                margin-bottom: 1rem;
-            }
-            // &-file {
-            //     display: inline-block;
-            //     width: 2.4rem;
-            //     vertical-align: middle;
-            // }
-            // &-date {
-            //     display: inline-block;
-            //     margin-left: auto;
-            //     width: auto;
-            //     float: right;
-            // }
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                padding: 2.4rem 2.8rem 2.4rem 0;
+        
+                &-num {
+                    display: none;
+                }
     
-            // &::after {
-            //     content: '';
-            //     display: block;
-            //     clear: both;
-            // }
+                &-down {
+                    width: 2.4rem;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &-name {
+                    display: block;
+                    margin-bottom: 1rem;
+                }
+            }
+            
+        }
+        &-withP {
+            margin-bottom: 6.4rem;
+        }
+        &-table {
+            overflow: hidden;
         }
         
+        &-view {
+            padding-top: 6.4rem !important;
+        }
     }
 
     .cpagin {
@@ -3418,21 +3435,186 @@ $color-A2A5BC : #A2A5BC;
         }
     }
 
-
     .purposeCont-list {
         flex-direction: column;
     }
     
     .withPCont {
-        grid-template-columns: 1fr;
+        margin-top: 2.4rem;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.6rem;
+        row-gap: 1.6rem;
+
+        &-li {
+            gap: 1.6rem;
+        }
+        &-position {
+            margin-bottom: 0;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        &-name {
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
+        &-occupation {
+            margin-top: 0.8rem;
+            flex-direction: column;
+            align-items: flex-start;
+            span:not(:first-of-type)::before {
+                margin-left: 0;
+                margin-right: 0.8rem;
+                height: 1.4rem;
+            }
+        }
     }
 
-    .awardSlide-li {
-        padding: 0;
+    .tabCont{
+        &-swip {
+            width: 100%;
+            height: 6.2rem;
+        }
+        &-swipBox {
+            height: 6.2rem;
+
+            &.up {
+                top: 6.2rem;
+            }
+        }
+        &-swipLi{
+            width: 17.8rem;
+        }
+        &-btn {
+            height: 6.2rem;
+            line-height: 6.2rem;
+            font-size: 1.8rem;
+            letter-spacing: -0.02em;
+            &::after {
+                height: 2px;
+            }
+        }
+        &-swipArea {
+            padding-top: 12.6rem;
+        }
+    }
+
+    .subHistory{
+        &-tit {
+            text-align: left;
+            margin-bottom: 1.6rem;
+
+            strong {
+                margin-top: 0.4rem;
+            }
+        }
+        &-contG {
+            &::after {
+                left: 0;
+                transform: translateX(0);
+            }
+        }
+        &-list {
+            gap: 6.4rem;
+        }
+        &-cont {
+            width: 100%;
+            margin-bottom: 4.8rem;
+
+            strong {
+                margin-bottom: 0.6rem;
+            }
+
+            li:not(:last-of-type) {
+                margin-bottom: 0.4rem;
+            }
+
+            &:not(.even) {
+                text-align: left;
+                padding-right: 0;
+                padding-left: 1.5rem;
+
+                li{
+                    padding-left: 1rem;
+                    &::after {
+                        position: absolute;
+                        left: 0;
+                        top: 0.9rem;
+                    }
+                }
+            }
+
+            &.even {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+
+    .scholarT {
+        &-titBox {
+            margin-top: 6.4rem;
+        }
+    }
+
+    .cslide {
+        &-li {
+            height: 32rem !important;
+        }
+        &-nav {
+            margin-top: 2.4rem;
+        }
+    }
+
+    .cTab {
+        &-btnG {
+            width: calc(100% + 3.2rem);
+            margin-left: -1.6rem;
+        }
+        &-btn {
+            line-height: 6.2rem;
+            font-size: 1.6rem;
+
+        }
     }
 
     .awardFix {
-        flex-direction: column;
+        display: block;
+        &-img {
+            height: 32rem;
+            overflow: hidden;
+        }
+        &-txt {
+            padding: 2rem;
+        }
+        &-stit {
+            margin-bottom: 0.8rem;
+        }
+        &-titBox {
+            padding: 0 0 2.4rem;
+        }
+        &-name {
+            margin-top: 1.6rem;
+        }
+        &-career {
+            padding: 2.4rem 0;
+        }
+        &-careerBox {
+            flex-direction: column;
+            gap: 0 !important;
+            margin-bottom: 0.8rem;
+        }
+        &-date {
+            flex-basis: 100% !important;
+        }
+        &-cont {
+            padding-left: 1.2rem;
+        }
+    }
+
+
+    // 
+
+    .awardSlide-li {
+        padding: 0;
     }
 
     .bookCont {
@@ -3503,5 +3685,10 @@ $color-A2A5BC : #A2A5BC;
         .btn-ti {
             border: 1px solid $color-accent;
         }
+    }
+}
+@media(hover: none) {
+    .mo-scrX {
+        &::-webkit-scrollbar { height: 0px !important; display: none; }
     }
 }

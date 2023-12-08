@@ -851,6 +851,18 @@ textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
             width: 2rem;
             height: 2rem;
         }
+        &-top {
+            width: 5rem;
+            height: 5rem;
+            bottom: 2rem;
+            left: calc(100% - 6.4rem);
+            font-size: 1.3rem;
+
+            i {
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+        }
     }
     .scrollDown{
         &-line{

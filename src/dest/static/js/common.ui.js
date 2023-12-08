@@ -413,7 +413,7 @@
 	function cSlide(){
 		if( $('.cslide-slide').length ) {
 			var cSlide = new Swiper(".cslide-slide", {
-				slidesPerView: "2",
+				slidesPerView: "1",
 				spaceBetween: 24,
 				// freeMode: true,
 				mousewheel: true,
@@ -427,6 +427,12 @@
 					el: ".cslide-pagination",
 					type: "progressbar",
 				},		
+
+				breakpoints: {
+					768: {
+						slidesPerView: 2,
+					},
+				},
 			});
 		}
 	}
