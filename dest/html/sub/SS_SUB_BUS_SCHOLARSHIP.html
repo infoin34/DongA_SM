@@ -299,7 +299,7 @@
 
 				<article class="sub-table ani btot-s">
 					<div class="wrap-inner typeA">
-						<div class="scholarT">
+						<div class="scholarT mo-scrX">
 							<div class="scholarT-titBox">
 								<strong>장학금 지급액</strong>
 								<span class="scholarT-unit">단위 : 백만원</span>
@@ -771,36 +771,6 @@
 </body>
 <!-- 페이지 관련 스크립트 -->
 <script>
-	$(function() {
-
-		let options = {}
-		let startCnt = $(".awardSlide .awardSlide-li").length < 3 ? 0 : 1;
-
-		var gallerySwiper = new Swiper(".awardSlide", {
-			slidesPerView: 1,
-			initialSlide: startCnt,
-			centeredSlides: true,
-			slideToClickedSlide: true,
-			keyboard: {
-				enabled: true,
-			},
-			navigation: {
-				nextEl: ".gallerySlide-next",
-				prevEl: ".gallerySlide-prev",
-			},
-
-			breakpoints: {
-				768: {
-					slidesPerView: 2,
-					centeredSlides: false,
-				},
-				992: {
-					slidesPerView: 3,
-					centeredSlides: true,
-				},
-			},
-		});
-	});
 </script>
 <!--//페이지 관련 스크립트 -->
 
