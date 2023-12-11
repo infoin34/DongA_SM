@@ -876,6 +876,14 @@ textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
             line-height: 1.4rem;
         }
     }
+    .c-input {
+        line-height: 5rem;
+        height: 5rem;
+        padding: 0 1.6rem;
+    }
+    .c-textarea {
+        padding: 1.6rem;
+    }
 }
 
 @media(hover: hover) and (pointer: fine) {

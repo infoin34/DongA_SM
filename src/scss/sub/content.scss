@@ -2025,9 +2025,9 @@ $color-A2A5BC : #A2A5BC;
 }
 
 .popBanner {
-    width: calc(100vw - 4rem);
+    width: calc(100vw - 3.2rem);
     max-width: 50rem;
-    max-height: calc(100vh - 4rem);
+    max-height: calc(100vh - 3.2rem);
     background-color: #002C85 ;
 
     &-btnG {
@@ -3096,7 +3096,7 @@ $color-A2A5BC : #A2A5BC;
     .locationCont{
         &-group {
             flex-direction: column;
-            gap: 0.8rem;
+            gap: 1.6rem;
         }
         &-dl .ddG {
             flex-direction: column;
@@ -3115,7 +3115,7 @@ $color-A2A5BC : #A2A5BC;
         flex-direction: column;
         &-map {
             flex-basis: auto;
-            height: 500px;
+            height: 34rem;
         }
         &-txt {
             transition-delay: 0s !important;
@@ -3124,20 +3124,26 @@ $color-A2A5BC : #A2A5BC;
 
     .awardCS{
         &-li {
-            width: 100%;
-        }
-        &-slide {
-            width: 100%;
-            height: 40rem;
+
+            &.swiper-slide {
+                height: 40rem;
+            }
 
             &.swiper-slide.swiper-slide-active {
                 width: 100% !important;
                 height: 40rem;
             }
         }
+        &-slide {
+            width: 100%;
+            height: 40rem;
+        }
         &-nav {
             top: -3.2rem;
             transform: translateY(-100%);
+        }
+        &-imgG {
+            flex-basis: 43%;
         }
     }
     .contestField {
@@ -3146,8 +3152,6 @@ $color-A2A5BC : #A2A5BC;
 
         &-li {
             width: 100%;
-            justify-content: center;
-            text-align: center;
             padding: 3.5rem 0;
             border-right: none;
             border-bottom: 1px solid $color-default;
@@ -3168,9 +3172,16 @@ $color-A2A5BC : #A2A5BC;
     .contestWin{
         &-txtArea {
             flex-direction: column;
+            gap: 2.4rem;
         }
         &-contG {
             flex-direction: column;
+        }
+    }
+
+    .bookCont {
+        &-txt {
+            padding: 2rem;
         }
     }
 
@@ -3195,6 +3206,15 @@ $color-A2A5BC : #A2A5BC;
             align-items: flex-start;
             gap: 6.4rem;
             padding-bottom: 0.8rem;
+
+            &-right {
+                align-items: flex-end;
+
+                .inqueryCont-top {
+                    font-size: 1.3rem;
+                    line-height: 2rem;
+                }
+            }
         }
         &-search {
             flex-basis: 100%;
@@ -3610,6 +3630,313 @@ $color-A2A5BC : #A2A5BC;
         }
     }
 
+    .awardCS {
+        &-slide {
+            height: auto;
+            margin-bottom: 4.8rem;
+        }
+        &-li {
+            flex-direction: column;
+            &.swiper-slide {
+                height: 60rem;
+                &.swiper-slide-active {
+                    height: 60rem;
+
+                    .awardCS-imgG {
+                        flex-basis: auto;
+                        height: 32rem;
+                    }
+
+                    .awardCS-txtWrap {
+                        flex-basis: auto;
+                        height: 28rem;
+                        padding: 2rem;
+                    }
+                }
+            }
+            
+        }
+        &-imgG {
+            flex-basis: 32rem;
+        }
+        &-part {
+            margin-bottom: 0.8rem;
+        }
+        &-name {
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
+        &-affiliation {
+            display: none;
+        }
+        &-cont {
+            margin-top: 1.6rem;
+        }
+        &-nav {
+            top: auto;
+            bottom: -2.4rem;
+            right: 50%;
+            transform: translateY(100%) translateX(50%);
+            width: 100%;
+        }
+        &-pagination {
+            flex-basis: 100%;
+            flex-shrink: 1;
+        }
+    }
+
+    .contestField {
+        padding: 2.4rem;
+
+        &-li {
+            > i {
+                flex-shrink: 0;
+            }
+        }
+
+        &-name-r {
+            flex-shrink: 0;
+        }
+    }
+
+    .subVideo {
+        width: calc(100% + 3.2rem);
+        margin-left: -1.6rem;
+    }
+
+    .bookCont {
+        &-img {
+            flex-basis: 100%;
+            height: 42rem;
+
+            img {
+                max-height: 42rem;
+                object-fit: contain;
+            }
+        }
+        &-txt {
+            padding: 2rem;
+            flex-basis: 60rem;
+        }
+        &-stit {
+            margin-bottom: 0.8rem;
+        } 
+        &-name {
+            margin-top: 1.6rem;
+            margin-bottom: 3.2rem;
+        }
+
+        &-cont {
+            max-height: 43.2rem;
+        }
+    }
+
+    .inqueryCont {
+        &-nameBox {
+            margin-bottom: 0.8rem;
+        }
+        &-name {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+        &-inputGroup {
+            gap: 3.2rem;
+            margin-top: 3.2rem;
+        }
+    }
+
+    .termsBox {
+        padding: 1.6rem;
+    }
+
+    .inqueryCont {
+        &-btnWrap {
+            margin-top: 6.4rem;
+        }
+    }
+
+    .popAlert {
+        width: calc(100vw - 6.4rem);
+        padding: 3.2rem 2.4rem;
+        &-icon {
+            width: 8rem;
+            height: 8rem;
+
+            i {
+                width: 4.48rem;
+                height: 4.48rem;
+            }
+        }
+        &-text {
+            min-height: 5.2rem;
+        }
+        &-btnWrap {
+            margin-top: 2.2rem;
+        }
+    }
+
+    .errorCont {
+        padding: 1.6rem;
+        max-width: 100%;
+
+        &-icon {
+            width: 10rem;
+            height: 10rem;
+
+            i {
+                width: 5.6rem;
+                height: 5.6rem;
+            }
+        }
+
+        &-txt {
+            margin: 3rem auto 4rem;
+            gap: 1.2rem;
+        }
+
+        &-timeBox {
+            max-width: 100%;
+            padding: 3rem 2.7rem;
+            gap: 1.6rem;
+        }
+
+        &-date {
+            &::after {
+                margin: 0 0.8rem;
+            }
+        }
+    }
+
+    .popBanner {
+        &-btnG {
+            height: 4.4rem;
+        }
+    }
+
+    .sponsorshipCont {
+        padding-top: 1.6rem;
+
+        &-list {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            position: relative;
+        }
+        &-li {
+            flex-basis: calc( (100% - 2.4rem) / 2);
+
+            &:nth-of-type(2) .sponsorshipCont-box{
+                &::after {
+                    height: 2.4rem;
+                    width: 2px;
+                    top: auto;
+                    bottom: 0;
+                    right: 50%;
+                    transform: translate(-50%, 100%);
+                }
+                &::before {
+                    top: auto;
+                    bottom: -2.4rem;
+                    right: 50%;
+                    transform: translate(40%, 80%);
+                }
+            }
+
+            &:nth-of-type(3) .sponsorshipCont-box{
+                &::after {
+                    right: auto;
+                    left: 0;
+                    transform: translate(-100%, -50%);
+                }
+                &::before {
+                    right: auto;
+                    left: -2.4rem;
+                    transform: translate(-80%, -50%);
+                }
+            }
+
+            &:last-of-type {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: calc((100% - 2.4rem)/2);
+            }
+        }
+
+        &-box {
+            gap: 0;
+
+            i {
+                width: 6.4rem;
+                height: 6.4rem;
+            }
+
+            span {
+                text-align: center;
+                padding: 0 1.6rem;
+                word-break: keep-all;
+            }
+
+            &::before {
+                width: 1.1rem;
+                height: 1.1rem;
+            }
+        }
+    }
+
+    .responsibilityCont  {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.4rem;
+
+        &-box {
+            &::after {
+                display: none;
+            }
+        }
+
+        &-ico {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    .locationCont {
+        gap: 4.8rem;
+
+        &-tit {
+            font-size: 2.8rem;
+            line-height: 4rem;
+            margin-bottom: 2.4rem;
+        }
+
+        &-dl {
+            dt {
+                margin-bottom: 0.8rem;
+                font-size: 1.6rem;
+                line-height: 2.6rem;
+            }
+        }
+
+        &-txtBox {
+            &:not(:first-of-type) {
+                margin-top: 4.8rem;
+
+                .locationCont-dl dt {
+                    margin-bottom: 1.6rem;
+                }
+            }
+        }
+
+        &-dl dd {
+            gap: 0.4rem;
+            .traffic {
+                margin-right: 0.8rem;
+                line-height: 2.4rem;
+                height: 2.4rem;
+                font-size: 1.3rem;
+            }
+        } 
+    }
 
     // 
 
