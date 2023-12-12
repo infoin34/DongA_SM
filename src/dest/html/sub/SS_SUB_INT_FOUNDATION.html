@@ -264,17 +264,15 @@
         
         -->
 		<main class="wrapper">
-			<section class="sub-tit subCont scrTit">
-				<article class="scrArea">
-					<div class="subTit">
-						<div class="wrap-inner typeA">
-							<div class="subTit-a">
-								<h2>재단소개</h2>
-							</div>
+			<section class="sub-tit subCont pb-0x">
+				<article class="subTit">
+					<div class="wrap-inner typeA">
+						<div class="subTit-a">
+							<h2>재단소개</h2>
 						</div>
 					</div>
 					<div class="subVisScr">
-						<div class="subVisScr-inner sub01">
+						<div class="subVisScr-inner">
 							<div class="subVisScr-start">
 								<strong class="subVis-tit">
                                     우리가 함께 만드는 길<br>
@@ -297,7 +295,7 @@
 					</div>
 				</article>
 			</section>
-			<section class="sub-white subCont" data-js-scr="top">
+			<section class="sub-white subCont foundation" data-js-scr="top">
 				<article class="sub-cText">
 					<div class="wrap-inner typeA">
 						<div class="subCText ani btot">
@@ -314,7 +312,7 @@
 					</div>
 				</article>
 			</section>
-			<section class="sub-gray subCont">
+			<section class="sub-gray subCont foundation">
 				<article class="sub-purpose">
 					<div class="wrap-inner typeA">
 						<div class="purposeCont ani btot">
@@ -357,7 +355,10 @@
 			</section>
 		</main>
 
-		<div class="footer">
+
+		<div class="footer foundation">
+
+
 			<div class="footer-inner">
 				<div class="footer-logo">
 					<h2>LOGO <i class="ico-footLogo"></i></h2>
@@ -417,9 +418,7 @@
 			</div>
 		</div>
 
-
-		<a class="btn-top @@class" data-js-scrbtn="notZero"><i class="ico-linkTop"></i>TOP</a>
-
+		<a class="btn-top" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
 
 		<script>
 		</script>
@@ -427,96 +426,40 @@
 </body>
 <!-- 페이지 관련 스크립트 -->
 <script>
-	let currentTop = $(".scrArea").css("margin-top");
+	// $(".subVisScr").addClass("start")
+	// $(function() {
+	//     setTimeout(function() { $(".subVisScr").removeClass("start") }, 1500);
+	//     setTimeout(function() { $(".subVisScr").addClass("end") }, 1500);
+	// })
 
-	gsap.registerPlugin(ScrollTrigger);
 
-	function removeProps() {
-		console.log('Reverse Complete')
-	}
-	let $tl = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".scrTit",
-			toggleActions: "restart none restart none",
-			start: "top 100",
-			end: "+=2000",
-			scrub: 1,
-			pin: true,
+	$(window).on({
+		load: function() {
+			$(".subVisScr").addClass("start")
 		},
-		onReverseComplete: () => removeProps()
-	})
+		scroll: function() {
+			let $winT = $(window).scrollTop()
+			let $winB = $winT + $(window).height()
 
-	$tl.from($(".scrArea"), {
-		marginTop: currentTop
-	})
-	$tl.to($(".scrArea"), {
-		marginTop: "0",
-		duration: 1.5
-	}, "+=0.5")
-	$tl.to($(".subVisScr-inner"), {
-		width: "0",
-		visibility: "hidden"
-	}, "+=0.5")
-	$tl.to($(".subVisScr-inner"), {
-		width: "100vw",
-		visibility: "visible",
-		duration: 1.8
-	}, "+=0.5")
-	$tl.to($(".subVisScr-start"), {
-		opacity: "0",
-		marginTop: "10rem"
-	}, "+=0.5")
-	$tl.to($(".subVisScr-start"), {
-		opacity: "1",
-		marginTop: "0",
-		duration: 2
-	})
-	$tl.to({}, {
-		duration: 2
-	});
-	$tl.to($(".subVisScr-start"), {
-		opacity: "0",
-		marginTop: "10rem",
-		duration: 2
-	}, "+=0.5")
-	$tl.to($(".subVisScr-inner"), {
-		maxWidth: "100%"
-	}, "+=0.5")
-	$tl.to($(".subVisScr-after"), {
-		opacity: "0",
-		marginTop: "10rem",
-		duration: 2
-	}, "-1")
-	$tl.to($(".subVisScr-after"), {
-		opacity: "1",
-		marginTop: "0",
-		duration: 2
-	}, "+=0.5")
-	$tl.to({}, {
-		duration: 2
-	});
-	$tl.to($(".scrArea"), {
-		marginBottom: currentTop
-	}, "+=0.5")
-	$tl.to({}, {
-		duration: 1
-	});
+			let $stopH = $(".subVisScr").offset().top + $(".subVisScr").height();
 
-	$(window).ready(function() {
-		$('html, body').scrollTop(0);
-		scrollMove(800, 1500);
-	});
+			console.log($winB, $stopH)
 
+			if ($(".subVisScr").hasClass("end") == false) {
+				if ($winB >= $stopH) {
+					$(".subVisScr").addClass("ing");
+					$(function() {
+						setTimeout(function() {
+							$(".subVisScr").addClass("end")
+							$(".foundation").removeClass("foundation")
+						}, 1500);
 
-	$(".btn-top").click(function() {
-
-		let $scrollTop = $(window).scrollTop();
-		let $thisTop = $('[data-js-scr="top"]').offset().top - $(window).height();
-		console.log($thisTop);
-
-		if ($scrollTop >= $thisTop) {
-			scrollMove($thisTop, 300);
-		}
+					})
+				}
+			} else {
+				console.log("sfjdshfksjdh");
+			}
+		},
 	})
 </script>
 <!--//페이지 관련 스크립트 -->

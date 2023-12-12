@@ -1041,6 +1041,7 @@
     }
 }
 
+
 // 메인 슬라이드
 .mainSlide{
     width: 100%;
@@ -1824,18 +1825,7 @@
         //     }
         // }
     }
-
     &.start {
-        .subVisScr-inner {
-            width: 100%;
-            opacity: 1;
-        }
-        .subVisScr-start {
-            opacity: 1;
-            margin-top: 0rem;
-        }
-    }
-    &.end {
         .subVisScr-inner {
             width: 100%;
             opacity: 1;
@@ -1880,6 +1870,10 @@
     .subTit {
         margin-top: 0;
     }
+}
+
+.foundation {
+    display: none;
 }
 
 // 팝업 
