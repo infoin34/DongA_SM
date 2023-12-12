@@ -1640,9 +1640,11 @@
 
     &-txt {
         display: block;
-        width: calc(100% - 4rem);
+        width: calc(100% - 3.2rem);
         text-align: center;
         transform: translateY(100%); 
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 3px;
         opacity: 0;
 
@@ -1762,6 +1764,7 @@
     margin: 6.4rem auto 0;
     height: calc(100vh - 22.3rem);
     position: relative;
+    overflow: hidden;
 
     &-inner {
         width: 0%;
@@ -1777,15 +1780,10 @@
         background-image: url(../../../dest/static/images/sub_main01.png);
 
         animation: 0.4s 0.2s subVis01 forwards linear;
-
-        // @keyframes subVis01 {
-        //     0% { width: 0%; }
-        //     100% { width: 100%; }
-        // }
     }
 
     &-start {
-        width: calc(100% - 4rem);
+        width: calc(100% - 6.4rem);
         position: absolute;
         text-align: center;
         top: 50%;
@@ -1800,7 +1798,7 @@
     }
 
     &-after {
-        width: calc(100% - 4rem);
+        width: calc(100% - 3.2rem);
         position: absolute;
         text-align: center;
         top: 50%;
@@ -1815,19 +1813,10 @@
 
         @include transition(all, 0.8s, $cubicTxt);
         transition-delay: 0.5s;
-
-        // &.up.active{
-        //     animation: 1s 0.8s subVisScrAfter $cubicTxt forwards;
-    
-        //     @keyframes subVisScrAfter {
-        //         0% { opacity: 0; margin-top: 10rem; }
-        //         100% { opacity: 1; margin-top: 0rem; }
-        //     }
-        // }
     }
     &.start {
         .subVisScr-inner {
-            width: 100%;
+            width: calc(100% - 3.2rem);
             opacity: 1;
         }
         .subVisScr-start {
@@ -1841,6 +1830,7 @@
 
     &.ing {
         .subVisScr-inner {
+            width: 100%;
             max-width: 100%;
         }
         .subVisScr-start {
@@ -2294,6 +2284,9 @@
         &-ceo {
             padding-bottom: 0 !important;
         }
+        &-gray {
+            padding-top: 6.4rem;
+        }
     }
 
     .subTit {
@@ -2351,6 +2344,23 @@
             font-size: 1.6rem;
             line-height: 2.4rem;  
             margin-bottom: 0.8rem; 
+        }
+        &-round{
+            padding: 0.8rem 1.6rem;
+            margin: 0 auto 2.4rem;
+            span {
+                font-weight: 400;
+
+                &:not(:last-child)::after {
+                    height: 1rem;
+                }
+            }
+        }
+    }
+
+    .subVisScr {
+        &-after {
+            padding-bottom: 0;
         }
     }
 }

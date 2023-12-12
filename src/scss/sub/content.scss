@@ -325,6 +325,9 @@ $color-A2A5BC : #A2A5BC;
             height: 100%;
             object-fit: cover;
         }
+
+        background-image: url(../../../dest/static/images/news_thum.png);
+        background-size: cover;
     }
 
     &-txt {
@@ -4200,6 +4203,22 @@ $color-A2A5BC : #A2A5BC;
         &-sign {
             width: 10.9rem;
             margin-left: 1.6rem;
+        }
+    }
+
+    .purposeCont {
+        &-list {
+            gap: 1.6rem;
+        }
+        &-li {
+            padding: 2.4rem;
+        }
+        &-top {
+            margin-bottom: 2.3rem;
+        }
+        &-ico {
+            width: 5.6rem;
+            height: 5.6rem;
         }
     }
 
