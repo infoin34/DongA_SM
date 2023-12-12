@@ -1763,37 +1763,24 @@
     position: relative;
 
     &-inner {
-        width: 0;
+        width: 0%;
         height: 100%;
         max-width: 1200px;
-        left: calc(50% - 1px);
-        bottom: 0;
-        transform: translateX(-50%);
-        position: absolute;
-
-        visibility: hidden;
-
         transition: 0.4s;
+        margin: 0 auto;
         
         overflow: hidden;
 
         background-position: 50% 50%;
         background-size: cover;
+        background-image: url(../../../dest/static/images/sub_main01.png);
 
-        &.sub01 {
-            // 재단소개 bg
-            background-image: url(../../../dest/static/images/sub_main01.png);
-        }
+        animation: 0.4s 0.2s subVis01 forwards linear;
 
-        &.active {
-            width: calc(100% + 2px);
-            max-width: 100%;
-
-            .subVisScr-start {
-                opacity: 0;
-                margin-top: 10rem;
-            }
-        }
+        // @keyframes subVis01 {
+        //     0% { width: 0%; }
+        //     100% { width: 100%; }
+        // }
     }
 
     &-start {
@@ -1807,6 +1794,8 @@
 
         opacity: 0;
         margin-top: 10rem;
+        @include transition(all, 0.8s, $cubicTxt);
+        transition-delay: 0.5s;
     }
 
     &-after {
@@ -1821,13 +1810,60 @@
         opacity: 0; 
         margin-top: 10rem;
 
-        &.up.active{
-            animation: 1s 0.8s subVisScrAfter $cubicTxt forwards;
+        pointer-events: none;
+
+        @include transition(all, 0.8s, $cubicTxt);
+        transition-delay: 0.5s;
+
+        // &.up.active{
+        //     animation: 1s 0.8s subVisScrAfter $cubicTxt forwards;
     
-            @keyframes subVisScrAfter {
-                0% { opacity: 0; margin-top: 10rem; }
-                100% { opacity: 1; margin-top: 0rem; }
-            }
+        //     @keyframes subVisScrAfter {
+        //         0% { opacity: 0; margin-top: 10rem; }
+        //         100% { opacity: 1; margin-top: 0rem; }
+        //     }
+        // }
+    }
+
+    &.start {
+        .subVisScr-inner {
+            width: 100%;
+            opacity: 1;
+        }
+        .subVisScr-start {
+            opacity: 1;
+            margin-top: 0rem;
+        }
+    }
+    &.end {
+        .subVisScr-inner {
+            width: 100%;
+            opacity: 1;
+        }
+        .subVisScr-start {
+            opacity: 1;
+            margin-top: 0rem;
+        }
+        .subVisScr-after {  
+            transition-delay: 0s;
+        }
+    }
+
+    &.ing {
+        .subVisScr-inner {
+            max-width: 100%;
+        }
+        .subVisScr-start {
+            transition-delay: 0.2s;
+            opacity: 0;
+            margin-top: 10rem;
+            pointer-events: none;
+        }
+        .subVisScr-after {
+            transition-delay: 0.8s;
+            opacity: 1;
+            margin-top: 0rem;
+            pointer-events: all;
         }
     }
 }
@@ -1838,7 +1874,7 @@
 }
 .scrArea {
     margin-top: 12rem;
-    position: fixed;
+    position: relative;
     width: 100%;
 
     .subTit {
@@ -2260,6 +2296,9 @@
             &.pt-64 {
                 padding-top: 4.8rem;
             }
+        }
+        &-ceo {
+            padding-bottom: 0 !important;
         }
     }
 

@@ -3938,6 +3938,271 @@ $color-A2A5BC : #A2A5BC;
         } 
     }
 
+    .ciWrap  {
+        padding-top: 6.4rem !important;
+    }
+
+    .ciIntro {
+        flex-direction: column;
+        gap: 4.8rem;
+
+        &-logoHorizon {
+            flex-basis: auto;
+            width: 21.1rem;
+            height: 18rem;
+        }
+        &-txt {
+            strong {
+                margin-bottom: 2rem;
+            }
+            p {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    .ciCont {
+        &-tit {
+            margin-bottom: 4.8rem;
+        }
+        &-box {
+            margin-bottom: 6.4rem;
+        }
+        &-text {
+            margin-bottom: 1.6rem;
+            span {
+                font-size: 1.5rem;
+            }
+
+            &.colum {
+                margin-bottom: 3.2rem;
+            }
+
+            &.typeface {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+            }
+        }
+    }
+
+    .ciMotive {
+        &-imgBox {
+            margin-top: 3.2rem;
+            padding: 3rem 2.3rem;
+            gap: 4.8rem;
+        }
+        &-imgGroup {
+            flex-direction: column;
+            &::after {
+                height: 100%;
+                width: 1px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &-img {
+            flex-basis: auto;
+            width: 20rem;
+            border-width: 2rem;
+            margin: 2.1rem 0;
+        }
+        &-img-s {
+            flex-basis: auto;
+            width: 10.6rem;
+        }
+        &-ico {
+            width: 85%;
+        } 
+        &-symbolGroup {
+            display: block;
+        }
+
+        &-plus{
+            display: block;
+            width: 2.4rem;
+            height: 2.4rem;
+            margin: 1rem auto 3rem;
+
+            &:first-of-type {
+                display: none;
+            }
+
+        }
+        &-symbol {
+            &:first-of-type {
+                display: inline-block;
+                width: 9.2rem;
+                max-height: 4.9rem;
+                margin-left: 1.7rem;
+                vertical-align: middle;
+            }
+            &:nth-of-type(2) {
+                display: inline-block;
+                width: 8rem;
+                max-height: 8rem;
+                vertical-align: middle;
+                margin-left: calc(100% - 21rem);
+                margin-right: 1.7rem;
+            
+            }
+            img {
+                height: 100%;
+            }
+        }
+    }
+    
+    .ciGuide {
+        flex-direction: column;
+        padding: 3rem 1.2rem;
+        gap: 4.8rem;
+
+        &-tit {
+            gap: 0.6rem;
+            margin-bottom: 1.6rem;
+        }
+        &-titKo {
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+        }
+        &-img {
+            margin-bottom: 1rem;
+
+            .guide-system{
+                padding: 0 0 1rem;
+                width: 100%;
+            }
+            .guide-space  {
+                width: 100%;
+            }
+        }
+    }
+
+    .ciUsage {
+        &-box {
+            margin-bottom: 4.8rem;
+            .ciCont-text {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+            }
+        }
+    }
+
+    .ciBi {
+        padding: 3rem 1rem;
+        gap: 1.6rem;
+        &-typeBox {
+            gap: 1.6rem;
+        }
+        &-type {
+            font-size: 1.3rem;
+            line-height: 2rem;
+        }
+    }
+
+    .ciIdentifier {
+        padding: 3rem 2rem;
+    }
+
+    .ciIncorrect {
+        &-type {
+            display: block;
+            margin-bottom: 1rem;
+        }
+        &-imgGroup {
+            flex-direction: column;
+        }
+        &-imgBox {
+            margin-bottom: 2.4rem;
+        }
+        &-txtG {
+            margin-top: 1rem;
+            align-items: center;
+        }
+        &-ex {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            padding: 0 0.7rem;
+        }
+    }
+
+    .ciIncorrect{
+        margin-top: 3.2rem;
+    }
+
+    .ciColor {
+        &-colorName {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+        &-box {
+            gap: 4.1rem;
+        }
+        &-valueCont {
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+        }
+    }
+
+    .ciCB {
+        margin-top: 4.8rem;
+    }
+
+    .ciType {
+        &-box {
+            padding: 2rem;
+        }
+        &-lng {
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+        }
+        &-fontG {
+            &:first-of-type {
+                margin-top: 1.6rem;
+            }
+
+            picture {
+                width: 100%;
+            }
+        }
+    }
+    
+    .ceoCont{
+        &-wrap{
+            flex-direction: column;
+            gap: 6.4rem;
+        }
+        &-img {
+            flex-basis: auto;
+            width: calc(100% + 3.2rem);
+            min-height: 46.8rem;
+            margin-left: -1.6rem;
+            object-fit: cover;
+        }
+    }
+
+    .ceoName{
+        margin-top: 4.8rem;
+        &-name {
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+
+
+            &::after {
+                margin: 0 0.7rem;
+            }
+        }
+        &-position {
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+        }
+        &-sign {
+            width: 10.9rem;
+            margin-left: 1.6rem;
+        }
+    }
+
     // 
 
     .awardSlide-li {
