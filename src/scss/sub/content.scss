@@ -3145,8 +3145,9 @@ $color-A2A5BC : #A2A5BC;
             top: -3.2rem;
             transform: translateY(-100%);
         }
-        &-imgG {
-            flex-basis: 43%;
+        &-imgG {    
+            flex-basis: auto;
+            height: 32rem;
         }
     }
     .contestField {
