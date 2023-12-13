@@ -934,6 +934,24 @@
 				}
 			})
 		})
+
+		function changeH() {
+			let $w_H = $(window).innerHeight()
+			$(".mainSlide").height($w_H)
+		}
+
+		if (window.isMobile) { //mo
+			$(window).on('orientationchange', function(e) {
+				$(window).one('resize', function() {
+					changeH()
+				});
+			});
+
+
+			$(window).on('load', function() {
+				changeH()
+			});
+		}
 	});
 </script>
 <!--//페이지 관련 스크립트 -->
