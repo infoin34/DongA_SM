@@ -275,7 +275,9 @@
 						</div>
 					</div>
 					<div class="subVis-wrap">
-						<div class="subVis history">
+						<!-- background-image html에 작성 -->
+						<div class="subVis history" style="background-image: url(../../../dest/static/images/subVis-history.png);">
+							<!-- background-image html에 작성 -->
 							<div class="subVis-txt m">
 								<div class="subVis-date ani btot">
 									<span>1987</span>
@@ -538,9 +540,12 @@
 		</main>
 
 
+		<!-- 푸터 변경 -->
+
 
 		<div class="footer">
 
+			<!-- 푸터 변경 -->
 			<div class="footer-inner">
 				<div class="footer-logo">
 					<h2>LOGO <i class="ico-footLogo"></i></h2>
@@ -600,7 +605,9 @@
 			</div>
 		</div>
 
+		<!-- 푸터 변경 -->
 		<a class="btn-top" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+		<!-- 푸터 변경 -->
 
 		<script>
 		</script>
@@ -666,12 +673,14 @@
 			let $year = $(".subHistory-box").eq($index).offset().top;
 			let $height = parseInt($(".tabCont-swipArea").css("padding-top"));
 
+			// 리사이즈 추가
 			$(window).on({
 				resize: function() {
 					$year = $(".subHistory-box").eq($index).offset().top;
 					$height = parseInt($(".tabCont-swipArea").css("padding-top"));
 				},
 			})
+			// 리사이즈 추가
 
 			$this.on({
 				click: function() {

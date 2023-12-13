@@ -272,7 +272,9 @@
 					<div class="mainSlide">
 						<ul class="mainSlide-wrap swiper-wrapper">
 							<li class="mainSlide-li swiper-slide">
+								<!-- typeA class 추가 -->
 								<div class="wrap-inner typeA">
+									<!-- typeA class 추가 // -->
 									<div class="main-tit">
 										<div class="line"><span>수석문화재단</span></div>
 										<div class="line"><span>나눔을 잇는 사랑의 시작</span></div>
@@ -491,6 +493,7 @@
 											<button class="infoSlide-next btn-next"></button>
 										</div>
 									</div>
+									<!-- imgSlide-navBottom 삭제 -->
 								</div>
 								<div class="businessCont-img">
 									<div class="imgSlide">
@@ -540,6 +543,7 @@
 								<strong>새로운 소식을 확인하세요</strong>
 							</div>
 							<div class="newsCont-inner">
+								<!-- class 추가 - swiper 로 변경 -->
 								<ul class="newsCont-list swiper-wrapper">
 									<li class="newsCont-li swiper-slide">
 										<a href="#none">
@@ -581,9 +585,14 @@
 										</a>
 									</li>
 								</ul>
+								<!-- class 추가 - swiper 로 변경 -->
+
+								<!-- newsCont-nav 추가 -->
 								<div class="newsCont-nav">
 									<div class="newsCont-pagination"></div>
 								</div>
+								<!-- newsCont-nav 추가 -->
+
 								<div class="newsCont-btnArea">
 									<button class="btn-ti b">
 										더보기<i class="ico-arrow"></i>
@@ -664,9 +673,12 @@
 			</div>
 		</main>
 
+		<!-- 푸터 변경 -->
+
 
 		<div class="footer">
 
+			<!-- 푸터 변경 -->
 			<div class="footer-inner">
 				<div class="footer-logo">
 					<h2>LOGO <i class="ico-footLogo"></i></h2>
@@ -726,7 +738,9 @@
 			</div>
 		</div>
 
+		<!-- 푸터 변경 -->
 		<a class="btn-top" onclick="scrollMove(0, 300)"><i class="ico-linkTop"></i>TOP</a>
+		<!-- 푸터 변경 -->
 
 		<script>
 		</script>
@@ -792,6 +806,7 @@
 			}
 		});
 
+		// 브레이크 포인트 추가
 		var imgSlide = new Swiper(".imgSlide", {
 			slidesPerView: 1,
 			spaceBetween: 8,
@@ -810,12 +825,14 @@
 				},
 			},
 		});
+		// 브레이크 포인트 추가
 
 		infoSlide.controller.control = imgSlide;
 		imgSlide.controller.control = infoSlide;
 
 
 		/* 파트너 슬라이드  */
+		// 브레이크 포인트 추가
 		var partnerSlide = new Swiper(".partnerSlide", {
 			slidesPerView: 2,
 			spaceBetween: 0,
@@ -846,7 +863,10 @@
 			},
 
 		});
+		// 브레이크 포인트 추가
 
+
+		// 뉴스슬라이드 추가 - 일정 width 아래에서 슬라이드로 전환
 
 		var newsSlide = undefined;
 		/* 소식 슬라이드  */
@@ -873,6 +893,7 @@
 
 		newsToSlide()
 
+		// 뉴스슬라이드 추가 - 일정 width 아래에서 슬라이드로 전환
 
 		/* 숫자 카운터 */
 		const countUp = {};
@@ -882,11 +903,16 @@
 			countUp[`countUP${i}`] = new CountUp($thisId, 0, $thisNum, 0, 0.7, {
 				useEasing: true,
 				useGrouping: true,
+
+				// 단위 변경
 				separator: '',
+				// 단위 변경
+
 				decimal: '.'
 			});
 		}
 
+		// resize 추가
 		$(window).on({
 			scroll: function() {
 				$(".supportCont-li").each(function(i, item) {
@@ -909,7 +935,7 @@
 				newsToSlide()
 			}
 		});
-
+		// resize 추가
 
 		// 호버시 click 따라다님
 		$('.imgGroup').each(function(index, item) {
@@ -935,6 +961,7 @@
 			})
 		})
 
+		// 모바일 100vh > innerHeight 값으로 변경 추가
 		function changeH() {
 			let $w_H = $(window).innerHeight()
 			$(".mainSlide").height($w_H)
@@ -952,6 +979,7 @@
 				changeH()
 			});
 		}
+		// 모바일 100vh > innerHeight 값으로 변경 추가
 	});
 </script>
 <!--//페이지 관련 스크립트 -->
