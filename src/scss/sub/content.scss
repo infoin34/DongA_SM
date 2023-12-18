@@ -2227,6 +2227,11 @@ $color-A2A5BC : #A2A5BC;
         color: $color-666;
         position: relative;
         cursor: pointer;
+        text-align: center;
+
+        &:visited {
+            color: $color-666;
+        }
 
         &.on {
             font-weight: 700;

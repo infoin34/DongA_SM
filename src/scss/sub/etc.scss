@@ -221,6 +221,10 @@
         color: $color-fff;        
         @include transition(all, 0.4s, linear);
 
+        &:visited {    
+            color: $color-fff;        
+        }
+
         .ico-arrow {
             display: inline-block;
             width: 16px;
@@ -306,10 +310,18 @@
         transition: 0.2s;    
         @include transition(all, 0.3s, linear);
 
+        &:visited {
+            color: $color-fff;   
+        }
+
         &.s {
             color: $color-accent;   
             border: 1px solid $color-accent;
             background-color: transparent;
+
+            &:visited {
+                color: $color-accent;   
+            }
         }
     }
 }
