@@ -416,7 +416,7 @@
 				slidesPerView: "1",
 				spaceBetween: 24,
 				// freeMode: true,
-				mousewheel: true,
+				// mousewheel: true,
 				threshold: 50,
 				
 				keyboard: {
