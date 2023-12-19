@@ -2157,6 +2157,81 @@ $color-A2A5BC : #A2A5BC;
     }
 }
 
+.edu {
+    &-titBox {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
+        margin: 14rem auto 2rem;
+        strong {
+            @include txt-32x;
+            color: $color-222;
+        }
+    }
+
+    &-tableWrap {
+        width: 100%;
+        border-top: 2px solid $color-444;
+        border-bottom: 1px solid $color-strong;
+        max-width: 50rem;
+    }
+
+    &-table {
+        width: 100%;
+
+        thead {
+            background-color: $color-primaryBg;
+
+            tr th {
+                padding: 2rem 0;
+                @include txt-16x;
+                color: $color-444;
+                &:last-of-type {
+                    text-align: end;
+                    padding-right: 6rem;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    text-align: center;
+                    padding: 1rem 0 1.2rem;
+                    @include txt-18x;
+                    color: $color-666;
+                    &:last-of-type {
+                        text-align: end;
+                        padding-right: 6rem;
+                    }
+                }
+
+                &.last {
+                    td {
+                        padding-bottom: 2rem;
+                    }
+                }
+                
+                &.total {
+                    td {
+                        background-color: $color-primaryBg;
+                        padding: 2rem 0;
+
+                        &:last-of-type {
+                            padding-right: 6rem;
+                        }
+                    }
+                }
+
+                &:first-of-type td {
+                    padding-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
 .awardSlide {
     overflow: hidden;
 
@@ -2690,13 +2765,19 @@ $color-A2A5BC : #A2A5BC;
     &-li {
         width: 48.6rem;
         height: 44rem;
-
+        
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
+
+    &-img {
+        width: 100%;
+        height: 100%;
+    }
+
 
     &-nav {
         margin-top: 8rem;
@@ -3579,6 +3660,12 @@ $color-A2A5BC : #A2A5BC;
     }
 
     .scholarT {
+        &-titBox {
+            margin-top: 6.4rem;
+        }
+    }
+
+    .edu {
         &-titBox {
             margin-top: 6.4rem;
         }
