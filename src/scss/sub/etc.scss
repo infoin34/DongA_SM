@@ -886,6 +886,7 @@ textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
         &-txt {
             font-size: 1.2rem;
             line-height: 1.4rem;
+            font-size: 1.5rem;
         }
     }
     .c-input {
@@ -895,6 +896,10 @@ textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
     }
     .c-textarea {
         padding: 1.6rem;
+    }
+    .cSelect {
+        height: 5.6rem;
+        line-height: 5.6rem;
     }
 }
 
