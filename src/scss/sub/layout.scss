@@ -746,6 +746,10 @@
         padding-bottom: 0;
     }
 
+    &.sub-titV {
+        padding-bottom: 4rem;
+    }
+
     &.pb-0x {
         padding-bottom: 0;
     }
@@ -1235,7 +1239,7 @@
             color: $color-accentNd;
             margin-bottom: 8px;
         }
-        strong {
+        .infoSlide-strong {
             display: block;
             @include txt-32x;
             color: $color-fff;
