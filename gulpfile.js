@@ -14,7 +14,7 @@ const newer = require('gulp-newer');
 const copy = require('gulp-copy');
 const ifElse = require('gulp-if-else');
 const preprocess = require('gulp-preprocess');
-const htmlreplace = require('gulp-html-replace-v');
+const htmlreplace = require('gulp-html-replace');
 const rename = require('gulp-rename');
 //gulp-debug, gulp-uglify(js 압축), gulp-plumber()
 
@@ -48,10 +48,10 @@ function serverInit(done) {
 function markupList(done) {
 	return src('./src/markup.html')
 		.pipe(htmlreplace({
-			'css': './markup/markup.css',
-			'js': './markup/markup.js'
+			css: 'markup/markup.css',
+			js: 'markup/markup.js'
 		}))
-		.pipe(rename("index.html"))
+		.pipe(rename('index.html'))
 		.pipe(dest('./'))
 	done();
 }
@@ -96,21 +96,21 @@ function css_compile(path, output, bool, done) {
 		}).on('error', sass.logError))				
 		.pipe(autoprefixer()) // Autoprefixer 브라우져리스트 - https://github.com/ai/browserslist, package.json에 포함
 		.pipe(
-			ifElse(
+			ifElse( 
 				(process.env.NODE_ENV === "development"),
 				function() { return dest(path.output, { sourcemaps: true }) },
-				function() { return dest(path.dest, { sourcemaps: false }) }
+				function() { return dest(path.dest, {sourcemaps: false }) }
 			)
 		)
 	done();
 };
 
 function css_pc_dev(done) {
-	css_compile(paths.pc.css, 'compact', true);
+	css_compile(paths.pc.css, 'compressed', false);
 	done();
 };
 function css_pc_build(done) {
-	css_compile(paths.pc.css, 'compact', false);
+	css_compile(paths.pc.css, 'compressed', false);
 	done();
 };
 
@@ -251,7 +251,7 @@ exports.html = html_pc;
 exports.css_clean = css_pc_clean;
 exports.css_dev = css_pc_dev;
 exports.css_build = series(css_pc_build);
-exports.build = series(set_prod_env, html_pc_clean, parallel(css_pc_dev, html_pc), filecopy_pc_images, filecopy_pc_css, filecopy_pc_js, filecopy_pc_font, markupList);
+exports.build = series(set_prod_env, html_pc_clean, parallel(css_pc_dev, html_pc), markupList, filecopy_pc_images, filecopy_pc_css, filecopy_pc_js, filecopy_pc_font);
 
 
 

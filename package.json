@@ -63,5 +63,8 @@
         "dest": "./dest/static/font/"
       }
     }
+  },
+  "dependencies": {
+    "gulp-html-replace": "^1.6.2"
   }
 }
