@@ -46,7 +46,7 @@
             </section>            
 
             <div class="wrap-inner typeA">
-                <div class="cTab ani btot">
+                <div class="cTab">
                     <div class="cTab-btnG">
                         <!-- a 태그로 변경 -->
                         <a href="javascript:void(0);" class="cTab-btn on">교육복지사업</a>
@@ -410,6 +410,10 @@
             $(".tab-block").eq($(this).index()).addClass("on")
             return false;
         });        
+        if(location.href.indexOf('tab') !== -1){
+			$('.cTab-btn').eq(Number(location.href.split('tab=')[1])-1).click();
+			scrollMove($('.cTab').offset().top, 400);
+		}
     });
     
 </script>

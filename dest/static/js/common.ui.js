@@ -412,28 +412,30 @@
 
 	function cSlide(){
 		if( $('.cslide-slide').length ) {
-			var cSlide = new Swiper(".cslide-slide", {
-				slidesPerView: "1",
-				spaceBetween: 24,
-				// freeMode: true,
-				// mousewheel: true,
-				threshold: 50,
-				
-				keyboard: {
-					enabled: true,
-				},
-		
-				pagination: {
-					el: ".cslide-pagination",
-					type: "progressbar",
-				},		
-
-				breakpoints: {
-					768: {
-						slidesPerView: 2,
+			$('.cslide-area').each(function(){
+				new Swiper($(this).find(".cslide-slide")[0], {
+					slidesPerView: "1",
+					spaceBetween: 24,
+					// freeMode: true,
+					// mousewheel: true,
+					threshold: 50,
+					
+					keyboard: {
+						enabled: true,
 					},
-				},
-			});
+			
+					pagination: {
+						el: $(this).find(".cslide-pagination")[0],
+						type: "progressbar",
+					},		
+	
+					breakpoints: {
+						768: {
+							slidesPerView: 2,
+						},
+					},
+				});
+			});			
 		}
 	}
 	
