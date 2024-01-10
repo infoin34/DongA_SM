@@ -433,7 +433,7 @@
             flex-direction: column;
         }
         .nav-depth {
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            border-top: 1px solid #ffffff1f;
             flex-basis: 100%;
             margin-bottom: 4rem;
         }
@@ -454,7 +454,11 @@
                 width: 100%;
                 padding: 1.6rem 0;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-
+                &.on {
+                    &:after {
+                        transform: rotate(180deg);
+                    }
+                }
                 &::after {
                     content: '';
                     display: inline-block;
@@ -462,6 +466,7 @@
                     height: 3.2rem;
                     background: svgIcoDropdown2('fff'); 
                     background-size:100% 100%;
+                    transition: transform 0.3s;
                 }
             }
         }
@@ -1235,7 +1240,7 @@
 
         span {
             display: block;
-            @include txt-16x;
+            @include txt-24x;
             color: $color-accentNd;
             margin-bottom: 8px;
         }

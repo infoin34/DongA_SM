@@ -57,12 +57,11 @@ body::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:i
 /* common */
 :root {
 	--size: 10px;
-	--clr1: #ff7101;
-	--clr2: #ff861e;
-	--clr3: #ff9936;
-	--clr4: #ffae51;
-	--clr5: #ffc570;
-  
+	--clr1: #c1bbeb;
+	--clr2: #9f91f5;
+	--clr3: #806ef5;
+	--clr4: #4b33ed;
+	--clr5: #1800b7;  
 }  
 
 .ell {display:block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; word-break:break-all;}

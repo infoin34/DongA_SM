@@ -1,3 +1,7 @@
+//pc, mo 구분
+.pcPart {display: block;}
+.moPart {display: none;}
+
 
 // button
 .btn {  
@@ -302,7 +306,7 @@
         font-weight: 600;
         font-size: 1.6rem;
         line-height: 5.6rem;
-        color: $color-fff;   
+        color: $color-fff !important;   
         border: none;
         background-color: $color-accent;     
         -webkit-transition: 0.2s;
@@ -831,14 +835,16 @@ textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
 }
 .tab-block {
     position: absolute; 
+    left: 0;
     top: 0;
-    left: 100%;
     opacity: 0;
+    transform: translateY(-100%);
     transition: opacity 0.5s;
     z-index: -2;
     &.on {
         position: relative;
         left: auto;
+        transform: translateY(0);
         opacity: 1;
         z-index: 1;
     }
@@ -959,4 +965,9 @@ textarea::-webkit-scrollbar-thumb { background-color: #89898a; }
         }
         
     }
+}
+
+.window-mo {
+    .pcPart {display: none;}
+    .moPart {display: block;}
 }

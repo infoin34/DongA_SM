@@ -529,6 +529,7 @@ $color-A2A5BC : #A2A5BC;
 .viewCont{
     padding: 4rem 0;
     border-bottom: 1px solid $color-default;
+    font-size: 1.8rem;
 
     &-nav {
         padding-top: 3.2rem;
@@ -1293,7 +1294,7 @@ $color-A2A5BC : #A2A5BC;
             }
         }
 
-        span {
+        span { 
             @include txt-16x;
             color: $color-888;
             padding-bottom: 0px;
@@ -2044,11 +2045,9 @@ $color-A2A5BC : #A2A5BC;
 }
 
 .popBanner {
-    width: calc(100vw - 3.2rem);
-    max-width: 50rem;
-    max-height: calc(100vh - 3.2rem);
-    background-color: #002C85 ;
-
+    //width: calc(100vw - 3.2rem);
+    background-color: #fff ;
+    img {max-width: 100%;}
     &-btnG {
         display: flex;
         height: 5.6rem;
@@ -2187,16 +2186,15 @@ $color-A2A5BC : #A2A5BC;
     }
 
     &-tableWrap {
-        width: 100%;
-        border-top: 2px solid $color-444;
-        border-bottom: 1px solid $color-strong;
+        width: 100%;        
         max-width: 50rem;
         margin: 0 auto;
     }
 
     &-table {
         width: 100%;
-
+        border-top: 2px solid $color-444;
+        border-bottom: 1px solid $color-strong;
         thead {
             background-color: $color-primaryBg;
 
@@ -2414,15 +2412,6 @@ $color-A2A5BC : #A2A5BC;
         &:last-of-type {
             padding-bottom: 0;
             border-bottom: none;
-        }
-
-        &.w-200x {
-          .awardFix-careerBox {
-            gap: 3.8rem;
-          }  
-          .awardFix-date {
-            flex-basis: 20rem;
-          }
         }
     }
 
@@ -3473,6 +3462,7 @@ $color-A2A5BC : #A2A5BC;
 
     .viewCont{
         padding-top: 2.4rem;
+        font-size: 1.5rem;
 
         &-nav {
             padding-top: 1.6rem;
@@ -3926,6 +3916,7 @@ $color-A2A5BC : #A2A5BC;
     }
 
     .popBanner {
+        margin: 0 2rem;
         &-btnG {
             height: 4.4rem;
         }

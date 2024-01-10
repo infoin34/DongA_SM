@@ -96,11 +96,12 @@
 			let $target = $(target),
 			    $pop = $target.hasClass('layer-popup') ? $target : $target.parents('.layer-popup');
 			
-			$.each(popup.targetArr, function(i) {
+			for(let i=0; i < popup.targetArr.length; i++){
 				if (popup.targetArr[i].attr('data-pop') == $pop.attr('data-pop')) {
 					popup.targetArr.splice(i,1);
+					break;
 				}
-			});
+			}
 			if (popup.targetArr.length == 0) {
 				if( !$('html').hasClass('layer-open') ) {
 					bodyScrollBlock(false);
@@ -173,6 +174,7 @@
 		
 			$(window).on ({
 				resize : function(){ 
+					if($('.btn-menu').hasClass('on')) return;
 					windowSize();
 				},
 	
@@ -187,10 +189,11 @@
 			let $depth3Btn = $nav.find(".has-dept3");
 
 			$depth1Btn.each(function(item) {
-				$(this).attr('href', "javascript:void(0);");
+				$(this).attr('href', "javascript:void(0);");				
 				let $depth2 = $(this).siblings(".nav-depth2");
 				$(this).on({
 					click: function(){
+						$(this).toggleClass('on');
 						$depth2.stop().slideToggle();
 					}
 				})
