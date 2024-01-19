@@ -747,23 +747,23 @@ $color-A2A5BC : #A2A5BC;
     align-items: flex-start;
     gap: 3.2rem;
 
-    strong {
+    &-tit {
         @include txt-40x;
         letter-spacing: -0.04em;
         color: $color-222;
 
-        em {
+        .em {
             color: $color-primaryNd
         }
     }
 
-    p {
+    &-txt {
         @include txt-18x;
         color: $color-666;
 
-        span {
-            display: inline-block;
-        }
+        // span {
+        //     display: inline-block;
+        // }
     }
 }
 
