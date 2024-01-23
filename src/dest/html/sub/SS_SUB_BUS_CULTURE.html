@@ -410,7 +410,7 @@
 									<strong class="contestList-tit">
                                         마로니에여성백일장 역대 수상자(장원) 및 작품명
                                     </strong>
-									<ul class="contestList-list">
+									<ul class="contestList-list ">
 										<li class="contestList-li">
 											<span class="contestList-date">2023</span>
 											<ul class="contestList-fieldList">
@@ -980,6 +980,12 @@
 										</li>
 									</ul>
 								</div>
+								<div class="contestList-btnArea">
+									<button class="contestList-btn">
+										<span class="show">더 보기</span>
+										<span class="hide">접기</span>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1112,6 +1118,59 @@
 </body>
 <!-- 페이지 관련 스크립트 -->
 <script>
+	function toggleWinner() {
+		let $contH_top = $(".contestList-li").eq(0).offset().top;
+		let $contH_bottom
+
+		if ($(window).width() > 768) {
+			$contH_bottom = $(".contestList-li").eq(6).offset().top;
+		} else if (768 >= $(window).width()) {
+			$contH_bottom = $(".contestList-li").eq(3).offset().top;
+		}
+
+		let $contH = $contH_bottom - $contH_top;
+
+		if ($(".contestList-list").hasClass("open") == false) {
+			$(".contestList-list").css("max-height", $contH)
+		} else if ($(".contestList-list").hasClass("open") == true) {
+			$(".contestList-list").css("max-height", "100%")
+		}
+	}
+
+	$(window).on({
+		resize: function() {
+			toggleWinner();
+		},
+
+		load: function() {
+			toggleWinner();
+		},
+	})
+
+	$(".contestList-btn").on('click', function() {
+		let $contH_top = $(".contestList-li").eq(0).offset().top;
+		let $contH_bottom
+
+		if ($(window).width() > 768) {
+			$contH_bottom = $(".contestList-li").eq(6).offset().top;
+		} else if (768 >= $(window).width()) {
+			$contH_bottom = $(".contestList-li").eq(3).offset().top;
+		}
+
+		let $contH = $contH_bottom - $contH_top;
+
+		let $btn = $(this);
+
+		if ($btn.hasClass("open") == true) {
+			$btn.removeClass("open")
+			$(".contestList-list").removeClass("open")
+			$(".contestList-list").css("max-height", $contH)
+		} else {
+			$btn.addClass("open")
+			$(".contestList-list").addClass("open")
+			$(".contestList-list").css("max-height", "100%")
+		}
+	})
 </script>
 <!--//페이지 관련 스크립트 -->
 
