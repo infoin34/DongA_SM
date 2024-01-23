@@ -2733,6 +2733,10 @@ $color-A2A5BC : #A2A5BC;
 .contestWin {
     width: 100%;
 
+    &-area {
+        margin-bottom: 14rem;
+    }
+
     &-tit {
         display: block;
         @include txt-24x;
@@ -2763,6 +2767,81 @@ $color-A2A5BC : #A2A5BC;
         p {
             @include txt-18x;
             color: $color-444;
+        }
+    }
+}
+
+.contestList{ 
+    width: 100%;
+    overflow-x: auto;
+
+    &-tit {
+        display: block;
+        @include txt-24x;
+        color: $color-222;
+        margin-bottom: 2.4rem;
+        word-break: keep-all;
+    }
+
+    &-list {
+        min-width: 70rem;
+    }
+    &-li {
+        width: 100%;
+        border-top: 1px solid #E2E2E2;
+        padding: 5rem 4rem 6rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    &-date {
+        @include txt-24x;
+        font-weight: 500;
+        color: #162DA1;
+        flex-basis: 26.6rem;
+        flex-shrink: 0;
+    }
+    &-fieldList {
+        flex-shrink: 0;
+    }
+    &-field {
+        padding-top: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        dl { 
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        dt { 
+            @include txt-20x;
+            font-weight: 700;
+            line-height: 2.4rem;
+            color: $color-222;
+        }
+
+        dd {
+            @include txt-20x;
+            font-weight: 400;
+            line-height: 2.4rem;
+            color: $color-666;
+
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 0.2rem;
+                height: 1.6rem;
+                margin: 0 1rem;
+                background-color: $color-medium;
+            }
         }
     }
 }
